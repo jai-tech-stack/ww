@@ -33,7 +33,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <Layout title="Services" description="White Wolf offers Branding, UI/UX Design, Development, and AI Integrated Services.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Services Overview</p>
@@ -63,6 +63,15 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Services",
+      description: "White Wolf offers Branding, UI/UX Design, Development, and AI Integrated Services.",
+    },
+  };
 }

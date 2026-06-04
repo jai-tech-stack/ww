@@ -5,10 +5,7 @@ export default function ProjectPage({ project }) {
   if (!project) return null;
 
   return (
-    <Layout
-      title={project.title}
-      description={project.tagline}
-    >
+    <>
       {/* ── Hero ──────────────────────────────────────────────── */}
       <section className="ww-proj-hero" style={{ "--proj-color": project.color }}>
         <div className="ww-container">
@@ -179,7 +176,7 @@ export default function ProjectPage({ project }) {
           </Link>
         </section>
       )}
-    </Layout>
+    </>
   );
 }
 
@@ -193,5 +190,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const project = getProjectBySlug(params.slug);
   if (!project) return { notFound: true };
-  return { props: { project } };
+  return {
+    props: {
+      project,
+      title: project.title,
+      description: project.tagline,
+    },
+  };
 }
