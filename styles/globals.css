@@ -741,158 +741,10 @@ html, body {
   }
 }
 
-/* ── Shared Navbar (inner pages) ────────────────────────────── */
-.ww-navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 9999;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(106,170,199,0.12);
-  transition: background 0.3s;
-}
-
-.ww-nav-inner {
-  max-width: 1470px;
-  margin: 0 auto;
-  padding: 0 15px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.ww-nav-logo { display: flex; align-items: center; text-decoration: none; margin-right: auto; }
-
-.ww-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.ww-nav-link {
-  font-family: 'Karla', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 100px;
-  transition: color 0.2s, background 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.ww-nav-link:hover { color: #fff; background: rgba(106,170,199,0.1); }
-.ww-nav-link--active { color: #6AAAC7 !important; }
-
-/* Services dropdown */
-.ww-nav-dropdown-wrap { position: relative; }
-
-.ww-nav-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  min-width: 220px;
-  background: #1a1535;
-  border: 1px solid rgba(106,170,199,0.18);
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  z-index: 10000;
-}
-
-.ww-nav-dropdown-item {
-  display: block;
-  font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
-}
-
-.ww-nav-dropdown-item:hover { color: #6AAAC7; background: rgba(106,170,199,0.08); }
-
-/* Contact CTA */
-.ww-nav-cta {
-  font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #6AAAC7;
-  text-decoration: none;
-  border: 1.5px solid #6AAAC7;
-  border-radius: 100px;
-  padding: 8px 20px;
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-
-.ww-nav-cta:hover { background: #6AAAC7; color: #131021; }
-
-/* Hamburger */
-.ww-nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  margin-left: auto;
-}
-
-.ww-nav-hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
-}
-
-/* Mobile menu */
-.ww-mobile-menu {
-  position: fixed;
-  top: 72px; left: 0; right: 0;
-  background: rgba(19,16,33,0.98);
-  backdrop-filter: blur(14px);
-  padding: 1.5rem 1.5rem 2rem;
-  border-bottom: 1px solid rgba(106,170,199,0.12);
-  z-index: 9998;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.ww-mobile-link {
-  font-family: 'Karla', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  display: block;
-}
-
-.ww-mobile-sub { padding-left: 1rem; }
-
-.ww-mobile-sub-link {
-  font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
-  color: rgba(106,170,199,0.85);
-  text-decoration: none;
-  padding: 8px 0;
-  display: block;
-}
 
 /* ── Page wrapper ────────────────────────────────────────────── */
 .ww-page { min-height: 100vh; background: #131021; display: flex; flex-direction: column; overflow: hidden; }
-.ww-main { flex: 1; padding-top: 72px; overflow-y: auto; }
+.ww-main { flex: 1; overflow-y: auto; }
 
 /* ── Footer (inner pages) ────────────────────────────────────── */
 .ww-footer {
@@ -999,9 +851,6 @@ html, body {
 
 /* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 991px) {
-  .ww-nav-links { display: none; }
-  .ww-nav-cta { display: none; }
-  .ww-nav-hamburger { display: flex !important; }
   .ww-footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
@@ -1012,7 +861,6 @@ html, body {
 
 @media (max-width: 479px) {
   .ww-footer-top { grid-template-columns: 1fr; }
-  .ww-nav-hamburger { display: flex !important; }
   .ww-page-hero { padding: 2rem 0 1.5rem; }
 }
 
