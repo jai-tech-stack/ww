@@ -1,4 +1,3 @@
-import Layout from "../components/Layout";
 import { useState } from "react";
 
 export default function Contact() {
@@ -21,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <Layout title="Contact" description="Get in touch with White Wolf to start your digital transformation project.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Contact</p>
@@ -80,6 +79,15 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Contact",
+      description: "Get in touch with White Wolf to start your digital transformation project.",
+    },
+  };
 }

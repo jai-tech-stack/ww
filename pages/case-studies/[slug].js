@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Layout from "../../components/Layout";
 import { PROJECTS, getProjectBySlug, getAllSlugs } from "../../lib/projects";
 
 export default function ProjectPage({ project }) {

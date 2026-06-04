@@ -1,8 +1,6 @@
-import Layout from "../../components/Layout";
-
 export default function UIUXDesign() {
   return (
-    <Layout title="UI/UX Design" description="White Wolf designs intuitive digital experiences that improve engagement, usability, and business growth.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Service — UI/UX Design</p>
@@ -17,6 +15,15 @@ export default function UIUXDesign() {
           <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add UI/UX Design page content here —</p>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "UI/UX Design",
+      description: "White Wolf designs intuitive digital experiences that improve engagement, usability, and business growth.",
+    },
+  };
 }

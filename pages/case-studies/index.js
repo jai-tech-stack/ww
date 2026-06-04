@@ -1,10 +1,9 @@
 import Link from "next/link";
-import Layout from "../../components/Layout";
 import { PROJECTS } from "../../lib/projects";
 
 export default function CaseStudies() {
   return (
-    <Layout title="Case Studies" description="White Wolf portfolio — branding, UI/UX, development and AI projects.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Case Studies</p>
@@ -55,6 +54,15 @@ export default function CaseStudies() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Case Studies",
+      description: "White Wolf portfolio — branding, UI/UX, development and AI projects.",
+    },
+  };
 }

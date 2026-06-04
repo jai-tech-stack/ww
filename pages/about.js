@@ -1,8 +1,6 @@
-import Layout from "../components/Layout";
-
 export default function About() {
   return (
-    <Layout title="About" description="Backed by 20+ years of industry leadership, White Wolf combines strategic thinking, world-class design, and AI integration.">
+    <>
       {/* Page Hero */}
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
@@ -22,6 +20,15 @@ export default function About() {
           </p>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "About",
+      description: "Backed by 20+ years of industry leadership, White Wolf combines strategic thinking, world-class design, and AI integration.",
+    },
+  };
 }

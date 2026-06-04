@@ -1,5 +1,3 @@
-import Layout from "../components/Layout";
-
 const STEPS = [
   { num: "01", title: "Discover",   desc: "Deep-dive research into your business, audience, and competitive landscape." },
   { num: "02", title: "Strategize", desc: "Define the roadmap, success metrics, and creative direction." },
@@ -11,7 +9,7 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <Layout title="Process" description="How White Wolf works — from discovery to launch and scale.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Our Process</p>
@@ -38,6 +36,15 @@ export default function Process() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Process",
+      description: "How White Wolf works — from discovery to launch and scale.",
+    },
+  };
 }
