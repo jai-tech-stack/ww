@@ -1,7 +1,6 @@
-
 export default function Development() {
   return (
-    <Layout title="Development" description="White Wolf builds scalable websites, platforms, applications, and digital ecosystems with modern technologies.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Service — Development</p>
@@ -16,6 +15,15 @@ export default function Development() {
           <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add Development page content here —</p>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Development",
+      description: "White Wolf builds scalable websites, platforms, applications, and digital ecosystems with modern technologies.",
+    },
+  };
 }

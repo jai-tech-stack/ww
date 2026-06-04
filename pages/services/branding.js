@@ -1,7 +1,6 @@
-
 export default function Branding() {
   return (
-    <Layout title="Branding" description="White Wolf creates memorable brands with strategic positioning, visual identity systems, and storytelling that connects globally.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Service — Branding</p>
@@ -16,6 +15,15 @@ export default function Branding() {
           <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add Branding page content here —</p>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Branding",
+      description: "White Wolf creates memorable brands with strategic positioning, visual identity systems, and storytelling that connects globally.",
+    },
+  };
 }

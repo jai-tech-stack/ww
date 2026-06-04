@@ -1,7 +1,6 @@
-
 export default function AIIntegratedServices() {
   return (
-    <Layout title="AI Integrated Services" description="White Wolf helps businesses integrate AI into products, workflows, customer experiences, and operations.">
+    <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
           <p className="ww-page-tag">Service — AI Integrated Services</p>
@@ -16,6 +15,15 @@ export default function AIIntegratedServices() {
           <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add AI Integrated Services content here —</p>
         </div>
       </section>
-    </Layout>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "AI Integrated Services",
+      description: "White Wolf helps businesses integrate AI into products, workflows, customer experiences, and operations.",
+    },
+  };
 }
