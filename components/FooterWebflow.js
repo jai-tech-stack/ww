@@ -14,10 +14,11 @@ const NAV_LINKS = [
   { label: "Case Studies", href: "/#project" },
 ];
 
-const UTILITY_LINKS = [
-  { label: "License", href: "/license" },
-  { label: "Changelog", href: "/changelog" },
-  { label: "Style Guide", href: "/style-guide" },
+const SERVICES_LIST = [
+  { label: "Branding", href: "/services/branding" },
+  { label: "UI/UX", href: "/services/ui-ux-design" },
+  { label: "Development", href: "/services/development" },
+  { label: "AI Solutions", href: "/services/ai-integrated-services" },
 ];
 
 export default function FooterWebflow() {
@@ -67,68 +68,18 @@ export default function FooterWebflow() {
                 </div>
               </div>
 
-              {/* Newsletter Column */}
+              {/* Services Column */}
               <div className="overflow-hidden _3">
-                <div className="sign-up-block">
-                  <p className="sign-up-para">
-                    Sign up for our newsletter to get latest insights and updates
-                  </p>
-                  <div className="footer-form-block w-form">
-                    <form className="footer-form" onSubmit={(e) => {
-                      e.preventDefault();
-                      alert("Thank you! Your submission has been received!");
-                    }}>
-                      <input
-                        className="footer-text-field w-input"
-                        maxLength="256"
-                        name="Footer-Email"
-                        placeholder="Enter email address"
-                        type="email"
-                        required
-                      />
-                      <input
-                        type="submit"
-                        className="footer-submit-button w-button"
-                        value="Subscribe"
-                      />
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer Bottom Info */}
-            <div className="footer-bottom-wrap">
-              <div className="overflow-hidden">
-                <div className="footer-info-left-wrap">
-                  <div className="footer-info-text">
-                    <span className="span-text-pimary-color">©</span> {new Date().getFullYear()} White Wolf Digital.
-                  </div>
-                </div>
-              </div>
-
-              <div className="overflow-hidden">
-                <div className="footer-info-middle-wrap">
-                  {UTILITY_LINKS.map((link) => (
-                    <Link key={link.href} href={link.href} className="utility-page-link w-inline-block">
-                      <div className="footer-info-text hover">{link.label}</div>
+                <div className="footer-menu-block">
+                  {SERVICES_LIST.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="footer-section-id-link w-inline-block"
+                    >
+                      <h6 className="footer-menu-iteam hover">{service.label}</h6>
                     </Link>
                   ))}
-                </div>
-              </div>
-
-              <div className="overflow-hidden">
-                <div className="footer-info-right-wrap">
-                  <div className="footer-info-text">
-                    Designed by{" "}
-                    <a href="https://origamicreative.com/" target="_blank" rel="noopener noreferrer" className="footer-info-text-span">
-                      Origami Creative
-                    </a>{" "}
-                    | Built with{" "}
-                    <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" className="footer-info-text-span">
-                      Next.js
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
