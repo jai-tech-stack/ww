@@ -152,11 +152,13 @@ const contactSection = `<section id="contact" class="section ww-contact"><div cl
 raw = replaceSection(raw, 'id="contact" class="section contact"', contactSection);
 
 // REMOVE ALL WEBFLOW FOOTER (we use React Footer component instead)
-// Remove footer-main-wrapper div and everything inside
-raw = raw.replace(/<div[^>]*class="[^"]*footer-main-wrapper[^"]*"[\s\S]*?<\/div>[\s\S]*?<\/div>/gi, "");
-// Remove any remaining footer tags
+// Remove entire footer element and all its children
 raw = raw.replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, "");
-// Remove footer-bottom-wrap and related sections
+// Remove any footer section divs
+raw = raw.replace(/<section[^>]*class="[^"]*footer[^"]*"[\s\S]*?<\/section>/gi, "");
+// Remove footer-main-wrapper
+raw = raw.replace(/<div[^>]*class="[^"]*footer-main-wrapper[^"]*"[\s\S]*?<\/div>/gi, "");
+// Remove footer-bottom-wrap
 raw = raw.replace(/<div[^>]*class="[^"]*footer-bottom-wrap[^"]*"[\s\S]*?<\/div>/gi, "");
 
 // Extract body
