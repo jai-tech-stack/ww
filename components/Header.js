@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 
-export default function Header({ title, description }) {
+export default function Header({ title, description, showNavbar = true }) {
   return (
     <>
       <Head>
@@ -11,7 +11,7 @@ export default function Header({ title, description }) {
         <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
       </Head>
 
-      <Navbar />
+      {showNavbar && <Navbar />}
     </>
   );
 }
