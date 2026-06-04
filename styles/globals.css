@@ -56,7 +56,7 @@ input, textarea, button,
    #6AAAC7  Blue          — primary accent / CTA
    #BF6EB6  Purple        — secondary accent / hover
    #CBC16C  Gold          — tertiary accent / highlights
-   #131021  Dark Navy     — main background
+   #0d0d0d  Dark Navy     — main background
    ============================================================ */
 
 *, *::before, *::after {
@@ -66,14 +66,14 @@ input, textarea, button,
 /* Override Webflow CSS custom properties with White Wolf brand */
 :root,
 body {
-  --dark-shade--black:         #131021;
+  --dark-shade--black:         #0d0d0d;
   --primary-color--primary:    #6AAAC7;
   --gray-shade--gray:          #707070;
   --white-shade--white:        #ffffff;
   --ww-blue:                   #6AAAC7;
   --ww-purple:                 #BF6EB6;
   --ww-gold:                   #CBC16C;
-  --ww-dark:                   #131021;
+  --ww-dark:                   #0d0d0d;
   --ww-gray:                   #707070;
   --border-color--border-1:    rgba(106,170,199,0.2);
   --white-shade--white-100:    rgba(106,170,199,0.08);
@@ -82,12 +82,12 @@ body {
 
 /* ── Global background ──────────────────────────────────────── */
 html, body {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 .section,
 .page-wrapper {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 /* ── Navbar ─────────────────────────────────────────────────── */
@@ -119,13 +119,13 @@ html, body {
 
 .nav-button:hover {
   background-color: #6AAAC7 !important;
-  color: #131021 !important;
+  color: #0d0d0d !important;
 }
 
 /* ── Hero section ───────────────────────────────────────────── */
 .section-banner,
 .fixed-banner {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 /* Hero heading text */
@@ -146,7 +146,7 @@ html, body {
 
 /* ── About section ──────────────────────────────────────────── */
 .section.about {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 .about-title {
@@ -166,7 +166,7 @@ html, body {
 
 /* ── Services section ───────────────────────────────────────── */
 .section.service {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 /* Service item title */
@@ -228,7 +228,7 @@ html, body {
 
 /* ── Project / Portfolio section ────────────────────────────── */
 .section.project {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 /* Category badges — blue */
@@ -256,7 +256,7 @@ html, body {
 /* ── Testimonials ───────────────────────────────────────────── */
 .section.testimonial,
 .section.tablet-testimonial {
-  background-color: #131021;
+  background-color: #0d0d0d;
 }
 
 .testimonial-wrap {
@@ -285,7 +285,7 @@ html, body {
 
 /* ── CTA section ─────────────────────────────────────────────── */
 .section.cta {
-  background: linear-gradient(135deg, #131021 0%, #1a1232 50%, #131021 100%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1232 50%, #0d0d0d 100%);
   border-top: 1px solid rgba(106,170,199,0.15);
 }
 
@@ -373,7 +373,7 @@ html, body {
 .section.ww-why {
   padding-top: var(--_spacing---section-padding--small, 90px);
   padding-bottom: var(--_spacing---section-padding--large, 180px);
-  background-color: #131021;
+  background-color: #0d0d0d;
   overflow: hidden;
 }
 
@@ -388,7 +388,7 @@ html, body {
 }
 
 .ww-why-card {
-  background-color: #131021;
+  background-color: #0d0d0d;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -536,7 +536,7 @@ html, body {
 
 .ww-process-cta:hover {
   background-color: #6AAAC7 !important;
-  color: #131021 !important;
+  color: #0d0d0d !important;
 }
 
 @media (max-width: 991px) {
@@ -567,7 +567,7 @@ html, body {
 .section.ww-contact {
   padding-top: var(--_spacing---section-padding--large, 180px);
   padding-bottom: var(--_spacing---section-padding--large, 180px);
-  background-color: #131021;
+  background-color: #0d0d0d;
   position: relative;
   overflow: hidden;
 }
@@ -682,7 +682,7 @@ html, body {
 
 .ww-form-btn {
   background-color: #6AAAC7;
-  color: #131021;
+  color: #0d0d0d;
   border: none;
   border-radius: 100px;
   padding: 0.85rem 2.5rem;
@@ -743,12 +743,12 @@ html, body {
 
 
 /* ── Page wrapper ────────────────────────────────────────────── */
-.ww-page { min-height: 100vh; background: #131021; display: flex; flex-direction: column; overflow: hidden; }
+.ww-page { min-height: 100vh; background: #0d0d0d; display: flex; flex-direction: column; overflow: hidden; }
 .ww-main { flex: 1; overflow-y: auto; }
 
 /* ── Webflow-Style Footer ────────────────────────────────────── */
 .webflow-footer {
-  background: #131021;
+  background: #0d0d0d;
   border-top: 1px solid rgba(106,170,199,0.1);
 }
 
@@ -992,7 +992,7 @@ html, body {
   font-size: 0.95rem;
   font-weight: 600;
   background: #6AAAC7;
-  color: #131021;
+  color: #0d0d0d;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1082,7 +1082,7 @@ html, body {
 
 /* Footer Bottom Marquee */
 .footer-bottom-marquee-wrapper {
-  background: #131021;
+  background: #0d0d0d;
   padding: 4rem 0;
   overflow: hidden;
   border-top: 1px solid rgba(106,170,199,0.1);
@@ -1333,7 +1333,7 @@ html, body {
 
 /* ── Services card grid (services/index) ────────────────────── */
 .ww-service-card {
-  background: #131021;
+  background: #0d0d0d;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -1356,7 +1356,7 @@ html, body {
   align-items: flex-start;
   gap: 2.5rem;
   padding: 2rem 2.5rem;
-  background: #131021;
+  background: #0d0d0d;
   position: relative;
   transition: background 0.3s;
 }
@@ -1380,7 +1380,7 @@ html, body {
 .ww-cs-card {
   display: block;
   text-decoration: none;
-  background: #131021;
+  background: #0d0d0d;
   transition: background 0.3s;
 }
 
@@ -1463,7 +1463,7 @@ html, body {
 /* ── Project Single Page ─────────────────────────────────────── */
 
 /* Hero */
-.ww-proj-hero { background: #131021; padding-bottom: 0; }
+.ww-proj-hero { background: #0d0d0d; padding-bottom: 0; }
 
 .ww-proj-breadcrumb {
   display: flex;
@@ -1572,7 +1572,7 @@ html, body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 40%;
-  background: linear-gradient(to bottom, transparent, #131021);
+  background: linear-gradient(to bottom, transparent, #0d0d0d);
 }
 
 /* Overview */
@@ -1680,7 +1680,7 @@ html, body {
 }
 
 .ww-proj-result-item {
-  background: #131021;
+  background: #0d0d0d;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -1703,7 +1703,7 @@ html, body {
 /* CTA strip */
 .ww-proj-cta-strip {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #131021 0%, #1a1232 50%, #131021 100%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1232 50%, #0d0d0d 100%);
   border-top: 1px solid rgba(106,170,199,0.12);
   border-bottom: 1px solid rgba(106,170,199,0.12);
 }
