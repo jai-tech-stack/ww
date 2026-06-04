@@ -763,7 +763,7 @@ html, body {
   margin: 0 auto;
   padding: 0 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
   gap: 4rem;
 }
 
@@ -788,31 +788,39 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 .footer-logo {
   height: 200px;
-  width: auto;
+  width: 100%;
+  max-width: 200px;
   object-fit: contain;
 }
 
 .footer-heading {
   font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  line-height: 1.1;
+  padding: 0;
+  line-height: 1.15;
   letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-subheading {
   font-family: 'Karla', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
+  padding: 0;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Social Links Column */
