@@ -19,8 +19,8 @@ export default function App({ Component, pageProps }) {
         <Header title={title} description={description} />
         <main className="ww-main">
           <Component {...pageProps} />
+          <Footer />
         </main>
-        <Footer />
       </div>
     </>
   );
