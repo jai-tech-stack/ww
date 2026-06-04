@@ -160,6 +160,9 @@ raw = raw.replace(
   servicesSubmenu + '<div class="footer-bottom-wrap">'
 );
 
+// Remove Webflow footer (we use React Footer component instead)
+raw = raw.replace(/<footer[^>]*class="ww-footer"[\s\S]*?<\/footer>/gi, "");
+
 // Extract body
 const bodyStart = raw.indexOf("<body");
 const bodyTagEnd = raw.indexOf(">", bodyStart) + 1;
