@@ -44,7 +44,7 @@ raw = raw.replace(
 );
 raw = raw.replace(
   '<p class="hero-text">Brand Identity</p><p class="hero-text">UI/UX Design</p><p class="hero-text">Development</p><p class="hero-text">Product Design</p>',
-  '<p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#6AAAC7;line-height:1.2;margin-bottom:0.5rem;">Branding</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#BF6EB6;line-height:1.2;margin-bottom:0.5rem;">UI/UX Design</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#CBC16C;line-height:1.2;margin-bottom:0.5rem;">Web &amp; Product Development</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#6AAAC7;line-height:1.2;">AI-Integrated Solutions</p>'
+  '<p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#FFFFFF;line-height:1.2;margin-bottom:0.5rem;">Branding</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#FFFFFF;line-height:1.2;margin-bottom:0.5rem;">UI/UX Design</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#FFFFFF;line-height:1.2;margin-bottom:0.5rem;">Web &amp; Product Development</p><p class="hero-text" style="font-size:clamp(1.2rem,2vw,2.5rem);font-weight:700;color:#FFFFFF;line-height:1.2;">AI-Integrated Solutions</p>'
 );
 
 // Slider images
