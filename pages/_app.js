@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import FooterWebflow from "../components/FooterWebflow";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
         <Header title={title} description={description} />
         <main className="ww-main">
           <Component {...pageProps} />
-          <Footer />
+          <FooterWebflow />
         </main>
       </div>
     </>
