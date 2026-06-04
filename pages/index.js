@@ -9,6 +9,9 @@ export default function Home({ bodyHtml, inlineStyles }) {
       "/assets/SplitText.min.js",
       "/assets/ScrollTrigger.min.js",
       "/assets/lenis.js",
+      "/assets/whitewolf-core.js",
+      "/assets/whitewolf-modules.js",
+      "/assets/whitewolf-ui.js",
     ];
 
     const afterAllLoaded = () => {
@@ -16,6 +19,7 @@ export default function Home({ bodyHtml, inlineStyles }) {
         gsap.registerPlugin(SplitText, ScrollTrigger);
       } catch (e) {}
 
+      // Initialize Lenis smooth scroll
       try {
         const lenis = new Lenis({
           duration: 1.8,
