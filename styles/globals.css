@@ -779,6 +779,42 @@ html, body {
   gap: 2rem;
 }
 
+/* Brand Column */
+.footer-brand-column {
+  justify-content: flex-start;
+}
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-heading {
+  font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.footer-subheading {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* Social Links Column */
 .footer-social-column .footer-menu-block {
   gap: 2rem;
@@ -866,6 +902,31 @@ html, body {
 }
 
 .footer-section-link:hover .footer-menu-item {
+  color: #6AAAC7;
+}
+
+/* Services List Column */
+.footer-services-column {
+  justify-content: flex-start;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-list-item {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.service-list-item:hover {
   color: #6AAAC7;
 }
 
@@ -1072,6 +1133,14 @@ html, body {
     padding: 3rem 0 2.5rem;
   }
 
+  .footer-heading {
+    font-size: 3.5rem;
+  }
+
+  .footer-logo {
+    height: 150px;
+  }
+
   .marquee-text {
     font-size: clamp(2rem, 6vw, 4rem);
   }
@@ -1101,6 +1170,14 @@ html, body {
     padding: 2.5rem 0;
   }
 
+  .footer-heading {
+    font-size: 2.5rem;
+  }
+
+  .footer-logo {
+    height: 120px;
+  }
+
   .footer-menu-block {
     gap: 1.5rem;
   }
@@ -1118,14 +1195,6 @@ html, body {
     gap: 1rem;
     padding: 1.5rem 15px;
   }
-
-  .form-group {
-    flex-direction: column;
-  }
-
-  .newsletter-button {
-    width: 100%;
-  }
 }
 
 @media (max-width: 479px) {
@@ -1137,8 +1206,28 @@ html, body {
     gap: 1.5rem;
   }
 
+  .footer-heading {
+    font-size: 2rem;
+  }
+
+  .footer-subheading {
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    height: 100px;
+  }
+
   .footer-menu-block {
     gap: 1rem;
+  }
+
+  .services-list {
+    gap: 0.5rem;
+  }
+
+  .service-list-item {
+    font-size: 0.9rem;
   }
 
   .marquee-text {

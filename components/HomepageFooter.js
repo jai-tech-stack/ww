@@ -11,8 +11,15 @@ const SOCIAL_LINKS = [
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Process", href: "/process" },
   { label: "Case Studies", href: "/case-studies" },
+];
+
+const SERVICES_LIST = [
+  { label: "Branding", href: "/services/branding" },
+  { label: "UI/UX Design", href: "/services/ui-ux-design" },
+  { label: "Development", href: "/services/development" },
+  { label: "AI-Solutions", href: "/services/ai-integrated-services" },
 ];
 
 const FOOTER_INFO = [
@@ -22,45 +29,17 @@ const FOOTER_INFO = [
 ];
 
 export default function HomepageFooter() {
-  const [email, setEmail] = useState("");
-  const [emailMessage, setEmailMessage] = useState("");
-
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      setEmailMessage("Thank you! Your submission has been received!");
-      setEmail("");
-      setTimeout(() => setEmailMessage(""), 5000);
-    }
-  };
-
   return (
     <footer className="webflow-footer">
       {/* Main Footer Content */}
       <div className="footer-main-wrapper">
         <div className="footer-inner">
-          {/* Social Links Column */}
-          <div className="footer-column footer-social-column">
-            <div className="footer-menu-block">
-              {SOCIAL_LINKS.map((social) => (
-                <a
-                  key={social.href}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-menu-link"
-                >
-                  <h6 className="footer-menu-item">{social.label}</h6>
-                  <div className="footer-hover-icon-block">
-                    <svg className="footer-menu-arrow _1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <svg className="footer-menu-arrow _2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </a>
-              ))}
+          {/* Logo & Heading Column */}
+          <div className="footer-column footer-brand-column">
+            <div className="footer-brand-section">
+              <img src="/assets/white-wolf-logo.svg" alt="White Wolf" className="footer-logo" />
+              <h2 className="footer-heading">White Wolf</h2>
+              <p className="footer-subheading">Digital Transformation Agency</p>
             </div>
           </div>
 
@@ -79,31 +58,18 @@ export default function HomepageFooter() {
             </div>
           </div>
 
-          {/* Newsletter Signup Column */}
-          <div className="footer-column footer-newsletter-column">
-            <div className="newsletter-block">
-              <p className="newsletter-description">
-                Sign up for our newsletter to get latest insights and updates
-              </p>
-
-              <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    placeholder="Enter email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="newsletter-input"
-                    required
-                  />
-                  <button type="submit" className="newsletter-button">
-                    Subscribe
-                  </button>
-                </div>
-                {emailMessage && (
-                  <p className="newsletter-success">{emailMessage}</p>
-                )}
-              </form>
+          {/* Services List Column */}
+          <div className="footer-column footer-services-column">
+            <div className="services-list">
+              {SERVICES_LIST.map((service) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="service-list-item"
+                >
+                  {service.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
