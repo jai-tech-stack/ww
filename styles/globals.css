@@ -891,8 +891,8 @@ html, body {
 }
 
 /* ── Page wrapper ────────────────────────────────────────────── */
-.ww-page { min-height: 100vh; background: #131021; display: flex; flex-direction: column; }
-.ww-main { flex: 1; padding-top: 72px; }
+.ww-page { min-height: 100vh; background: #131021; display: flex; flex-direction: column; overflow: hidden; }
+.ww-main { flex: 1; padding-top: 72px; overflow-y: auto; }
 
 /* ── Footer (inner pages) ────────────────────────────────────── */
 .ww-footer {
@@ -1001,12 +1001,19 @@ html, body {
 @media (max-width: 991px) {
   .ww-nav-links { display: none; }
   .ww-nav-cta { display: none; }
-  .ww-nav-hamburger { display: flex; }
+  .ww-nav-hamburger { display: flex !important; }
   .ww-footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+@media (max-width: 767px) {
+  .ww-footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ww-page-hero { padding: 3rem 0 2rem; }
 }
 
 @media (max-width: 479px) {
   .ww-footer-top { grid-template-columns: 1fr; }
+  .ww-nav-hamburger { display: flex !important; }
+  .ww-page-hero { padding: 2rem 0 1.5rem; }
 }
 
 /* ── Services card grid (services/index) ────────────────────── */
