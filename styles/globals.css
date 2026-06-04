@@ -92,10 +92,10 @@ html, body {
 
 /* ── Navbar ─────────────────────────────────────────────────── */
 .navbar {
-  background-color: rgba(19,16,33,0.94) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(106,170,199,0.15) !important;
+  background-color: transparent !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none !important;
 }
 
 .navbar-main {
