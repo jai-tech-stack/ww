@@ -190,7 +190,23 @@ html, body {
   left: 0;
   right: 0;
   z-index: 2;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
+}
+
+/* Big White Wolf SVG text — must be visible */
+.hero-big-text-wrapper {
+  flex: 1;
+  overflow: visible !important;
+}
+
+.hero-big-text {
+  color: #ffffff;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 100%;
 }
 
 /* Hero content layout */
