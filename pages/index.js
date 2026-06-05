@@ -10,7 +10,6 @@ export default function Home({ bodyHtml, inlineStyles }) {
       "/assets/ScrollTrigger.min.js",
       "/assets/lenis.js",
       "/assets/whitewolf-core.js",
-      "/assets/whitewolf.api.js",
       "/assets/whitewolf-modules.js",
       "/assets/whitewolf-ui.js",
       "/assets/whitewolf.fonts.js",
