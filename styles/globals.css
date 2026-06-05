@@ -297,6 +297,20 @@ html, body {
   background-color: #0d0d0d;
 }
 
+/* Services Overview tag — 20px */
+.service-tag {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+}
+
+/* Services description paragraph — 24px */
+.service-tag-description,
+.service-tag-description p {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  text-transform: uppercase;
+}
+
 /* Service item title */
 .content-title {
   color: #ffffff;
