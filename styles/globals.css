@@ -331,7 +331,7 @@ html, body {
 /* ── About title tag */
 .about-title {
   color: rgba(255,255,255,0.08);
-  font-size: clamp(4rem, 10vw, 10rem);
+  font-size: clamp(2.4rem, 6vw, 6rem);
   font-family: 'LucidaBright', Georgia, serif !important;
   font-weight: 600;
   line-height: 0.9;
@@ -445,7 +445,7 @@ html, body {
 
 .cta-marquee-text {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.7rem);
   font-weight: 600;
   color: #0d0d0d;
   letter-spacing: -0.02em;
@@ -455,7 +455,7 @@ html, body {
 }
 
 .cta-marquee-sep {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.2rem, 2.4vw, 2.1rem);
   color: #0d0d0d;
   opacity: 0.6;
   font-weight: 300;
@@ -463,8 +463,8 @@ html, body {
 }
 
 .cta-marquee-star {
-  width: clamp(28px, 3.5vw, 48px);
-  height: clamp(28px, 3.5vw, 48px);
+  width: clamp(16.8px, 2.1vw, 28.8px);
+  height: clamp(16.8px, 2.1vw, 28.8px);
   flex-shrink: 0;
   filter: brightness(0);
   opacity: 0.7;
@@ -1070,7 +1070,7 @@ html, body {
 
 .footer-bottom-text {
   font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif;
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(1.5rem, 4.8vw, 3rem);
   color: rgba(255, 255, 255, 0.08);
   font-weight: 700;
   margin: 0;
@@ -1106,7 +1106,7 @@ html, body {
   }
 
   .footer-bottom-text {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(1.2rem, 3.6vw, 2.1rem);
   }
 }
 
@@ -1128,7 +1128,7 @@ html, body {
   }
 
   .footer-bottom-text {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(0.9rem, 2.4vw, 1.5rem);
   }
 }
 
@@ -1162,7 +1162,7 @@ html, body {
 
 .ww-page-title {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(1.5rem, 3.6vw, 3.3rem);
   color: #fff;
   line-height: 1.0;
   font-weight: 600;
@@ -1212,7 +1212,7 @@ html, body {
 }
 .ww-service-card:hover { background: rgba(106,170,199,0.06); }
 .ww-service-card-num { font-family:'LucidaBright',serif; font-size:0.65rem; color:#6AAAC7; letter-spacing:0.15em; opacity:0.6; }
-.ww-service-card-title { font-family:'LucidaBright',serif !important; font-size:clamp(1.2rem,2vw,1.6rem); color:#fff; font-weight:600; margin:0; }
+.ww-service-card-title { font-family:'LucidaBright',serif !important; font-size:clamp(0.72rem, 1.2vw, 0.96rem); color:#fff; font-weight:600; margin:0; }
 .ww-service-card-desc { font-family:'Karla',sans-serif !important; font-size:0.9rem; color:rgba(255,255,255,0.5); line-height:1.7; margin:0; flex:1; }
 .ww-service-card-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.3rem; }
 .ww-service-card-list li { font-family:'Karla',sans-serif; font-size:0.82rem; color:rgba(255,255,255,0.35); padding-left:1rem; position:relative; }
@@ -1231,7 +1231,7 @@ html, body {
 }
 .ww-process-row:hover { background: rgba(106,170,199,0.05); }
 .ww-process-row-num { font-family:'LucidaBright',serif; font-size:0.65rem; color:#6AAAC7; letter-spacing:0.15em; opacity:0.6; min-width:2.5rem; padding-top:4px; }
-.ww-process-row-title { font-family:'LucidaBright',serif !important; font-size:clamp(1.2rem,2vw,1.5rem); color:#fff; font-weight:600; margin:0 0 0.4rem; }
+.ww-process-row-title { font-family:'LucidaBright',serif !important; font-size:clamp(0.72rem, 1.2vw, 0.9rem); color:#fff; font-weight:600; margin:0 0 0.4rem; }
 .ww-process-row-desc { font-family:'Karla',sans-serif !important; font-size:0.92rem; color:rgba(255,255,255,0.5); line-height:1.7; margin:0; }
 .ww-process-row-bar { position:absolute; left:0; top:0; width:2px; height:0; background:linear-gradient(180deg,#6AAAC7,#BF6EB6); transition:height 0.4s; }
 .ww-process-row:hover .ww-process-row-bar { height:100%; }
@@ -1313,7 +1313,7 @@ html, body {
 
 .ww-cs-card-title {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(0.84rem, 1.5vw, 1.2rem);
   color: #fff;
   font-weight: 600;
   margin: 0.75rem 0 0.5rem;
@@ -1383,7 +1383,7 @@ html, body {
 
 .ww-proj-title {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(1.8rem, 4.8vw, 4.2rem);
   color: #fff;
   font-weight: 600;
   line-height: 0.95;
@@ -1504,7 +1504,7 @@ html, body {
 
 .ww-proj-section-heading {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(1.08rem, 2.1vw, 1.8rem);
   color: #fff;
   font-weight: 600;
   margin: 1rem 0 1.25rem;
@@ -1571,7 +1571,7 @@ html, body {
 
 .ww-proj-result-stat {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
   font-weight: 600;
   line-height: 1;
 }
@@ -1629,7 +1629,7 @@ html, body {
 
 .ww-proj-next-title {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.5rem);
   color: #fff;
   font-weight: 600;
   margin: 0;
@@ -1651,7 +1651,7 @@ html, body {
 
 @media (max-width: 479px) {
   .ww-proj-meta { grid-template-columns: repeat(2, 1fr); }
-  .ww-proj-title { font-size: clamp(2.2rem, 10vw, 4rem); }
+  .ww-proj-title { font-size: clamp(1.32rem, 6vw, 2.4rem); }
 }
 
 /* ── Selection color ────────────────────────────────────────── */
