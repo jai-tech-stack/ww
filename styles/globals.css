@@ -96,8 +96,9 @@ html, body {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: none !important;
-  position: relative !important;
-  z-index: 9999 !important;
+  position: absolute !important;
+  inset: 0% 0% auto !important;
+  z-index: 111111 !important;
 }
 
 .navbar-main {
