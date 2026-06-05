@@ -27,6 +27,21 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     const afterAllLoaded = () => {
       try { gsap.registerPlugin(SplitText, ScrollTrigger); } catch (e) {}
+
+      // Footer marquee animation — same as original HTML
+      try {
+        const wrappers = document.querySelectorAll('.footer-bottom-text-wrapper');
+        wrappers.forEach((el, i) => {
+          const dir = i % 2 === 0 ? '-' : '+';
+          gsap.to(el, {
+            x: dir + '33.333%',
+            duration: 12,
+            ease: 'none',
+            repeat: -1,
+          });
+        });
+      } catch (e) {}
+
       try {
         const lenis = new Lenis({
           duration: 1.8,

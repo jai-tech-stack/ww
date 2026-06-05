@@ -72,17 +72,17 @@ export default function SiteFooter() {
     </section>
     <div class="footer-bottom-marquee-wrapper">
       <div class="footer-bottom-marquee section">
-        <div class="footer-bottom-text-wrapper">
+        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
         </div>
-        <div class="footer-bottom-text-wrapper">
+        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
         </div>
-        <div class="footer-bottom-text-wrapper">
+        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
           <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
