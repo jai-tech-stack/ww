@@ -71,21 +71,24 @@ export default function SiteFooter() {
       </div>
     </section>
     <div class="footer-bottom-marquee-wrapper">
-      <div class="footer-bottom-marquee section">
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-        </div>
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-        </div>
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+      <div class="footer-bottom-marquee section" style="overflow:hidden;">
+        <div class="footer-marquee-track" style="display:flex;width:max-content;">
+          <div class="footer-bottom-text-wrapper">
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+          </div>
+          <div class="footer-bottom-text-wrapper" aria-hidden="true">
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+          </div>
         </div>
       </div>
     </div>

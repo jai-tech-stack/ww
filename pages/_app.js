@@ -28,12 +28,12 @@ export default function App({ Component, pageProps }) {
     const afterAllLoaded = () => {
       try { gsap.registerPlugin(SplitText, ScrollTrigger); } catch (e) {}
 
-      // Footer marquee animation — all wrappers scroll left together
+      // Footer marquee — animate only the inner track, background stays fixed
       try {
-        const marquee = document.querySelector('.footer-bottom-marquee');
-        if (marquee) {
-          gsap.to(marquee, {
-            xPercent: -33.333,
+        const track = document.querySelector('.footer-marquee-track');
+        if (track) {
+          gsap.to(track, {
+            xPercent: -50,
             duration: 15,
             ease: 'none',
             repeat: -1,
