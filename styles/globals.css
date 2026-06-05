@@ -394,12 +394,12 @@ html, body {
   color: #ffffff !important;
 }
 
-/* Services description paragraph — 24px */
+/* Services description paragraph — 24px, sentence case */
 .service-tag-description,
 .service-tag-description p {
   font-size: 24px !important;
   line-height: 1.5 !important;
-  text-transform: uppercase;
+  text-transform: none !important;
 }
 
 /* Service item title */
@@ -444,13 +444,31 @@ html, body {
   line-height: 1.1 !important;
 }
 
-/* Section description paragraphs */
+/* Section description paragraphs — sentence case */
 .para-1 {
   color: rgba(255,255,255,0.6);
+  text-transform: none !important;
 }
 
 .para-2 {
   color: rgba(255,255,255,0.55);
+  text-transform: none !important;
+}
+
+/* All paragraph text — sentence case */
+.medium-content-text,
+.medium-content-text p,
+.hover-content-para,
+.hover-content-para p,
+.sign-up-para,
+.footer-info-text,
+.work-content-block p,
+.service-tag-description,
+.service-tag-description p,
+.ww-proj-overview-text,
+.ww-proj-section-body,
+.ww-proj-tagline {
+  text-transform: none !important;
 }
 
 /* ── About title — heading size matching sub-heading */
