@@ -83,20 +83,20 @@ export default function SiteFooter() {
     </section>
     <div class="footer-bottom-marquee-wrapper">
       <div class="footer-bottom-marquee section">
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
+        <div class="footer-bottom-text-wrapper">
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
         </div>
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
+        <div class="footer-bottom-text-wrapper">
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
         </div>
-        <div class="footer-bottom-text-wrapper" style="transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
-          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" class="footer-bottom-text" style="height:70px;width:auto;display:inline-block;vertical-align:middle;" alt="White Wolf"><h1 class="footer-bottom-text">-</h1></div>
+        <div class="footer-bottom-text-wrapper">
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
+          <div class="bottom-big-text"><img src="/assets/slide-bottom-text.svg" loading="lazy" alt="White Wolf" style="height:60px;width:auto;filter:brightness(0);"><h1 class="footer-bottom-text">-</h1></div>
         </div>
       </div>
     </div>

@@ -654,63 +654,13 @@ html, body {
   color: rgba(255,255,255,0.5);
 }
 
-/* Footer menu items — visible by default (GSAP animates them in) */
+/* ── Footer ─────────────────────────────────────────────────── */
+/* Force footer items visible — GSAP reveals them on scroll */
 .footer-menu-link,
 .footer-section-id-link,
 .sign-up-para,
 .footer-form {
   opacity: 1 !important;
-}
-
-/* ── Footer ─────────────────────────────────────────────────── */
-.footer-section {
-  display: flex;
-  overflow: clip;
-  width: 100%;
-  flex-flow: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.footer-section,
-.section.footer {
-  background-color: #0d0c18;
-  border-top: 1px solid rgba(106,170,199,0.12);
-}
-
-/* Footer social links hover */
-.footer-menu-link:hover .footer-menu-iteam {
-  color: #6AAAC7 !important;
-}
-
-.footer-menu-iteam {
-  color: rgba(255,255,255,0.5);
-  transition: color 0.2s;
-}
-
-.footer-menu-iteam.hover:hover {
-  color: #6AAAC7 !important;
-}
-
-/* Footer nav link hover */
-.footer-section-id-link:hover .footer-menu-iteam {
-  color: #BF6EB6 !important;
-}
-
-/* Footer arrow icons — blue tint */
-.footer-menu-arrow {
-  filter: brightness(0) saturate(100%) invert(67%) sepia(29%) saturate(500%) hue-rotate(163deg) brightness(95%) contrast(88%);
-}
-
-/* Footer sign-up text */
-.sign-up-para {
-  color: rgba(255,255,255,0.45);
-}
-
-/* Footer bottom marquee text (slide-bottom-text.svg) */
-.footer-bottom-section {
-  border-top: 1px solid rgba(106,170,199,0.08);
-  opacity: 0.15;
 }
 
 /* ── Scroll line decorations in hero ────────────────────────── */
@@ -1097,209 +1047,50 @@ html, body {
 .ww-page { min-height: 100vh; background: #0d0d0d; display: flex; flex-direction: column; overflow: hidden; }
 .ww-main { flex: 1; overflow-y: auto; }
 
-/* ── Webflow Footer ──────────────────────────────────────────── */
+/* ── Footer — exact original CSS ────────────────────────────── */
 .footer-section {
-  background: #0d0d0d;
-  border-top: 1px solid rgba(106,170,199,0.1);
+  display: flex;
+  overflow: clip;
+  width: 100%;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #0d0c18;
 }
 
 .section.footer {
-  background: #0d0d0d;
-  padding: 5rem 0;
-  border-bottom: 1px solid rgba(106,170,199,0.1);
+  background-color: #0d0c18;
 }
 
-.footer-top-content {
-  width: 100%;
-}
-
-.footer-main-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem;
-}
-
-.footer-menu-block {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.footer-menu-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  padding-bottom: 8px;
-  border-bottom: 1px solid transparent;
-}
-
-.footer-menu-link:hover {
-  border-bottom-color: rgba(106,170,199,0.3);
-}
-
-.footer-menu-iteam {
-  font-family: 'Karla', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0;
-  transition: color 0.2s;
-  text-transform: capitalize;
-}
-
-.footer-menu-link:hover .footer-menu-iteam {
-  color: #6AAAC7;
-}
-
-.footer-hover-icon-block {
-  display: flex;
-  gap: 8px;
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
-
-.footer-menu-arrow {
-  width: 20px;
-  height: 20px;
-  color: rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s ease, color 0.2s;
-  position: absolute;
-  stroke-width: 2;
-}
-
-.footer-menu-arrow._1 {
-  transform: translate3d(0%, 0%, 0px);
-}
-
-.footer-menu-arrow._2 {
-  transform: translate3d(100%, 0%, 0px);
-  opacity: 0;
-}
-
-.footer-menu-link:hover .footer-menu-arrow._1 {
-  transform: translate3d(-100%, 0%, 0px);
-  opacity: 0;
-}
-
-.footer-menu-link:hover .footer-menu-arrow._2 {
-  transform: translate3d(0%, 0%, 0px);
-  opacity: 1;
-}
-
-.footer-menu-link:hover .footer-menu-arrow {
-  color: #6AAAC7;
-}
-
-.footer-section-id-link {
-  text-decoration: none;
-  padding-bottom: 8px;
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.footer-section-id-link:hover {
-  border-bottom-color: rgba(106,170,199,0.3);
-}
-
-.footer-section-id-link:hover .footer-menu-iteam {
-  color: #6AAAC7;
-}
-
-/* Footer Marquee */
+/* Marquee wrapper — sticky at bottom (scroll reveal effect) */
 .footer-bottom-marquee-wrapper {
-  background: #0d0d0d;
-  padding: 4rem 0;
-  overflow: hidden;
-  border-top: 1px solid rgba(106,170,199,0.1);
+  z-index: 11;
+  position: sticky;
+  bottom: 0;
 }
 
+/* Marquee strip — blue background */
 .footer-bottom-marquee {
-  width: 100%;
-  overflow: hidden;
+  gap: 34px;
+  background-color: #6AAAC7;
+  justify-content: center;
+  align-items: center;
   display: flex;
-  gap: 2rem;
 }
 
+/* Marquee text rows */
 .footer-bottom-text-wrapper {
+  gap: 34px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  gap: 2rem;
-  align-items: center;
-  white-space: nowrap;
-  animation: marqueeScroll 25s linear infinite;
 }
 
-.bottom-big-text {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  flex-shrink: 0;
-}
-
+/* White Wolf SVG in marquee */
 .footer-bottom-text {
-  font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif;
-  font-size: clamp(1.5rem, 4.8vw, 3rem);
-  color: rgba(255, 255, 255, 0.08);
-  font-weight: 700;
+  color: #0d0d0d;
   margin: 0;
-  letter-spacing: -0.02em;
   line-height: 1;
-}
-
-@keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
-}
-
-/* Footer Responsive */
-@media (max-width: 991px) {
-  .footer-main-wrapper {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .section.footer {
-    padding: 3rem 0;
-  }
-
-  .footer-main-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer-bottom-marquee-wrapper {
-    padding: 2.5rem 0;
-  }
-
-  .footer-bottom-text {
-    font-size: clamp(1.2rem, 3.6vw, 2.1rem);
-  }
-}
-
-@media (max-width: 479px) {
-  .section.footer {
-    padding: 2rem 0;
-  }
-
-  .footer-main-wrapper {
-    gap: 1.5rem;
-  }
-
-  .footer-menu-block {
-    gap: 1rem;
-  }
-
-  .footer-bottom-marquee-wrapper {
-    padding: 2rem 0;
-  }
-
-  .footer-bottom-text {
-    font-size: clamp(0.9rem, 2.4vw, 1.5rem);
-  }
 }
 
 /* ── Inner page hero ─────────────────────────────────────────── */
