@@ -285,11 +285,70 @@ html, body {
 
 /* ── CTA section ─────────────────────────────────────────────── */
 .section.cta {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1232 50%, #0d0d0d 100%);
+  background: #0d0d0d;
   border-top: 1px solid rgba(106,170,199,0.15);
 }
 
-/* CTA top scrolling text */
+/* CTA marquee rows */
+.cta-top-loading-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.cta-marquee-row {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cta-marquee-row--blue  { background: #6AAAC7; }
+.cta-marquee-row--purple { background: #BF6EB6; }
+
+.cta-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: cta-scroll 18s linear infinite;
+  will-change: transform;
+}
+
+.cta-marquee-row--purple .cta-marquee-track {
+  animation-direction: reverse;
+}
+
+@keyframes cta-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.cta-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.cta-marquee-text {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  color: #0d0d0d;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.cta-marquee-sep {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #0d0d0d;
+  opacity: 0.6;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* CTA top scrolling text (legacy) */
 .top-loading-title {
   color: rgba(255,255,255,0.08) !important;
   -webkit-text-stroke: 1px rgba(106,170,199,0.2);
