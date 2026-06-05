@@ -3,7 +3,7 @@ export default function AIIntegratedServices() {
     <>
       <section className="ww-page-hero">
         <div className="ww-page-hero-inner">
-          <p className="ww-page-tag">Service — AI Integrated Services</p>
+          <p className="ww-page-tag">Service — AI Services</p>
           <h1 className="ww-page-title">Intelligence Embedded in Everything</h1>
           <p className="ww-page-subtitle">
             We help businesses integrate AI into products, workflows, customer experiences, and operations.
@@ -12,7 +12,7 @@ export default function AIIntegratedServices() {
       </section>
       <section className="ww-section">
         <div className="ww-container">
-          <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add AI Integrated Services content here —</p>
+          <p style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Karla',sans-serif" }}>— Add AI Services content here —</p>
         </div>
       </section>
     </>
@@ -22,7 +22,7 @@ export default function AIIntegratedServices() {
 export async function getStaticProps() {
   return {
     props: {
-      title: "AI Integrated Services",
+      title: "AI Services",
       description: "White Wolf helps businesses integrate AI into products, workflows, customer experiences, and operations.",
     },
   };

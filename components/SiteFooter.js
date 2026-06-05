@@ -49,7 +49,7 @@ export default function SiteFooter() {
                 <a href="/services/branding" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Branding</h6></a>
                 <a href="/services/ui-ux-design" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">UI/UX Design</h6></a>
                 <a href="/services/development" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Development</h6></a>
-                <a href="/services/ai-integrated-services" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">AI Integrated Services</h6></a>
+                <a href="/services/ai-integrated-services" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">AI Services</h6></a>
               </div>
             </div>
           </div>

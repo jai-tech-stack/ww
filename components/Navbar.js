@@ -6,7 +6,7 @@ const SERVICES = [
   { label: "Branding",               href: "/services/branding" },
   { label: "UI/UX Design",           href: "/services/ui-ux-design" },
   { label: "Development",            href: "/services/development" },
-  { label: "AI Integrated Services", href: "/services/ai-integrated-services" },
+  { label: "AI Services", href: "/services/ai-integrated-services" },
 ];
 
 const NAV_LINKS = [

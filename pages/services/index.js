@@ -25,7 +25,7 @@ const SERVICES = [
   {
     href: "/services/ai-integrated-services",
     tag: "04",
-    title: "AI Integrated Services",
+    title: "AI Services",
     desc: "We help businesses integrate AI into products, workflows, customer experiences, and operations.",
     items: ["AI Workflow Automation", "AI Chatbot Integration", "AI-Powered UX", "Data-Driven Intelligence"],
   },
@@ -71,7 +71,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: "Services",
-      description: "White Wolf offers Branding, UI/UX Design, Development, and AI Integrated Services.",
+      description: "White Wolf offers Branding, UI/UX Design, Development, and AI Services.",
     },
   };
 }

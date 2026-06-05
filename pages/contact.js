@@ -54,7 +54,7 @@ export default function Contact() {
                     <label className="ww-form-label">Project Type</label>
                     <select className="ww-form-input ww-form-select" name="projectType" value={form.projectType} onChange={handleChange}>
                       <option value="" disabled>Select service</option>
-                      <option>Branding</option><option>UI/UX Design</option><option>Development</option><option>AI Integrated Services</option><option>Full Service</option>
+                      <option>Branding</option><option>UI/UX Design</option><option>Development</option><option>AI Services</option><option>Full Service</option>
                     </select>
                   </div>
                   <div className="ww-form-group">
