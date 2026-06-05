@@ -1,0 +1,10 @@
+export default function NavbarWebflow() {
+  const navHtml = `<div data-w-id="aa4ac332-ca09-5398-f3fa-8d31dcb47619" data-animation="default" data-collapse="medium" data-duration="500" data-easing="ease-in" data-easing2="ease-in" role="banner" class="navbar w-nav" style="opacity: 1;"><div class="navbar-main"><div class="container w-container"><div class="navbar-content-flex"><div class="brand-logo-block"><a href="/" class="brand-logo-link w-nav-brand" aria-label="home"><img src="/assets/white-wolf-logo.svg" loading="lazy" alt="" class="brand-logo"></a></div><nav role="navigation" class="nav-menu w-nav-menu"><div class="nav-menu-flex-down"><a href="/" class="nav-menu-link w-inline-block"><div class="nav-menu-dot" style="opacity: 0;"></div><div class="nav-text">Home</div></a><a href="/about" class="nav-menu-link w-inline-block"><div class="nav-menu-dot" style="opacity: 0;"></div><div class="nav-text">About</div></a><a href="/services" class="nav-menu-link w-inline-block"><div class="nav-menu-dot" style="opacity: 0;"></div><div class="nav-text">Service</div></a><a href="/case-studies" class="nav-menu-link w-inline-block"><div class="nav-menu-dot" style="opacity: 0;"></div><div class="nav-text">Project</div></a><div class="button-wrap nav-tablet"><a href="/contact" class="nav-button w-inline-block"><div class="nav-button-dot"></div><div class="nav-button-text-wrap"><div class="nav-button-text">Contact</div><div class="nav-button-text">Contact</div></div></a></div></div></nav><div class="navbar-button-humber-wrapper"><div class="button-wrap nav"><a href="/contact" class="nav-button w-inline-block"><div class="nav-button-dot"></div><div class="nav-button-text-wrap"><div class="nav-button-text">Contact</div><div class="nav-button-text">Contact</div></div></a></div></div></div></div></div><div class="w-nav-overlay" id="w-nav-overlay-0"></div></div>`;
+
+  return (
+    <div
+      className="ww-site-navbar"
+      dangerouslySetInnerHTML={{ __html: navHtml }}
+    />
+  );
+}
