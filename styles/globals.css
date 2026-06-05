@@ -128,10 +128,10 @@ html, body {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  overflow: visible;
+  overflow: hidden;
   display: block;
   padding: 0 !important;
-  margin-bottom: 6rem !important;
+  margin-bottom: 0 !important;
 }
 
 .fixed-banner {
@@ -140,7 +140,7 @@ html, body {
   width: 100%;
   height: 100vh;
   min-height: 600px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Slider fills full hero */
@@ -277,42 +277,43 @@ html, body {
 /* ── About section ──────────────────────────────────────────── */
 .section.about {
   background-color: #0d0d0d;
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
 }
 
-/* About layout — left title + right content side by side */
+/* About layout — matches original Webflow structure */
 .about-wrapper {
-  display: grid !important;
-  grid-template-columns: 1fr 1.8fr !important;
-  align-items: center !important;
-  gap: 4rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 8rem !important;
+  margin-bottom: 5rem !important;
 }
 
 .about-left-box {
-  display: flex !important;
-  align-items: center !important;
+  width: 100% !important;
+  max-width: 120px !important;
+  flex-shrink: 0 !important;
 }
 
 .about-right-box {
-  display: flex !important;
-  align-items: center !important;
+  flex: 1 !important;
 }
 
 .medium-content-text,
 .medium-content-text p {
-  color: rgba(255,255,255,0.85);
-  font-size: clamp(1.1rem, 1.8vw, 1.6rem) !important;
-  line-height: 1.7 !important;
+  color: rgba(255,255,255,0.85) !important;
+  font-size: clamp(1.2rem, 2vw, 1.8rem) !important;
+  line-height: 1.65 !important;
   text-transform: none !important;
-  font-family: 'Karla', sans-serif !important;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-weight: 600 !important;
 }
 
 @media (max-width: 768px) {
   .about-wrapper {
-    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
     gap: 2rem !important;
   }
+  .about-left-box { max-width: 100% !important; }
 }
 
 /* ── Client logos ───────────────────────────────────────────── */
@@ -377,16 +378,18 @@ html, body {
   color: rgba(255,255,255,0.55);
 }
 
-/* ── About title tag */
+/* ── About title tag — small uppercase label on left */
 .about-title {
-  color: rgba(255,255,255,0.08);
-  font-size: clamp(2.4rem, 6vw, 6rem);
-  font-family: 'LucidaBright', Georgia, serif !important;
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  text-transform: none;
-  -webkit-text-stroke: 1px rgba(106,170,199,0.25);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem !important;
+  font-family: 'Karla', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
 
 /* ── Project / Portfolio section ────────────────────────────── */
