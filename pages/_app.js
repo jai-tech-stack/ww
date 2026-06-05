@@ -2,7 +2,6 @@ import Head from "next/head";
 import Header from "../components/Header";
 import SiteNavbar from "../components/SiteNavbar";
 import SiteFooter from "../components/SiteFooter";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 import "@/styles/globals.css";
 
@@ -21,8 +20,7 @@ const SCRIPTS = [
 export default function App({ Component, pageProps }) {
   const title = pageProps.title;
   const description = pageProps.description;
-  const router = useRouter();
-  const isHomepage = router.pathname === "/";
+  const isHomepage = pageProps.isHomepage === true;
 
   useEffect(() => {
     const afterAllLoaded = () => {

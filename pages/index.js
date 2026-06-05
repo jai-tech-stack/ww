@@ -13,8 +13,9 @@ export async function getStaticProps() {
     props: {
       bodyHtml,
       inlineStyles,
+      isHomepage: true,
       title: "White Wolf — Digital Transformation Agency",
-      description: "Branding, UI/UX Design, Web Development, AI-Integrated Solutions",
+      description: "Branding, UI/UX Design, Web Development, AI Solutions",
     },
   };
 }
