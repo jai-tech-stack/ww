@@ -74,7 +74,7 @@ export default function SiteFooter() {
             </div>
             <div class="overflow-hidden">
               <div class="footer-info-right-wrap">
-                <div class="footer-info-text">Designed by <a href="https://origamicreative.com/" target="_blank" class="footer-info-text-span">Origami Creative</a></div>
+                <div class="footer-info-text">© 2025 White Wolf Digital Agency</div>
               </div>
             </div>
           </div>
