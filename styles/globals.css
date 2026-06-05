@@ -123,20 +123,130 @@ html, body {
 }
 
 /* ── Hero section ───────────────────────────────────────────── */
-.section-banner,
-.fixed-banner {
+.section-banner {
   background-color: #0d0d0d;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hero heading text */
+.fixed-banner {
+  background-color: #0d0d0d;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+}
+
+/* Slider fills full hero */
+.hero-slider-v1,
+.hero-v1-mask {
+  position: absolute !important;
+  top: 0; left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-v1-slide-item,
+.hero-v1-slide-item-wrap {
+  height: 100% !important;
+}
+
+.slider-image-wrap {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  position: absolute !important;
+  top: 0; left: 0;
+}
+
+/* Gradient overlay so text is readable */
+.fixed-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,13,13,0.3) 0%,
+    rgba(13,13,13,0.15) 40%,
+    rgba(13,13,13,0.6) 75%,
+    rgba(13,13,13,0.95) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Banner info — pinned to bottom of hero */
+.banner-info {
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-bottom: 2rem;
+}
+
+/* Hero content layout */
+.hero-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+
+/* Hero bottom content — big text + side slider */
+.hero-bottom-content {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 1.5rem !important;
+  margin-top: 1.5rem !important;
+}
+
+.hero-big-text-wrapper {
+  flex: 1;
+}
+
+/* Big "White Wolf" SVG text at bottom */
 .hero-big-text {
   color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Side slider (v2) — image thumbnail */
+.hero-slider-v2-wrap {
+  width: 200px !important;
+  flex-shrink: 0 !important;
+}
+
+.hero-v2-mask,
+.hero-slider-v2 {
+  height: 120px !important;
+}
+
+.slider-img-v2 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 /* Hero description text */
 .hero-text {
   color: rgba(255,255,255,0.85);
 }
+
+/* Hero text wrapper — left heading + right services */
+.hero-text-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.hero-left-text { flex: 1; }
+.hero-right-text { flex-shrink: 0; text-align: right; }
 
 /* Hero right side service tags — use blue accent */
 .hero-right-text .hero-text {
