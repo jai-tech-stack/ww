@@ -98,6 +98,19 @@ html, body {
   inset: 0% 0% auto;
 }
 
+/* Force all navbar elements visible — Webflow scripts set opacity:0 as initial state */
+.navbar,
+.navbar *,
+.nav-menu-link,
+.nav-text,
+.brand-logo,
+.nav-button,
+.nav-button-text,
+.navbar-button-humber-wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 
 .navbar-main {
   border-bottom: 1px solid var(--border-color--border-1);
