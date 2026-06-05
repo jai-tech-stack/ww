@@ -76,7 +76,7 @@ export default function App({ Component, pageProps }) {
     };
 
     loadNext(0);
-  }, [router.pathname]);
+  }, []);
 
   return (
     <>
