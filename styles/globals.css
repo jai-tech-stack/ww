@@ -1151,7 +1151,20 @@ html, body {
 /* ── Project Single Page ─────────────────────────────────────── */
 
 /* Hero */
-.ww-proj-hero { background: #0d0d0d; padding-bottom: 0; }
+.ww-proj-hero { background: #0d0d0d; padding-bottom: 0; overflow: hidden; }
+
+/* Project hero tag line banner above title */
+.ww-proj-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ww-proj-hero-eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: rgba(106,170,199,0.5);
+}
 
 .ww-proj-breadcrumb {
   display: flex;

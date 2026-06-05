@@ -23,8 +23,11 @@ export default function ProjectPage({ project }) {
 
           {/* Title area */}
           <div className="ww-proj-hero-text">
-            <div className="ww-proj-category-badge" style={{ background: `${project.color}18`, borderColor: `${project.color}40`, color: project.color }}>
-              {project.category}
+            <div className="ww-proj-hero-eyebrow">
+              <div className="ww-proj-hero-eyebrow-line" />
+              <div className="ww-proj-category-badge" style={{ background: `${project.color}18`, borderColor: `${project.color}40`, color: project.color }}>
+                {project.category}
+              </div>
             </div>
             <h1 className="ww-proj-title">{project.title}</h1>
             <p className="ww-proj-tagline">{project.tagline}</p>
@@ -33,10 +36,10 @@ export default function ProjectPage({ project }) {
           {/* Metadata bar */}
           <div className="ww-proj-meta">
             {[
-              { label: "Client",   value: project.client },
-              { label: "Year",     value: project.year },
-              { label: "Duration", value: project.duration },
+              { label: "Date",     value: project.year },
               { label: "Category", value: project.category },
+              { label: "Duration", value: project.duration },
+              { label: "Budget",   value: project.budget || "On Request" },
             ].map((m) => (
               <div key={m.label} className="ww-proj-meta-item">
                 <span className="ww-proj-meta-label">{m.label}</span>
