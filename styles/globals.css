@@ -181,57 +181,49 @@ html, body {
   z-index: 1;
 }
 
-/* Banner info — pinned to bottom of hero */
+/* Banner info — full height, flex column: center text, bottom SVG */
 .banner-info {
   position: absolute !important;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
-  padding-bottom: 0;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
-/* Big White Wolf SVG text — must be visible */
+/* Hero content layout — text centered */
+.hero-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  flex: 1 !important;
+}
+
+/* Hero bottom content — White Wolf SVG + right thumb */
+.hero-bottom-content {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 1.5rem !important;
+  margin-top: 0 !important;
+}
+
+/* White Wolf SVG */
 .hero-big-text-wrapper {
   flex: 1;
   overflow: visible !important;
 }
 
 .hero-big-text {
-  color: #ffffff;
   width: 100% !important;
   height: auto !important;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  max-width: 100%;
-}
-
-/* Hero content layout */
-.hero-content-wrapper {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-end !important;
-}
-
-/* Hero bottom content — big text + side slider */
-.hero-bottom-content {
-  display: flex !important;
-  align-items: flex-end !important;
-  gap: 1.5rem !important;
-  margin-top: 1.5rem !important;
-}
-
-.hero-big-text-wrapper {
-  flex: 1;
-}
-
-/* Big "White Wolf" SVG text at bottom */
-.hero-big-text {
-  color: #ffffff;
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* Side slider (v2) — image thumbnail */
@@ -277,6 +269,7 @@ html, body {
 /* ── About section ──────────────────────────────────────────── */
 .section.about {
   background-color: #0d0d0d;
+  padding-top: 120px !important;
 }
 
 /* About layout — matches original Webflow structure */
@@ -289,8 +282,8 @@ html, body {
 }
 
 .about-left-box {
-  width: 100% !important;
-  max-width: 120px !important;
+  width: 300px !important;
+  max-width: 300px !important;
   flex-shrink: 0 !important;
 }
 
@@ -378,18 +371,16 @@ html, body {
   color: rgba(255,255,255,0.55);
 }
 
-/* ── About title tag — small uppercase label on left */
+/* ── About title — heading size matching sub-heading */
 .about-title {
-  color: rgba(255,255,255,0.4);
-  font-size: 0.75rem !important;
-  font-family: 'Karla', sans-serif !important;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  line-height: 1.4;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
+  color: rgba(255,255,255,0.9);
+  font-size: 64px !important;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  writing-mode: normal;
 }
 
 /* ── Project / Portfolio section ────────────────────────────── */
