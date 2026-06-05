@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import SiteNavbar from "../components/SiteNavbar";
+import SiteFooter from "../components/SiteFooter";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }) {
         <main className="ww-main">
           <Component {...pageProps} />
         </main>
+        <SiteFooter />
       </div>
     </>
   );
