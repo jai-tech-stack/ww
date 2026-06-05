@@ -98,12 +98,6 @@ html, body {
   inset: 0% 0% auto;
 }
 
-/* Navbar on inner pages — sits in normal flow, dark bg */
-.ww-site-navbar .navbar {
-  position: relative !important;
-  inset: auto !important;
-  background-color: #0d0d0d !important;
-}
 
 .navbar-main {
   border-bottom: 1px solid var(--border-color--border-1);

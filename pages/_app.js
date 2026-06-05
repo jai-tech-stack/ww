@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import NavbarWebflow from "../components/NavbarWebflow";
+import SiteNavbar from "../components/SiteNavbar";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
 
       <div className="ww-page">
         <Header title={title} description={description} />
-        {!isHomepage && <NavbarWebflow />}
+        {!isHomepage && <SiteNavbar />}
         <main className="ww-main">
           <Component {...pageProps} />
         </main>
