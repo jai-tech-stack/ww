@@ -220,10 +220,14 @@ html, body {
 
 /* ── About title tag */
 .about-title {
-  color: rgba(255,255,255,0.35);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: rgba(255,255,255,0.08);
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  -webkit-text-stroke: 1px rgba(106,170,199,0.25);
 }
 
 /* ── Project / Portfolio section ────────────────────────────── */
