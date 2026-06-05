@@ -28,18 +28,17 @@ export default function App({ Component, pageProps }) {
     const afterAllLoaded = () => {
       try { gsap.registerPlugin(SplitText, ScrollTrigger); } catch (e) {}
 
-      // Footer marquee animation — same as original HTML
+      // Footer marquee animation — all wrappers scroll left together
       try {
-        const wrappers = document.querySelectorAll('.footer-bottom-text-wrapper');
-        wrappers.forEach((el, i) => {
-          const dir = i % 2 === 0 ? '-' : '+';
-          gsap.to(el, {
-            x: dir + '33.333%',
-            duration: 12,
+        const marquee = document.querySelector('.footer-bottom-marquee');
+        if (marquee) {
+          gsap.to(marquee, {
+            xPercent: -33.333,
+            duration: 15,
             ease: 'none',
             repeat: -1,
           });
-        });
+        }
       } catch (e) {}
 
       try {
