@@ -62,21 +62,10 @@ export default function SiteFooter() {
           <div class="footer-bottom-wrap">
             <div class="overflow-hidden">
               <div class="footer-info-left-wrap">
-                <div class="footer-info-text"><span class="span-text-pimary-color">©</span> 2025 White Wolf®.</div>
+                <div class="footer-info-text"><span class="span-text-pimary-color">©</span> 2025 White Wolf.</div>
               </div>
             </div>
-            <div class="overflow-hidden">
-              <div class="footer-info-middle-wrap">
-                <a href="/license" class="utility-page-link w-inline-block"><div class="footer-info-text hover">License</div></a>
-                <a href="/changelog" class="utility-page-link w-inline-block"><div class="footer-info-text hover">Changelog</div></a>
-                <a href="/style-guide" class="utility-page-link w-inline-block"><div class="footer-info-text hover">Style Guide</div></a>
-              </div>
-            </div>
-            <div class="overflow-hidden">
-              <div class="footer-info-right-wrap">
-                <div class="footer-info-text">© 2025 White Wolf Digital Agency</div>
-              </div>
-            </div>
+             
           </div>
         </div>
       </div>
