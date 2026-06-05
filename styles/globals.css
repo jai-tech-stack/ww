@@ -169,19 +169,28 @@ html, body {
 .banner-info {
   flex-flow: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   display: flex;
   position: absolute;
   inset: 0%;
 }
 
+/* Container must fill full banner height */
+.banner-info > .w-layout-blockcontainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-content-wrapper {
   z-index: 1;
-  flex-flow: column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  padding-top: 226px;
-  padding-bottom: 126px;
+  flex: 1;
+  padding-top: 120px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -210,7 +219,7 @@ html, body {
   grid-row-gap: 46px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 332px;
+  margin-top: 0;
   display: flex;
 }
 
