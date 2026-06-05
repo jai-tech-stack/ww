@@ -1,10 +1,14 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import { useRouter } from "next/router";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   const title = pageProps.title;
   const description = pageProps.description;
+  const router = useRouter();
+  const isHomepage = router.pathname === "/";
 
   return (
     <>
@@ -16,6 +20,7 @@ export default function App({ Component, pageProps }) {
 
       <div className="ww-page">
         <Header title={title} description={description} />
+        {!isHomepage && <Navbar />}
         <main className="ww-main">
           <Component {...pageProps} />
         </main>
