@@ -45,17 +45,11 @@ export default function SiteFooter() {
               </div>
             </div>
             <div class="overflow-hidden _3">
-              <div class="sign-up-block">
-                <p class="sign-up-para">Sign up for our newsletter to get latest insights and updates</p>
-                <div class="footer-form-block w-form">
-                  <form class="footer-form" onsubmit="event.preventDefault();this.style.display='none';this.nextElementSibling.style.display='block';">
-                    <input class="footer-text-field w-input" maxlength="256" name="Footer-Email" placeholder="Enter email address" type="email" required>
-                    <input type="submit" class="footer-submit-button w-button" value="Subscribe">
-                  </form>
-                  <div class="success-message w-form-done" style="display:none;">
-                    <div class="success-message-text">Thank you! Your submission has been received!</div>
-                  </div>
-                </div>
+              <div class="footer-menu-block">
+                <a href="/services/branding" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Branding</h6></a>
+                <a href="/services/ui-ux-design" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">UI/UX Design</h6></a>
+                <a href="/services/development" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Development</h6></a>
+                <a href="/services/ai-integrated-services" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">AI Integrated Services</h6></a>
               </div>
             </div>
           </div>
