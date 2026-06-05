@@ -92,23 +92,45 @@ html, body {
 
 /* ── Navbar ─────────────────────────────────────────────────── */
 .navbar {
-  background-color: transparent !important;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: none !important;
-  position: absolute !important;
-  inset: 0% 0% auto !important;
-  z-index: 111111 !important;
+  z-index: 111111;
+  background-color: transparent;
+  position: absolute;
+  inset: 0% 0% auto;
 }
 
 .navbar-main {
-  border-bottom: none !important;
+  border-bottom: 1px solid var(--border-color--border-1);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-/* Nav links hover glow */
+.brand-logo {
+  width: 100%;
+  max-width: 160px;
+}
+
+.navbar-content-flex {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.nav-menu-link {
+  gap: 12px;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 18px;
+  transition: all .4s;
+  display: flex;
+}
+
 .nav-menu-link:hover {
-  background-color: rgba(106,170,199,0.1) !important;
-  color: #6AAAC7 !important;
+  background-color: rgba(106,170,199,0.08);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 /* Contact CTA button — blue accent */
