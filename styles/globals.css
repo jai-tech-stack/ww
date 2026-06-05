@@ -385,10 +385,13 @@ html, body {
   background-color: #0d0d0d;
 }
 
-/* Services Overview tag — 20px */
+/* Services tag — sub-heading size */
 .service-tag {
-  font-size: 20px !important;
-  line-height: 1.5 !important;
+  font-size: 64px !important;
+  line-height: 1.1 !important;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
 }
 
 /* Services description paragraph — 24px */
