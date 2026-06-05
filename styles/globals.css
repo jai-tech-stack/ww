@@ -348,6 +348,14 @@ html, body {
   line-height: 1;
 }
 
+.cta-marquee-star {
+  width: clamp(28px, 3.5vw, 48px);
+  height: clamp(28px, 3.5vw, 48px);
+  flex-shrink: 0;
+  filter: brightness(0);
+  opacity: 0.7;
+}
+
 /* CTA top scrolling text (legacy) */
 .top-loading-title {
   color: rgba(255,255,255,0.08) !important;
