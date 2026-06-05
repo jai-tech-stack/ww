@@ -1086,11 +1086,16 @@ html, body {
   display: flex;
 }
 
-/* White Wolf SVG in marquee */
+/* White Wolf text in marquee */
 .footer-bottom-text {
   color: #0d0d0d;
   margin: 0;
   line-height: 1;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 /* ── Inner page hero ─────────────────────────────────────────── */
