@@ -1100,11 +1100,11 @@ html, body {
   flex-flow: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: #000000;
+  background-color: #0d0d0d;
 }
 
 .section.footer {
-  background-color: #000000;
+  background-color: #0d0d0d;
 }
 
 /* Marquee wrapper — sticky at bottom (scroll reveal effect) */
