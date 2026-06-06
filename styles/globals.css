@@ -717,7 +717,7 @@ html, body {
 /* ── Why White Wolf section ─────────────────────────────────── */
 .section.ww-why {
   padding-top: var(--_spacing---section-padding--small, 90px);
-  padding-bottom: var(--_spacing---section-padding--large, 180px);
+  padding-bottom: 60px;
   background-color: #0d0d0d;
   overflow: hidden;
 }
