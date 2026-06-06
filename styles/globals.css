@@ -583,6 +583,9 @@ html, body {
   border-top: 1px solid rgba(106,170,199,0.15);
   padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+  overflow: visible !important;
 }
 
 /* CTA marquee rows — full width edge to edge */
@@ -1074,8 +1077,8 @@ html, body {
 
 
 /* ── Page wrapper ────────────────────────────────────────────── */
-.ww-page { min-height: 100vh; background: #0d0d0d; display: flex; flex-direction: column; overflow: hidden; }
-.ww-main { flex: 1; overflow-y: auto; }
+.ww-page { min-height: 100vh; background: #0d0d0d; display: flex; flex-direction: column; }
+.ww-main { flex: 1; }
 
 /* ── Footer — exact original CSS ────────────────────────────── */
 .footer-section {
