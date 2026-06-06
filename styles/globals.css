@@ -240,7 +240,7 @@ html, body {
 .hero-bottom-content {
   grid-column-gap: 46px;
   grid-row-gap: 46px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: 0;
   display: flex;
@@ -424,17 +424,17 @@ html, body {
 
 /* Services tag — sub-heading size */
 .service-tag {
-  font-size: 64px !important;
+  font-size: clamp(1.2rem, 2vw, 2.4rem) !important;
   line-height: 1.1 !important;
   font-family: 'LucidaBright', Georgia, serif !important;
   font-weight: 600 !important;
   color: #ffffff !important;
 }
 
-/* Services description paragraph — 24px, sentence case */
+/* Services description paragraph — sentence case */
 .service-tag-description,
 .service-tag-description p {
-  font-size: 24px !important;
+  font-size: clamp(0.85rem, 2vw, 1.4rem) !important;
   line-height: 1.5 !important;
   text-transform: none !important;
 }
@@ -449,9 +449,9 @@ html, body {
   border-bottom: 1px solid rgba(106,170,199,0.15) !important;
 }
 
-/* Service plus icon tint */
+/* Service plus icon tint — purple */
 .plus-icon {
-  filter: brightness(0) saturate(100%) invert(67%) sepia(29%) saturate(500%) hue-rotate(163deg) brightness(95%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(52%) sepia(25%) saturate(800%) hue-rotate(265deg) brightness(95%) contrast(90%);
 }
 
 /* Service sub-item names */
@@ -477,7 +477,7 @@ html, body {
 /* ── Sub-headings (section titles) ──────────────────────────── */
 .sub-heading {
   color: #ffffff;
-  font-size: 64px !important;
+  font-size: clamp(1.2rem, 2vw, 2.4rem) !important;
   line-height: 1.1 !important;
 }
 
@@ -511,7 +511,7 @@ html, body {
 /* ── About title — heading size matching sub-heading */
 .about-title {
   color: rgba(255,255,255,0.9);
-  font-size: 64px !important;
+  font-size: clamp(1.2rem, 2vw, 2.4rem) !important;
   font-family: 'LucidaBright', Georgia, serif !important;
   font-weight: 600;
   line-height: 1.1;
@@ -1093,7 +1093,7 @@ html, body {
   flex-flow: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: #0d0c18;
+  background-color: #000000;
 }
 
 .section.footer {
