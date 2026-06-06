@@ -431,12 +431,13 @@ html, body {
   color: #ffffff !important;
 }
 
-/* Services description paragraph — Karla, sentence case */
+/* Services description paragraph — heading font */
 .service-tag-description,
 .service-tag-description p {
-  font-family: 'Karla', sans-serif !important;
-  font-size: clamp(0.85rem, 2vw, 1.4rem) !important;
-  line-height: 1.5 !important;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem) !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   text-transform: none !important;
 }
 
