@@ -531,15 +531,15 @@ html, body {
   background-color: #0d0d0d;
 }
 
-/* Category badges — blue */
+/* Category badges — purple */
 .category-bg {
-  background-color: rgba(106,170,199,0.12) !important;
-  border: 1px solid rgba(106,170,199,0.3) !important;
+  background-color: rgba(191,110,182,0.12) !important;
+  border: 1px solid rgba(191,110,182,0.3) !important;
   border-radius: 100px;
 }
 
 .category-name {
-  color: #6AAAC7 !important;
+  color: #BF6EB6 !important;
 }
 
 /* Year label */
