@@ -1148,7 +1148,7 @@ html, body {
   border-bottom: 1px solid rgba(106,170,199,0.1);
 }
 
-.ww-page-hero-inner { max-width: 1470px; margin: 0 auto; padding: 0 15px; }
+.ww-page-hero-inner { max-width: 1470px; margin: 0 auto; padding: 70px 15px 0; }
 
 .ww-page-tag {
   font-family: 'Karla', sans-serif;
