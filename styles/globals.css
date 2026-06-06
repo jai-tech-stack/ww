@@ -588,18 +588,24 @@ html, body {
   overflow: visible !important;
 }
 
-/* CTA marquee rows — full width edge to edge */
+/* CTA marquee wrapper — exact original CSS + full viewport width */
 .cta-top-loading-wrapper {
+  gap: 30px;
+  flex-flow: column;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 80px;
+  display: flex;
   overflow: hidden;
-  width: 100%;
 }
 
 .cta-marquee-row {
-  display: flex;
+  gap: 20px;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
   width: 100%;
+  display: flex;
+  overflow: hidden;
 }
 
 .cta-marquee-row--blue  { background: #6AAAC7; }
@@ -1105,7 +1111,7 @@ html, body {
 /* Marquee strip — blue background */
 .footer-bottom-marquee {
   gap: 34px;
-  background-color: #6AAAC7;
+  background-color: #BF6EB6;
   justify-content: center;
   align-items: center;
   display: flex;

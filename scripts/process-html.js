@@ -38,12 +38,12 @@ raw = raw.replace(/<script[^>]*webfont[^>]*>[\s\S]*?<\/script>/gi, "");
 raw = raw.replace(/WebFont\.load\([^)]*\);?/g, "");
 
 // Hero text - fix &nbsp; entities
-raw = raw.replace(/<p class="hero-text">We&nbsp;&nbsp;patner with brands to create digital design that drives conversion and commands attention\.<\/p>/g, '<p class="hero-text" style="font-size:clamp(1rem,1.4vw,1.35rem);font-weight:700;line-height:1.3;letter-spacing:-0.01em;">We Build Brands, Products &amp; AI Solutions That Lead Markets.</p><p class="hero-text" style="font-size:clamp(0.8rem,1vw,1rem);opacity:0.65;margin-top:0.75rem;line-height:1.6;font-weight:400;">White Wolf helps global businesses transform ideas into scalable digital experiences through branding, UI/UX, development, and AI-powered innovation.</p>');
+raw = raw.replace(/<p class="hero-text">We&nbsp;&nbsp;patner with brands to create digital design that drives conversion and commands attention\.<\/p>/g, '<p class="hero-text" style="font-size:clamp(1rem,1.4vw,1.35rem);font-weight:700;line-height:1.3;letter-spacing:-0.01em;">Where Strategy, Design & AI Converge.</p><p class="hero-text" style="font-size:clamp(0.8rem,1vw,1rem);opacity:0.65;margin-top:0.75rem;line-height:1.6;font-weight:400;">White Wolf helps global businesses transform ideas into scalable digital experiences through branding, UI/UX, development, and AI-powered innovation.</p>');
 
 // Hero text - fallback for regular spaces
 raw = raw.replace(
   '<p class="hero-text">We  patner with brands to create digital design that drives conversion and commands attention.</p>',
-  '<p class="hero-text" style="font-size:clamp(1rem,1.4vw,1.35rem);font-weight:700;line-height:1.3;letter-spacing:-0.01em;">We Build Brands, Products &amp; AI Solutions That Lead Markets.</p><p class="hero-text" style="font-size:clamp(0.8rem,1vw,1rem);opacity:0.65;margin-top:0.75rem;line-height:1.6;font-weight:400;">White Wolf helps global businesses transform ideas into scalable digital experiences through branding, UI/UX, development, and AI-powered innovation.</p>'
+  '<p class="hero-text" style="font-size:clamp(1rem,1.4vw,1.35rem);font-weight:700;line-height:1.3;letter-spacing:-0.01em;">Where Strategy, Design & AI Converge.</p><p class="hero-text" style="font-size:clamp(0.8rem,1vw,1rem);opacity:0.65;margin-top:0.75rem;line-height:1.6;font-weight:400;">Creating brands and digital products that accelerate business growth.</p>'
 );
 raw = raw.replace(
   '<p class="hero-text">Brand Identity</p><p class="hero-text">UI/UX Design</p><p class="hero-text">Development</p><p class="hero-text">Product Design</p>',
