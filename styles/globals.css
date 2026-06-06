@@ -585,15 +585,14 @@ html, body {
   padding-right: 0 !important;
   padding-top: 90px !important;
   padding-bottom: 90px !important;
-  overflow: visible !important;
+  overflow: clip;
 }
 
-/* CTA marquee wrapper — exact original CSS + full viewport width */
+/* CTA marquee wrapper — full width (section is now a sibling of section.project, outside the container) */
 .cta-top-loading-wrapper {
   gap: 30px;
   flex-flow: column;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
   margin-bottom: 80px;
   display: flex;
   overflow: hidden;
