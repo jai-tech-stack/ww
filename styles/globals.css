@@ -215,7 +215,7 @@ html, body {
 
 .hero-text-wrapper {
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
 }
 
@@ -346,7 +346,12 @@ html, body {
 }
 
 .hero-left-text { flex: 1; }
-.hero-right-text { flex-shrink: 0; text-align: right; }
+.hero-right-text {
+  flex-shrink: 0;
+  text-align: right;
+  align-self: flex-start !important;
+  font-family: 'Karla', sans-serif !important;
+}
 
 /* Hero right side service tags — use blue accent */
 .hero-right-text .hero-text {
@@ -569,10 +574,15 @@ html, body {
   border-top: 1px solid rgba(106,170,199,0.15);
 }
 
-/* CTA marquee rows */
+/* CTA marquee rows — full width edge to edge */
 .cta-top-loading-wrapper {
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .cta-marquee-row {
@@ -580,6 +590,7 @@ html, body {
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
 }
 
 .cta-marquee-row--blue  { background: #6AAAC7; }
