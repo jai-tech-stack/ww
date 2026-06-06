@@ -26,9 +26,18 @@ h1, h2, h3, h4, h5, h6,
 .content-title,
 .footer-bottom-text,
 .top-loading-title,
-.about-title,
-.hero-text {
+.about-title {
   font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif !important;
+}
+
+/* Hero left text — serif heading */
+.hero-left-text .hero-text {
+  font-family: 'LucidaBright', 'Lucida Bright', Georgia, serif !important;
+}
+
+/* Hero right text — Karla sans-serif */
+.hero-right-text .hero-text {
+  font-family: 'Karla', sans-serif !important;
 }
 
 /* Body / UI text — Karla */
@@ -572,17 +581,14 @@ html, body {
 .section.cta {
   background: #0d0d0d;
   border-top: 1px solid rgba(106,170,199,0.15);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* CTA marquee rows — full width edge to edge */
 .cta-top-loading-wrapper {
   overflow: hidden;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
 }
 
 .cta-marquee-row {
