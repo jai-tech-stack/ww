@@ -468,7 +468,7 @@ html, body {
 
 /* Service sub-item plus dot */
 .service-plus-icon {
-  filter: brightness(0) saturate(100%) invert(67%) sepia(29%) saturate(500%) hue-rotate(163deg) brightness(95%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(52%) sepia(25%) saturate(800%) hue-rotate(265deg) brightness(95%) contrast(90%);
 }
 
 /* Service open state — blue accent */
