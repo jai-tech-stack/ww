@@ -431,12 +431,18 @@ html, body {
   color: #ffffff !important;
 }
 
-/* Services description paragraph — sentence case */
+/* Services description paragraph — Karla, sentence case */
 .service-tag-description,
 .service-tag-description p {
+  font-family: 'Karla', sans-serif !important;
   font-size: clamp(0.85rem, 2vw, 1.4rem) !important;
   line-height: 1.5 !important;
   text-transform: none !important;
+}
+
+/* Hide the dot before "Services" heading */
+.service-tag-wrapper .white-dot {
+  display: none;
 }
 
 /* Service item title */
