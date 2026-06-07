@@ -135,7 +135,7 @@ html, body {
 
 .nav-text,
 .nav-menu-link {
-  color: #BF6EB6 !important;
+  color: #ffffff !important;
 }
 
 .brand-logo {
@@ -195,18 +195,20 @@ html, body {
   stroke: #ffffff !important;
 }
 
-/* Contact CTA button — blue accent */
+/* Contact CTA button — purple */
 .nav-button {
-  border: 1.5px solid #6AAAC7 !important;
-  color: #6AAAC7 !important;
+  background-color: #BF6EB6 !important;
+  border: 1.5px solid #BF6EB6 !important;
+  color: #ffffff !important;
   border-radius: 100px;
   padding: 8px 22px;
   transition: background 0.3s, color 0.3s;
 }
 
 .nav-button:hover {
-  background-color: #6AAAC7 !important;
-  color: #0d0d0d !important;
+  background-color: #a85aa0 !important;
+  border-color: #a85aa0 !important;
+  color: #ffffff !important;
 }
 
 /* ── Hero section ───────────────────────────────────────────── */
