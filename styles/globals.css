@@ -1665,6 +1665,68 @@ html, body {
   .ww-proj-title { font-size: clamp(1.32rem, 6vw, 2.4rem); }
 }
 
+/* ── Mobile responsive fixes ─────────────────────────────────── */
+
+/* Nav — mobile overlay */
+@media (max-width: 991px) {
+  /* Stack nav items vertically with tight spacing, no bullet gaps */
+  .nav-menu-flex-down {
+    flex-direction: column !important;
+    gap: 0 !important;
+    align-items: flex-start !important;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu-link {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    border-radius: 0 !important;
+    padding: 14px 24px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* Hide hover dot — shows as bullet on mobile */
+  .nav-menu-dot {
+    display: none !important;
+  }
+
+  /* Mobile menu background */
+  .w-nav-menu,
+  .w-nav-overlay {
+    background-color: #0d0d0d !important;
+  }
+
+  /* Tablet contact button inside menu */
+  .button-wrap.nav-tablet {
+    display: block !important;
+    padding: 16px 24px;
+    width: 100%;
+  }
+}
+
+/* Hero — hide right service tags on mobile, they overlap the image */
+@media (max-width: 767px) {
+  .hero-right-text {
+    display: none !important;
+  }
+
+  .hero-bottom-content {
+    justify-content: flex-start !important;
+  }
+
+  /* Highlight stats — single column on mobile */
+  .about-content-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-right-text {
+    display: none !important;
+  }
+}
+
 /* ── Selection color ────────────────────────────────────────── */
 ::selection {
   background-color: rgba(106,170,199,0.35);
