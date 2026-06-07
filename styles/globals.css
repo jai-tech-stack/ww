@@ -127,10 +127,15 @@ html, body {
   padding-bottom: 30px;
 }
 
-/* Navbar — solid dark background so hero purple doesn't bleed through */
+/* Navbar — transparent, nav text forced white */
 .navbar,
 .w-nav {
-  background-color: #0d0d0d !important;
+  background-color: transparent !important;
+}
+
+.nav-text,
+.nav-menu-link {
+  color: #ffffff !important;
 }
 
 .brand-logo {
