@@ -195,19 +195,19 @@ html, body {
   stroke: #ffffff !important;
 }
 
-/* Contact CTA button — purple */
+/* Contact CTA button — white default, purple on hover */
 .nav-button {
-  background-color: #BF6EB6 !important;
-  border: 1.5px solid #BF6EB6 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  border: 1.5px solid #ffffff !important;
+  color: #0d0d0d !important;
   border-radius: 100px;
   padding: 8px 22px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .nav-button:hover {
-  background-color: #a85aa0 !important;
-  border-color: #a85aa0 !important;
+  background-color: #BF6EB6 !important;
+  border-color: #BF6EB6 !important;
   color: #ffffff !important;
 }
 
