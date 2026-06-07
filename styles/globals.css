@@ -156,12 +156,9 @@ html, body {
   backdrop-filter: blur(5px);
 }
 
-/* Nav dot — force white, prevent purple bleed */
+/* Nav dot — hidden (decorative, was showing purple) */
 .nav-menu-dot {
-  background-color: #ffffff !important;
-  width: 6px !important;
-  height: 6px !important;
-  border-radius: 100% !important;
+  display: none !important;
 }
 
 /* Hamburger menu icon — force white lines */
