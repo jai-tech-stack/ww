@@ -779,18 +779,20 @@ html, body {
 .ww-why-card--wide {
   grid-column: 1 / -1;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 3rem;
+  align-items: center;
+  gap: 1rem;
   padding: 2rem 2.5rem;
   border-top: 1.5px solid rgba(106,170,199,0.12);
 }
 
 .ww-why-card--wide .ww-why-number {
-  min-width: 3rem;
+  min-width: 2rem;
+  flex-shrink: 0;
 }
 
 .ww-why-card--wide .ww-why-title {
-  padding-left: 2rem;
+  flex-shrink: 0;
+  margin-right: 2rem;
 }
 
 .ww-why-number {
