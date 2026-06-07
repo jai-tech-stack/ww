@@ -799,13 +799,13 @@ html, body {
 }
 
 .ww-why-card--wide .ww-why-number {
-  min-width: 2rem;
+  min-width: 1rem;
   flex-shrink: 0;
 }
 
 .ww-why-card--wide .ww-why-title {
   flex-shrink: 0;
-  margin-right: 2rem;
+  margin-right: 0;
 }
 
 .ww-why-number {
