@@ -122,9 +122,15 @@ html, body {
 
 
 .navbar-main {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+/* Navbar — solid dark background so hero purple doesn't bleed through */
+.navbar,
+.w-nav {
+  background-color: #0d0d0d !important;
 }
 
 .brand-logo {
