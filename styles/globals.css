@@ -164,6 +164,29 @@ html, body {
   border-radius: 100% !important;
 }
 
+/* Hamburger menu icon — force white lines */
+.nav-menu-button,
+.w-nav-button {
+  color: #ffffff !important;
+  filter: none !important;
+}
+
+.nav-menu-button svg path,
+.nav-menu-button svg line,
+.nav-menu-button svg rect,
+.w-nav-button svg path,
+.w-nav-button svg line,
+.w-nav-button svg rect {
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.lottie-animation svg path,
+.lottie-animation svg line,
+.lottie-animation svg rect {
+  stroke: #ffffff !important;
+}
+
 /* Contact CTA button — blue accent */
 .nav-button {
   border: 1.5px solid #6AAAC7 !important;
