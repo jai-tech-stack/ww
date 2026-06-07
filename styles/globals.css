@@ -156,6 +156,14 @@ html, body {
   backdrop-filter: blur(5px);
 }
 
+/* Nav dot — force white, prevent purple bleed */
+.nav-menu-dot {
+  background-color: #ffffff !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 100% !important;
+}
+
 /* Contact CTA button — blue accent */
 .nav-button {
   border: 1.5px solid #6AAAC7 !important;
@@ -759,6 +767,10 @@ html, body {
 
 .ww-why-card--wide .ww-why-number {
   min-width: 3rem;
+}
+
+.ww-why-card--wide .ww-why-title {
+  padding-left: 2rem;
 }
 
 .ww-why-number {
