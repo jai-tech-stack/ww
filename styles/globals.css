@@ -985,7 +985,7 @@ html, body {
 
 .ww-contact-link {
   font-family: 'Karla', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   color: rgba(255,255,255,0.5);
   text-decoration: none;
   transition: color 0.2s;
@@ -1772,6 +1772,208 @@ html, body {
   .hero-right-text {
     display: none !important;
   }
+}
+
+/* ── About page ──────────────────────────────────────────────── */
+.ww-about-section {
+  padding: 5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.ww-about-mvv { background-color: rgba(106,170,199,0.03); }
+
+.ww-about-story-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.ww-about-label-col {}
+
+.ww-about-label {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AAAC7;
+  margin: 0;
+  padding-top: 6px;
+}
+
+.ww-about-body {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  margin: 0 0 1.4rem;
+}
+.ww-about-body:last-child { margin-bottom: 0; }
+
+/* Mission / Vision / Values */
+.ww-mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(106,170,199,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ww-mvv-card {
+  background: #0d0d0d;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ww-mvv-label {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AAAC7;
+  margin: 0;
+}
+
+.ww-mvv-text {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ww-mvv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ww-mvv-list li {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  color: rgba(255,255,255,0.75);
+  padding-left: 1rem;
+  position: relative;
+}
+.ww-mvv-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #BF6EB6;
+  font-size: 0.75rem;
+}
+
+/* Team 3-col grid */
+.ww-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ww-team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ww-team-img-wrap {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #1a1a1a;
+}
+
+.ww-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.ww-team-img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+.ww-team-img--placeholder span {
+  font-size: 2rem;
+  color: rgba(255,255,255,0.15);
+  font-family: 'LucidaBright', serif;
+}
+
+.ww-team-name {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: #ffffff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.ww-team-role {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.82rem;
+  color: #6AAAC7;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/* Culture */
+.ww-about-culture-heading {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+/* CTA */
+.ww-about-cta {
+  padding: 6rem 0;
+  text-align: center;
+  background: rgba(191,110,182,0.05);
+  border-top: 1px solid rgba(191,110,182,0.12);
+}
+
+.ww-about-cta-heading {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  color: #ffffff;
+  margin: 0 0 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ww-about-cta-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1.5px solid #BF6EB6;
+  color: #BF6EB6;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: background 0.3s, color 0.3s;
+}
+.ww-about-cta-btn:hover {
+  background: #BF6EB6;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .ww-about-story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ww-mvv-grid { grid-template-columns: 1fr; }
+  .ww-team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
 /* ── Selection color ────────────────────────────────────────── */
