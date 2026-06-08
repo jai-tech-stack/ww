@@ -725,6 +725,7 @@ html, body {
 .contact-mail-wrap .content-title,
 .cta-main-wrapper .content-title {
   color: #6AAAC7 !important;
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem) !important;
   border-bottom: 1px solid rgba(106,170,199,0.3);
   padding-bottom: 4px;
   transition: color 0.2s, border-color 0.2s;
