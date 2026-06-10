@@ -207,11 +207,29 @@ export default function Services() {
 }
 
 export async function getStaticProps() {
+  const serviceList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "White Wolf Services",
+    itemListElement: SERVICES.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: s.label,
+        description: s.intro,
+        provider: { "@type": "Organization", name: "White Wolf" },
+        serviceType: s.label,
+      },
+    })),
+  };
+
   return {
     props: {
-      title: "Services — White Wolf",
+      title: "Services — Branding, UI/UX, Development & AI",
       description:
-        "Branding, UI/UX Design, Development, and AI Integrated Services — end-to-end digital transformation from White Wolf.",
+        "Branding, UI/UX Design, Development, and AI Integrated Services — end-to-end digital transformation from White Wolf. Strategy, design, engineering and AI under one roof.",
+      jsonLd: serviceList,
     },
   };
 }

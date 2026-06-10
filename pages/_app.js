@@ -89,7 +89,14 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <div className="ww-page">
-        <Header title={title} description={description} />
+        <Header
+          title={title}
+          description={description}
+          noindex={pageProps.noindex === true}
+          ogImage={pageProps.ogImage}
+          ogType={pageProps.ogType}
+          jsonLd={pageProps.jsonLd}
+        />
         {!isHomepage && !isLanding && <SiteNavbar />}
         <main className="ww-main">
           <Component {...pageProps} />

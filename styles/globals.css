@@ -1823,9 +1823,9 @@ html, body {
 /* CTA strip */
 .ww-proj-cta-strip {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1232 50%, #0d0d0d 100%);
-  border-top: 1px solid rgba(106,170,199,0.12);
-  border-bottom: 1px solid rgba(106,170,199,0.12);
+  background: #000000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .ww-proj-cta-inner {
@@ -1837,7 +1837,7 @@ html, body {
 }
 
 /* Next project */
-.ww-proj-next { background: #0d0c18; }
+.ww-proj-next { background: #000000; }
 
 .ww-proj-next-link {
   display: block;

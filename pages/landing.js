@@ -241,6 +241,7 @@ export async function getStaticProps() {
       endHtml,
       inlineStyles,
       isLanding: true,
+      noindex: true, // campaign page reuses homepage sections — keep out of the index
       title: "Grow With White Wolf — Free Consultation",
       description: "Branding, UI/UX, Development & AI under one roof. Book a free consultation and grow your business.",
     },

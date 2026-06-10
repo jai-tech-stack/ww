@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PROJECTS, getProjectBySlug, getAllSlugs } from "../../lib/projects";
+import { abs, breadcrumbSchema, SITE_NAME } from "../../lib/seo";
 
 export default function ProjectPage({ project }) {
   if (!project) return null;
@@ -193,11 +194,34 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const project = getProjectBySlug(params.slug);
   if (!project) return { notFound: true };
+
+  const creativeWork = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    headline: project.title,
+    description: project.tagline,
+    image: abs(project.coverImage),
+    creator: { "@type": "Organization", name: SITE_NAME },
+    about: project.category,
+    datePublished: String(project.year),
+  };
+  const crumbs = breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: project.title, path: `/case-studies/${project.slug}` },
+  ]);
+
   return {
     props: {
       project,
-      title: project.title,
-      description: project.tagline,
+      title: `${project.title} — ${project.category} Case Study`,
+      description: project.overview
+        ? project.overview.slice(0, 155)
+        : project.tagline,
+      ogImage: project.coverImage,
+      ogType: "article",
+      jsonLd: [creativeWork, crumbs],
     },
   };
 }
