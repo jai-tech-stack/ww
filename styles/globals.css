@@ -2184,22 +2184,24 @@ html, body {
 }
 .ww-bio-name {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
   font-weight: 600;
   color: #ffffff;
   line-height: 1.15;
-  margin: 0 0 0.35rem;
+  margin: 0;
+  line-height: normal;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.14s, transform 0.4s ease 0.14s;
 }
 .ww-bio-role {
   font-family: 'Karla', sans-serif !important;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #6AAAC7;
-  margin: 0 0 1.1rem;
+  margin: 0;
+  line-height: normal;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.19s, transform 0.4s ease 0.19s;
