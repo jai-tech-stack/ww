@@ -1796,18 +1796,6 @@ html, body {
 
 /* ── About page ──────────────────────────────────────────────── */
 
-/* Scroll-reveal — matching homepage GSAP slide-up feel */
-.ww-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.ww-reveal--visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .ww-about-section {
   padding: 5rem 0;
