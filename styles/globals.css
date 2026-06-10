@@ -2968,14 +2968,14 @@ html, body {
   margin-left: 1px;
 }
 
-/* ── Label — small uppercase, cool grey ─────────────── */
+/* ── Label — small uppercase, blue accent ───────────── */
 .ww-stat-label {
   font-family: 'Karla', sans-serif;
   font-size: 0.68rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(173,192,205,0.55);
+  color: #6AAAC7;
   line-height: 1.5;
   margin: 0;
 }
