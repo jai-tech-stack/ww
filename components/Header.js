@@ -75,8 +75,8 @@ export default function Header({
       <meta name="twitter:image" content={image} />
 
       {/* Icons */}
-      <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
-      <link rel="apple-touch-icon" href="/assets/icon.svg" />
+      <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/assets/favicon.svg" />
 
       {/* Structured data */}
       {schemas.map((schema, i) => (

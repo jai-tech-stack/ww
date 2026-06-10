@@ -41,8 +41,8 @@ html.w-mod-js:not(.w-mod-ix3) :is(.cta-top-wrapper-1,.cta-top-wrapper-2,.about-r
         `}</style>
 
         {/* White Wolf icon */}
-        <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/assets/icon.svg" />
+        <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/assets/favicon.svg" />
       </Head>
       <body>
         <Main />
