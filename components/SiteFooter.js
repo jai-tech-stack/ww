@@ -19,7 +19,7 @@ export default function SiteFooter() {
                 <div className="ww-footer-location-item">
                   <h4 className="ww-footer-city">Bangalore</h4>
                   <p className="ww-footer-addr">
-                    2nd main , sp naidu layout , r m nagar , bangalore 560016
+                    2nd Main SP Naidu Layout, Ramamurthy Nagar, Bengaluru, Karnataka 560016
                   </p>
                   <a
                     href="https://www.google.com/maps/place/2nd+Main+St,+SP+Naidu+Layout,+Ramamurthy+Nagar,+Bengaluru,+Karnataka+560016/@13.0076782,77.6654889,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae11244c49956b:0x62daf97c81c4812d!8m2!3d13.007673!4d77.6680638!16s%2Fg%2F11w2k0ghw3?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D"
