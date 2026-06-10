@@ -67,7 +67,7 @@ This document covers the **on-page / technical SEO** implemented in the codebase
 Off-page = building authority and trust signals **outside** your website. Priority order:
 
 ### 1. Google Business Profile (highest ROI for a local agency)
-- Create/claim **Google Business Profile** for the Bangalore address (Maruthi Seva Nagar, HBR Layout).
+- Create/claim **Google Business Profile** for the Bangalore address (2nd main , sp naidu layout , r m nagar , bangalore 560016).
 - Exact, consistent **NAP** (Name, Address, Phone) matching the website footer.
 - Add categories (Website Designer, Marketing Agency, Software Company), photos, services, posts.
 - Collect **Google reviews** from past clients — aim for 10+ with keywords in the text.
