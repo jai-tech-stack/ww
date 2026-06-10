@@ -2136,14 +2136,14 @@ html, body {
 }
 .ww-team-default-name {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(0.92rem, 1.3vw, 1.3rem);
+  font-size: clamp(0.92rem, 1.9vw, 1.9rem);
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 0.25rem;
 }
 .ww-team-default-role {
   font-family: 'Karla', sans-serif !important;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #6AAAC7;
   letter-spacing: 0.06em;
   margin: 0;
