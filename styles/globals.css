@@ -1387,15 +1387,15 @@ html, body {
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .ww-svc-item-dot {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #BF6EB6;
   flex-shrink: 0;
 }
 .ww-svc-item-name {
   font-family: 'Karla', sans-serif !important;
-  font-size: clamp(0.92rem, 1.6vw, 1.6rem);
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
   color: rgba(255,255,255,0.82);
   letter-spacing: 0.01em;
 }
