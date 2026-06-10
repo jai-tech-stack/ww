@@ -13,10 +13,9 @@ export default function SiteFooter() {
           <div className="ww-container">
             <div className="ww-footer-new-grid">
 
-              {/* LEFT — Locations */}
+              {/* LEFT — Address */}
               <div className="ww-footer-locations">
                 <p className="ww-footer-find-label">Find Us At</p>
-
                 <div className="ww-footer-location-item">
                   <h4 className="ww-footer-city">Bangalore</h4>
                   <p className="ww-footer-addr">
@@ -32,23 +31,19 @@ export default function SiteFooter() {
                     Get Directions
                   </a>
                 </div>
+              </div>
 
-                <div className="ww-footer-location-item">
-                  <h4 className="ww-footer-city">Coimbatore</h4>
-                  <p className="ww-footer-addr">
-                    1st Floor, Sathuriyan Complex,<br />
-                    Keeranatham Rd, Saravanampatti,<br />
-                    Coimbatore, India
-                  </p>
-                  <a
-                    href="https://maps.google.com/?q=Sathuriyan+Complex+Keeranatham+Rd+Saravanampatti+Coimbatore+India"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ww-footer-directions"
-                  >
-                    Get Directions
-                  </a>
-                </div>
+              {/* CENTER — Navigation */}
+              <div className="ww-footer-nav-col">
+                <p className="ww-footer-nav-label">Menu</p>
+                <nav className="ww-footer-nav">
+                  <a href="/" className="ww-footer-nav-link">Home</a>
+                  <a href="/about" className="ww-footer-nav-link">About</a>
+                  <a href="/services" className="ww-footer-nav-link">Services</a>
+                  <a href="/case-studies" className="ww-footer-nav-link">Projects</a>
+                  <a href="/process" className="ww-footer-nav-link">Process</a>
+                  <a href="/contact" className="ww-footer-nav-link">Contact</a>
+                </nav>
               </div>
 
               {/* RIGHT — Social + Chat/Speak */}
@@ -109,7 +104,6 @@ export default function SiteFooter() {
                   </a>
                 </div>
 
-                <p className="ww-footer-sales-note"><em>For sales purpose only *</em></p>
               </div>
 
             </div>
