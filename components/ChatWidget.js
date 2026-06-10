@@ -28,6 +28,7 @@ export default function ChatWidget() {
   const [showLead, setShowLead] = useState(false);
   const [lead, setLead] = useState({ name: '', email: '', phone: '' });
   const [shareState, setShareState] = useState('idle'); // idle | sending | sent | error
+  const [leadCaptured, setLeadCaptured] = useState(false); // agent captured a lead
 
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
@@ -152,6 +153,12 @@ export default function ChatWidget() {
       });
       const data = await res.json();
       setMessages([...next, { role: 'assistant', content: data.content }]);
+      // If the agent captured the lead / requested a callback, it already
+      // emailed the team — don't auto-send again on close, and show a chip.
+      if (Array.isArray(data.toolsUsed) && data.toolsUsed.length > 0) {
+        autoSharedRef.current = true;
+        setLeadCaptured(true);
+      }
     } catch {
       setMessages([
         ...next,
@@ -227,7 +234,10 @@ export default function ChatWidget() {
             </div>
             <div className="ww-chat-header-info">
               <p className="ww-chat-name">White Wolf AI</p>
-              <p className="ww-chat-status"><span className="ww-chat-dot" />Online · replies in minutes</p>
+              <p className="ww-chat-status">
+                <span className="ww-chat-dot" />
+                {leadCaptured ? 'Details shared with the team ✓' : 'Online · replies in minutes'}
+              </p>
             </div>
           </div>
           <button className="ww-chat-close-btn" onClick={closeChat} aria-label="Close chat">
