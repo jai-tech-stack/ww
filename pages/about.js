@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const TEAM = [
   {
-    img: '/assets/team-1.jpg',
+    img: '/assets/selestin.s.jpeg',
     name: 'Selestin Anthony',
     role: 'Founder & Creative Director',
     eyebrow: '25+ Years of Creative Leadership. Building Brands That Endure.',
