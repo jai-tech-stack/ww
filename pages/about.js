@@ -9,7 +9,7 @@ const TEAM = [
     bio: 'With over 25 years of experience spanning advertising, branding, digital design, and product innovation, Selestin Anthony has built a distinguished career transforming ideas into impactful brand experiences. Beginning as a visualizer, he evolved into a multidisciplinary creative leader, delivering award-winning work across brand identity, packaging, marketing communications, websites, and digital products. His work has been recognized through multiple industry accolades, including awards for national Girl Child Safety and protection awareness campaigns, Best Design and UI/UX awards, and large-scale brand initiatives. Driven by a passion for design beyond boundaries, Selestin combines strategic thinking, creativity, and emerging technologies to help organizations build meaningful brands, exceptional user experiences, and future-ready digital solutions.',
   },
   {
-    img: '/assets/team-2.jpg',
+    img: '/assets/team2.png',
     name: 'Jai Kumar',
     role: 'Technical Head & AI Engineer',
     eyebrow: 'Engineering Scalable Solutions. Powering Intelligent Innovation.',
