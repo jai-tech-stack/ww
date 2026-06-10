@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }) {
   const title = pageProps.title;
   const description = pageProps.description;
   const isHomepage = pageProps.isHomepage === true;
+  const isLanding = pageProps.isLanding === true;
 
   useEffect(() => {
     const afterAllLoaded = () => {
@@ -89,7 +90,7 @@ export default function App({ Component, pageProps }) {
 
       <div className="ww-page">
         <Header title={title} description={description} />
-        {!isHomepage && <SiteNavbar />}
+        {!isHomepage && !isLanding && <SiteNavbar />}
         <main className="ww-main">
           <Component {...pageProps} />
         </main>
