@@ -40,7 +40,7 @@ export default function SiteFooter() {
                   <a href="/" className="ww-footer-nav-link">Home</a>
                   <a href="/about" className="ww-footer-nav-link">About</a>
                   <a href="/services" className="ww-footer-nav-link">Services</a>
-                  <a href="/case-studies" className="ww-footer-nav-link">Projects</a>
+                  <a href="/case-studies" className="ww-footer-nav-link">Work</a>
                   <a href="/contact" className="ww-footer-nav-link">Contact</a>
                 </nav>
               </div>
