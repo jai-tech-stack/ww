@@ -296,6 +296,20 @@ html, body {
   overflow: hidden;
 }
 
+/* Static single-image hero (replaces slider) */
+.hero-banner-static {
+  background-color: transparent;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+.hero-banner-static .hero-v1-slide-item-wrap {
+  width: 100%;
+  height: 100%;
+}
+
 .hero-v1-slide-item {
   width: 100%;
   height: 100%;
