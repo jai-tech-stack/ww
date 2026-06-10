@@ -2971,12 +2971,12 @@ html, body {
 /* ── Label — small uppercase, blue accent ───────────── */
 .ww-stat-label {
   font-family: 'Karla', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #6AAAC7;
-  line-height: 1.5;
+  line-height: 1.1;
   margin: 0;
 }
 
