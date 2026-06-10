@@ -110,12 +110,6 @@ export default function SiteFooter() {
             {/* Bottom bar */}
             <div className="ww-footer-bottom-bar">
               <span className="ww-footer-copy">© 2025 White Wolf. All rights reserved.</span>
-              <div className="ww-footer-bottom-links">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/services">Services</a>
-                <a href="/case-studies">Projects</a>
-              </div>
             </div>
           </div>
         </div>
