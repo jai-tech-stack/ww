@@ -1795,6 +1795,20 @@ html, body {
 }
 
 /* ── About page ──────────────────────────────────────────────── */
+
+/* Scroll-reveal — matching homepage GSAP slide-up feel */
+.ww-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ww-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .ww-about-section {
   padding: 5rem 0;
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -1811,16 +1825,20 @@ html, body {
 
 .ww-about-label-col {}
 
+/* Label — matches homepage .about-title style */
 .ww-about-label {
-  font-family: 'Karla', sans-serif !important;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #6AAAC7;
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.2rem, 2vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.9);
+  text-transform: none;
   margin: 0;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
+/* Body — matches homepage medium-content-text paragraph */
 .ww-about-body {
   font-family: 'LucidaBright', Georgia, serif !important;
   font-size: clamp(1.1rem, 1.8vw, 1.6rem);
@@ -1865,27 +1883,45 @@ html, body {
   margin: 0;
 }
 
-.ww-mvv-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Core Values — redesigned 2-col numbered grid */
+.ww-mvv-card--values { gap: 1.5rem; }
+
+.ww-values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.ww-value-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  padding: 1.1rem 1rem;
+  background: #111111;
+  transition: background 0.3s ease;
+  cursor: default;
 }
-.ww-mvv-list li {
-  font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
-  color: rgba(255,255,255,0.75);
-  padding-left: 1rem;
-  position: relative;
-}
-.ww-mvv-list li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
+.ww-value-item:hover { background: rgba(191,110,182,0.1); }
+
+.ww-value-num {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   color: #BF6EB6;
-  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.ww-value-name {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.2;
 }
 
 /* Team 3-col grid */
@@ -1990,10 +2026,16 @@ html, body {
   color: #ffffff;
 }
 
+@media (max-width: 991px) {
+  .ww-mvv-grid { grid-template-columns: 1fr; }
+  .ww-about-story-grid { grid-template-columns: 180px 1fr; gap: 2.5rem; }
+}
+
 @media (max-width: 767px) {
   .ww-about-story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .ww-mvv-grid { grid-template-columns: 1fr; }
   .ww-team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ww-values-grid { grid-template-columns: 1fr 1fr; }
+  .ww-about-label { font-size: clamp(1.2rem, 5vw, 1.8rem); }
 }
 
 /* ═══════════════════════════════════════════════════════════
