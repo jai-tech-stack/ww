@@ -19,11 +19,11 @@ export default function SiteFooter() {
                 <div className="ww-footer-location-item">
                   <h4 className="ww-footer-city">Bangalore</h4>
                   <p className="ww-footer-addr">
-                    Aswath Nagar, HBR Layout 5th Block,<br />
+                    Maruthi Seva Nagar, HBR Layout 5th Block,<br />
                     Bangalore, India
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Aswath+Nagar+HBR+Layout+5th+Block+Bangalore+India"
+                    href="https://maps.google.com/?q=Maruthi+Seva+Nagar+HBR+Layout+5th+Block+Bangalore+India"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ww-footer-directions"
