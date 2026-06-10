@@ -2173,7 +2173,7 @@ html, body {
 /* Bio content items — each stagger in after the overlay slides up */
 .ww-bio-eyebrow {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(0.82rem, 1.4vw, 0.95rem);
+  font-size: clamp(0.82rem, 1.4vw, 1.5rem);
   font-style: italic;
   color: #BF6EB6;
   line-height: 1.4;
