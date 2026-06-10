@@ -2140,6 +2140,7 @@ html, body {
   font-weight: 600;
   color: #ffffff;
   margin: 0;
+  line-height: normal;
 }
 .ww-team-default-role {
   font-family: 'Karla', sans-serif !important;
