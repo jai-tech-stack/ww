@@ -34,7 +34,7 @@ export default function Contact() {
           <div className="ww-contact-grid">
             <div className="ww-contact-left">
               <div className="ww-contact-info">
-                <a href="mailto:selestin.s@gmail.com" className="ww-contact-link">selestin.s@gmail.com</a>
+                <a href="mailto:info@whitewolfone.com" className="ww-contact-link">info@whitewolfone.com</a>
                 <a href="tel:+919880459502" className="ww-contact-link">+91 98804 59502</a>
                 <span className="ww-contact-link" style={{ cursor:"default" }}>Bangalore, India</span>
               </div>

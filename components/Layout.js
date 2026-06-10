@@ -58,7 +58,7 @@ export default function Layout({ children, title, description }) {
 
               <div className="ww-footer-col">
                 <p className="ww-footer-col-title">Contact</p>
-                <a href="mailto:selestin.s@gmail.com" className="ww-footer-link">selestin.s@gmail.com</a>
+                <a href="mailto:info@whitewolfone.com" className="ww-footer-link">info@whitewolfone.com</a>
                 <a href="tel:+919880459502" className="ww-footer-link">+91 98804 59502</a>
                 <span className="ww-footer-link" style={{ cursor: "default" }}>Bangalore, India</span>
               </div>
