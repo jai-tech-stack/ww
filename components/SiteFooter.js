@@ -127,21 +127,6 @@ export default function SiteFooter() {
           </div>
         </div>
       </section>
-
-      {/* Marquee */}
-      <div className="footer-bottom-marquee-wrapper">
-        <div className="footer-bottom-marquee section" style={{overflow:"hidden"}}>
-          <div className="footer-marquee-track" style={{display:"flex",width:"max-content"}}>
-            {[...Array(2)].map((_, i) => (
-              <div className="footer-bottom-text-wrapper" key={i} aria-hidden={i > 0 ? "true" : undefined}>
-                {["White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–"].map((t,j) => (
-                  <div className="bottom-big-text" key={j}><h1 className="footer-bottom-text">{t}</h1></div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
