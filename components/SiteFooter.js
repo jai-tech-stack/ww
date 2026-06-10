@@ -15,7 +15,7 @@ export default function SiteFooter() {
 
               {/* LEFT — Address */}
               <div className="ww-footer-locations">
-                <p className="ww-footer-find-label">Find Us At</p>
+                <p className="ww-footer-find-label">Locate us</p>
                 <div className="ww-footer-location-item">
                   <h4 className="ww-footer-city">Bangalore</h4>
                   <p className="ww-footer-addr">
