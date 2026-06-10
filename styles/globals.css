@@ -1512,7 +1512,7 @@ html, body {
 .ww-cs-card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(19,16,33,0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1524,7 +1524,7 @@ html, body {
 
 .ww-cs-card-cta {
   font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #6AAAC7;
   border: 1px solid rgba(106,170,199,0.5);
   padding: 10px 24px;
