@@ -1479,7 +1479,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
-  background: rgba(106,170,199,0.08);
+  background: rgba(255,255,255,0.06);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -1570,7 +1570,7 @@ html, body {
 /* ── Project Single Page ─────────────────────────────────────── */
 
 /* Hero */
-.ww-proj-hero { background: #0d0d0d; padding-bottom: 0; overflow: hidden; }
+.ww-proj-hero { background: #0d0d0d; padding-top: 96px; padding-bottom: 0; overflow: hidden; }
 
 /* Project hero tag line banner above title */
 .ww-proj-hero-eyebrow {
@@ -1794,7 +1794,7 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   margin-top: 2rem;
-  background: rgba(106,170,199,0.08);
+  background: rgba(255,255,255,0.06);
   border-radius: 4px;
   overflow: hidden;
 }
