@@ -1987,8 +1987,8 @@ html, body {
 
 .ww-footer-new-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
   align-items: flex-start;
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -1996,121 +1996,142 @@ html, body {
 
 /* ── LEFT — Locations ──────────────────────────────────── */
 .ww-footer-find-label {
-  font-family: 'LucidaBright', Georgia, serif;
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 0.12em;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0 0 2.5rem;
 }
 
 .ww-footer-location-item {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
 }
 
 .ww-footer-city {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
+  font-weight: 400;
   color: #ffffff;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.6rem;
 }
 
 .ww-footer-addr {
   font-family: 'Karla', sans-serif;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.7;
-  margin: 0 0 0.8rem;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin: 0 0 1rem;
 }
 
+/* GET DIRECTIONS — spaced uppercase with underline (matching screenshot) */
 .ww-footer-directions {
   display: inline-block;
   font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #BF6EB6;
+  color: rgba(255,255,255,0.5);
   text-decoration: none;
-  border: 1px solid rgba(191,110,182,0.4);
-  border-radius: 100px;
-  padding: 5px 14px;
-  transition: background 0.25s, color 0.25s;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 3px;
+  transition: color 0.2s, border-color 0.2s;
+  background: none;
 }
 .ww-footer-directions:hover {
-  background: #BF6EB6;
   color: #ffffff;
-  border-color: #BF6EB6;
+  border-color: rgba(255,255,255,0.7);
+  background: none;
 }
 
 /* ── RIGHT — Social + Cards ────────────────────────────── */
 .ww-footer-right {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .ww-footer-follow-label {
   font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
   margin: 0 0 1rem;
 }
 
 .ww-footer-social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
+/* Filled dark circular social icons */
 .ww-footer-social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
   text-decoration: none;
-  transition: border-color 0.25s, color 0.25s, background 0.25s;
+  transition: background 0.25s, color 0.25s;
 }
 .ww-footer-social-icon:hover {
-  border-color: #BF6EB6;
-  color: #BF6EB6;
-  background: rgba(191,110,182,0.08);
+  background: #BF6EB6;
+  color: #ffffff;
 }
 
-/* Chat / Speak cards */
+/* Chat / Speak cards — side by side, tall, icon top / text bottom */
 .ww-footer-contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .ww-footer-contact-card {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.1rem 1.4rem;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.8rem 1.4rem 1.4rem;
+  min-height: 155px;
+  background: rgba(255,255,255,0.025);
   text-decoration: none;
   color: #ffffff;
-  background: rgba(255,255,255,0.03);
-  transition: border-color 0.25s, background 0.25s;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.25s;
+  text-align: left;
+  font-family: inherit;
+}
+.ww-footer-contact-card:first-child {
+  border-right: 1px solid rgba(255,255,255,0.1);
 }
 .ww-footer-contact-card:hover {
-  border-color: rgba(191,110,182,0.5);
-  background: rgba(191,110,182,0.07);
+  background: rgba(191,110,182,0.08);
 }
 
 .ww-footer-card-icon {
-  color: #BF6EB6;
+  color: rgba(255,255,255,0.7);
   flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: auto;
+}
+
+.ww-footer-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1.2rem;
+  gap: 0.5rem;
 }
 
 .ww-footer-card-label {
@@ -2118,19 +2139,21 @@ html, body {
   font-size: 1rem;
   color: #ffffff;
   line-height: 1.4;
-  flex: 1;
 }
 
 .ww-footer-card-arrow {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.4);
   flex-shrink: 0;
+  line-height: 1;
+  margin-bottom: 2px;
 }
 
 .ww-footer-sales-note {
   font-family: 'Karla', sans-serif;
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
   margin: 0;
 }
 
@@ -2146,8 +2169,8 @@ html, body {
 
 .ww-footer-copy {
   font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
 }
 
 .ww-footer-bottom-links {
@@ -2156,8 +2179,8 @@ html, body {
 }
 .ww-footer-bottom-links a {
   font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -2171,12 +2194,311 @@ html, body {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  .ww-footer-contact-cards {
+    max-width: 420px;
+  }
 }
 
 @media (max-width: 600px) {
   .ww-footer-new { padding: 50px 0 30px; }
   .ww-footer-bottom-bar { flex-direction: column; align-items: flex-start; }
   .ww-footer-bottom-links { flex-wrap: wrap; gap: 1rem; }
+  .ww-footer-contact-cards { grid-template-columns: 1fr; max-width: 100%; }
+  .ww-footer-contact-card:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AI CHAT WIDGET
+   ══════════════════════════════════════════════════════════= */
+
+/* Floating action button */
+.ww-chat-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px 0 16px;
+  height: 48px;
+  border-radius: 100px;
+  background: #BF6EB6;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 20px rgba(191,110,182,0.45);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.ww-chat-fab:hover {
+  background: #a85ea0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(191,110,182,0.55);
+}
+.ww-chat-fab--open {
+  padding: 0;
+  width: 48px;
+  justify-content: center;
+}
+.ww-chat-fab--open .ww-chat-fab-label { display: none; }
+
+.ww-chat-fab-label {
+  white-space: nowrap;
+}
+
+/* Chat window */
+.ww-chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 28px;
+  z-index: 9998;
+  width: 360px;
+  max-height: 520px;
+  display: flex;
+  flex-direction: column;
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.ww-chat-window--open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* Header */
+.ww-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #0d0d0d;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.ww-chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ww-chat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(191,110,182,0.2);
+  border: 1px solid rgba(191,110,182,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #BF6EB6;
+  flex-shrink: 0;
+}
+.ww-chat-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.ww-chat-name {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+.ww-chat-status {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ww-chat-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+.ww-chat-close-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.ww-chat-close-btn:hover { color: #ffffff; }
+
+/* Messages area */
+.ww-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+.ww-chat-messages::-webkit-scrollbar { width: 4px; }
+.ww-chat-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+/* Bubbles */
+.ww-chat-bubble {
+  max-width: 82%;
+  padding: 9px 13px;
+  border-radius: 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  word-break: break-word;
+}
+.ww-chat-bubble--assistant {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+  border-radius: 12px 12px 12px 3px;
+  align-self: flex-start;
+}
+.ww-chat-bubble--user {
+  background: #BF6EB6;
+  color: #ffffff;
+  border-radius: 12px 12px 3px 12px;
+  align-self: flex-end;
+}
+
+/* Typing indicator */
+.ww-chat-typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+}
+.ww-chat-typing span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  animation: ww-typing-bounce 1.2s infinite ease-in-out;
+}
+.ww-chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ww-chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes ww-typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+/* Quick prompt buttons */
+.ww-chat-quick-prompts {
+  padding: 0 16px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.ww-chat-quick-btn {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.ww-chat-quick-btn:hover {
+  background: rgba(191,110,182,0.15);
+  border-color: rgba(191,110,182,0.4);
+  color: #ffffff;
+}
+
+/* Input row */
+.ww-chat-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+  background: #0d0d0d;
+}
+.ww-chat-input {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.875rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ww-chat-input::placeholder { color: rgba(255,255,255,0.3); }
+.ww-chat-input:focus { border-color: rgba(191,110,182,0.5); }
+
+.ww-chat-send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #BF6EB6;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, opacity 0.2s;
+}
+.ww-chat-send-btn:hover { background: #a85ea0; }
+.ww-chat-send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Footer note */
+.ww-chat-footer-note {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 6px 0 8px;
+  margin: 0;
+  background: #0d0d0d;
+  flex-shrink: 0;
+}
+.ww-chat-footer-note a {
+  color: rgba(191,110,182,0.6);
+  text-decoration: none;
+}
+.ww-chat-footer-note a:hover { color: #BF6EB6; }
+
+/* Mobile chat widget */
+@media (max-width: 480px) {
+  .ww-chat-window {
+    width: calc(100vw - 24px);
+    right: 12px;
+    bottom: 78px;
+    max-height: 70vh;
+  }
+  .ww-chat-fab {
+    right: 16px;
+    bottom: 20px;
+  }
 }
 
 /* ── Selection color ────────────────────────────────────────── */

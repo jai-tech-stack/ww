@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import SiteNavbar from "../components/SiteNavbar";
 import SiteFooter from "../components/SiteFooter";
+import ChatWidget from "../components/ChatWidget";
 import { useEffect } from "react";
 import "@/styles/globals.css";
 
@@ -93,6 +94,7 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
         <SiteFooter />
+        <ChatWidget />
       </div>
     </>
   );
