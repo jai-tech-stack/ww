@@ -1912,7 +1912,7 @@ html, body {
   line-height: 1.2;
 }
 
-/* Team 3-col grid */
+/* ── Team grid ───────────────────────────────────────────────── */
 .ww-team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1921,52 +1921,167 @@ html, body {
 }
 
 .ww-team-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  /* just a wrapper; animation handled by GSAP */
 }
 
-.ww-team-img-wrap {
+/* Portrait container — clips the hover overlay */
+.ww-team-portrait {
+  position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
   border-radius: 4px;
-  background: #1a1a1a;
+  background: #141414;
+  cursor: pointer;
 }
 
+/* Photo */
 .ww-team-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: top center;
   display: block;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ww-team-card:hover .ww-team-img {
+  transform: scale(1.05);
 }
 
-.ww-team-img--placeholder {
+/* Placeholder (Coming Soon) */
+.ww-team-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed rgba(255,255,255,0.1);
+  border: 1px dashed rgba(255,255,255,0.08);
 }
-.ww-team-img--placeholder span {
-  font-size: 2rem;
-  color: rgba(255,255,255,0.15);
+.ww-team-placeholder span {
+  font-size: 2.5rem;
+  color: rgba(255,255,255,0.1);
   font-family: 'LucidaBright', serif;
 }
 
-.ww-team-name {
+/* Default name bar — always visible at bottom */
+.ww-team-default-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2.5rem 1.5rem 1.3rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+.ww-team-card:hover .ww-team-default-bar {
+  opacity: 0;
+}
+.ww-team-default-name {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
-  color: #ffffff;
-  margin: 0;
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
   font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+}
+.ww-team-default-role {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.72rem;
+  color: #6AAAC7;
+  letter-spacing: 0.06em;
+  margin: 0;
 }
 
-.ww-team-role {
+/* ── Bio overlay — slides up from bottom on hover ─────────────── */
+.ww-team-bio-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1.6rem 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(6, 6, 6, 0.95);
+  transform: translateY(100%);
+  transition: transform 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Purple accent line at top */
+  border-top: 2px solid #BF6EB6;
+}
+.ww-team-card:hover .ww-team-bio-overlay {
+  transform: translateY(0);
+}
+
+/* Bio content items — each stagger in after the overlay slides up */
+.ww-bio-eyebrow {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+  font-style: italic;
+  color: #BF6EB6;
+  line-height: 1.35;
+  margin: 0 0 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.08s, transform 0.4s ease 0.08s;
+}
+.ww-bio-name {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.14s, transform 0.4s ease 0.14s;
+}
+.ww-bio-role {
   font-family: 'Karla', sans-serif !important;
-  font-size: 0.82rem;
-  color: #6AAAC7;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin: 0 0 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.19s, transform 0.4s ease 0.19s;
+}
+.ww-bio-divider {
+  width: 28px;
+  height: 1px;
+  background: rgba(191,110,182,0.55);
+  margin-bottom: 0.9rem;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: opacity 0.35s ease 0.23s, transform 0.35s ease 0.23s;
+}
+.ww-bio-text {
+  font-family: 'Karla', sans-serif !important;
+  font-size: clamp(0.75rem, 0.95vw, 0.84rem);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
   margin: 0;
-  letter-spacing: 0.04em;
+  overflow-y: auto;
+  max-height: 42%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.27s, transform 0.4s ease 0.27s;
+  /* subtle scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(191,110,182,0.35) transparent;
+}
+.ww-bio-text::-webkit-scrollbar { width: 3px; }
+.ww-bio-text::-webkit-scrollbar-track { background: transparent; }
+.ww-bio-text::-webkit-scrollbar-thumb { background: rgba(191,110,182,0.35); border-radius: 2px; }
+
+/* Trigger child reveals when overlay is hovered */
+.ww-team-card:hover .ww-bio-eyebrow,
+.ww-team-card:hover .ww-bio-name,
+.ww-team-card:hover .ww-bio-role,
+.ww-team-card:hover .ww-bio-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ww-team-card:hover .ww-bio-divider {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 /* Culture */
@@ -2019,11 +2134,44 @@ html, body {
   .ww-about-story-grid { grid-template-columns: 180px 1fr; gap: 2.5rem; }
 }
 
+@media (max-width: 991px) {
+  .ww-team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
 @media (max-width: 767px) {
   .ww-about-story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .ww-team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ww-team-grid { grid-template-columns: 1fr; gap: 2.5rem; max-width: 420px; }
   .ww-values-grid { grid-template-columns: 1fr 1fr; }
   .ww-about-label { font-size: clamp(1.2rem, 5vw, 1.8rem); }
+}
+
+/* Touch devices — no hover, so reveal bio on tap (focus) and give a hint */
+@media (hover: none) {
+  .ww-team-portrait::after {
+    content: "Tap to read bio";
+    position: absolute;
+    top: 0.9rem; right: 0.9rem;
+    z-index: 3;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(191,110,182,0.85);
+    padding: 4px 9px;
+    border-radius: 100px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .ww-team-portrait:focus-within::after { opacity: 0; }
+
+  .ww-team-portrait:focus-within .ww-team-bio-overlay { transform: translateY(0); }
+  .ww-team-portrait:focus-within .ww-team-default-bar { opacity: 0; }
+  .ww-team-portrait:focus-within .ww-bio-eyebrow,
+  .ww-team-portrait:focus-within .ww-bio-name,
+  .ww-team-portrait:focus-within .ww-bio-role,
+  .ww-team-portrait:focus-within .ww-bio-text { opacity: 1; transform: translateY(0); }
+  .ww-team-portrait:focus-within .ww-bio-divider { opacity: 1; transform: scaleX(1); }
 }
 
 /* ═══════════════════════════════════════════════════════════

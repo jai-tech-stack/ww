@@ -1,11 +1,32 @@
 import { useEffect } from 'react';
 
+const TEAM = [
+  {
+    img: '/assets/team-1.jpg',
+    name: 'Selestin Anthony',
+    role: 'Founder & Creative Director',
+    eyebrow: '25+ Years of Creative Leadership. Building Brands That Endure.',
+    bio: 'With over 25 years of experience spanning advertising, branding, digital design, and product innovation, Selestin Anthony has built a distinguished career transforming ideas into impactful brand experiences. Beginning as a visualizer, he evolved into a multidisciplinary creative leader, delivering award-winning work across brand identity, packaging, marketing communications, websites, and digital products. His work has been recognized through multiple industry accolades, including awards for national Girl Child Safety and protection awareness campaigns, Best Design and UI/UX awards, and large-scale brand initiatives. Driven by a passion for design beyond boundaries, Selestin combines strategic thinking, creativity, and emerging technologies to help organizations build meaningful brands, exceptional user experiences, and future-ready digital solutions.',
+  },
+  {
+    img: '/assets/team-2.jpg',
+    name: 'Jai Kumar',
+    role: 'Technical Head & AI Engineer',
+    eyebrow: 'Engineering Scalable Solutions. Powering Intelligent Innovation.',
+    bio: 'With over 12+ years of experience in web technologies, cloud infrastructure, e-commerce, and AI-driven solutions, Jai Kumar leads the technical vision at White Wolf. He has successfully delivered and managed digital platforms for organizations across India, the UAE, and Qatar, spanning healthcare, real estate, nonprofit, and consumer sectors. His expertise covers the entire digital lifecycle — from strategy and architecture to development, cloud deployment, performance optimization, and AI integration. As the creator of Mintbrand, a SaaS-based branding workflow platform, Jai brings a unique blend of technical excellence, product thinking, and business insight. Passionate about innovation, he helps organizations build secure, scalable, and intelligent digital ecosystems that drive measurable growth and long-term value.',
+  },
+  {
+    img: null,
+    name: 'Coming Soon',
+    role: 'Strategy & Growth',
+    eyebrow: null,
+    bio: null,
+  },
+];
+
 export default function About() {
 
   useEffect(() => {
-    // GSAP + ScrollTrigger are loaded globally via _app.js script loader.
-    // Poll until they're ready, then wire up animations matching the
-    // homepage "About" section: opacity 0→1, y 40→0, power3.out ease.
     let attempts = 0;
     const run = () => {
       const g = window.gsap;
@@ -16,65 +37,23 @@ export default function About() {
       }
       g.registerPlugin(ST);
 
-      // Story grids (Our Story / Leadership / Culture)
       document.querySelectorAll('.ww-about-story-grid').forEach(grid => {
         const label   = grid.querySelector('.ww-about-label-col');
         const content = grid.querySelector('.ww-about-content-col');
-        if (label) {
-          g.fromTo(label,
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-              scrollTrigger: { trigger: label, start: 'top 88%', once: true } }
-          );
-        }
-        if (content) {
-          g.fromTo(content,
-            { opacity: 0, y: 28 },
-            { opacity: 1, y: 0, duration: 0.9, delay: 0.16, ease: 'power3.out',
-              scrollTrigger: { trigger: content, start: 'top 88%', once: true } }
-          );
-        }
+        if (label) g.fromTo(label,   { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: label,   start: 'top 88%', once: true } });
+        if (content) g.fromTo(content, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.9, delay: 0.16, ease: 'power3.out', scrollTrigger: { trigger: content, start: 'top 88%', once: true } });
       });
 
-      // MVV cards — staggered
       const cards = document.querySelectorAll('.ww-mvv-card');
-      if (cards.length) {
-        g.fromTo(cards,
-          { opacity: 0, y: 36 },
-          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-            stagger: 0.12,
-            scrollTrigger: { trigger: cards[0], start: 'top 88%', once: true } }
-        );
-      }
+      if (cards.length) g.fromTo(cards, { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.12, scrollTrigger: { trigger: cards[0], start: 'top 88%', once: true } });
 
-      // Team cards — staggered
       const team = document.querySelectorAll('.ww-team-card');
-      if (team.length) {
-        g.fromTo(team,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out',
-            stagger: 0.12,
-            scrollTrigger: { trigger: team[0], start: 'top 88%', once: true } }
-        );
-      }
+      if (team.length) g.fromTo(team, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out', stagger: 0.12, scrollTrigger: { trigger: team[0], start: 'top 88%', once: true } });
 
-      // CTA
       const ctaH = document.querySelector('.ww-about-cta-heading');
       const ctaB = document.querySelector('.ww-about-cta-btn');
-      if (ctaH) {
-        g.fromTo(ctaH,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
-            scrollTrigger: { trigger: ctaH, start: 'top 88%', once: true } }
-        );
-      }
-      if (ctaB) {
-        g.fromTo(ctaB,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.75, delay: 0.14, ease: 'power3.out',
-            scrollTrigger: { trigger: ctaB, start: 'top 92%', once: true } }
-        );
-      }
+      if (ctaH) g.fromTo(ctaH, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: ctaH, start: 'top 88%', once: true } });
+      if (ctaB) g.fromTo(ctaB, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, delay: 0.14, ease: 'power3.out', scrollTrigger: { trigger: ctaB, start: 'top 92%', once: true } });
     };
     run();
   }, []);
@@ -101,15 +80,9 @@ export default function About() {
               <p className="ww-about-label">Our Story</p>
             </div>
             <div className="ww-about-content-col">
-              <p className="ww-about-body">
-                White Wolf emerged from a vision to create a modern digital agency that goes beyond execution.
-              </p>
-              <p className="ww-about-body">
-                We believe the future belongs to businesses that combine exceptional design, intelligent technology, and human-centered experiences.
-              </p>
-              <p className="ww-about-body">
-                Our team brings together expertise in branding, digital product design, engineering, and AI-driven innovation to help companies scale with confidence.
-              </p>
+              <p className="ww-about-body">White Wolf emerged from a vision to create a modern digital agency that goes beyond execution.</p>
+              <p className="ww-about-body">We believe the future belongs to businesses that combine exceptional design, intelligent technology, and human-centered experiences.</p>
+              <p className="ww-about-body">Our team brings together expertise in branding, digital product design, engineering, and AI-driven innovation to help companies scale with confidence.</p>
             </div>
           </div>
         </div>
@@ -119,17 +92,14 @@ export default function About() {
       <section className="ww-about-section ww-about-mvv">
         <div className="ww-container">
           <div className="ww-mvv-grid">
-
             <div className="ww-mvv-card">
               <p className="ww-mvv-label">Mission</p>
               <p className="ww-mvv-text">To create intelligent digital experiences that empower ambitious businesses to lead their industries.</p>
             </div>
-
             <div className="ww-mvv-card">
               <p className="ww-mvv-label">Vision</p>
               <p className="ww-mvv-text">To become a globally respected innovation agency shaping the future of digital products and AI experiences.</p>
             </div>
-
             <div className="ww-mvv-card ww-mvv-card--values">
               <p className="ww-mvv-label">Core Values</p>
               <div className="ww-values-grid">
@@ -148,7 +118,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -161,43 +130,46 @@ export default function About() {
               <p className="ww-about-label">Leadership</p>
             </div>
             <div className="ww-about-content-col">
-              <p className="ww-about-body">
-                Led by industry professionals with 20+ years of experience across branding, product design, technology, and digital transformation.
-              </p>
-              <p className="ww-about-body">
-                White Wolf combines strategic leadership with hands-on execution to ensure every project delivers measurable impact.
-              </p>
+              <p className="ww-about-body">Led by industry professionals with 20+ years of experience across branding, product design, technology, and digital transformation.</p>
+              <p className="ww-about-body">White Wolf combines strategic leadership with hands-on execution to ensure every project delivers measurable impact.</p>
             </div>
           </div>
 
+          {/* Team grid */}
           <div className="ww-team-grid">
-            <div className="ww-team-card">
-              <div className="ww-team-img-wrap">
-                <img src="/assets/team-1.jpg" alt="Selestin Anthony" className="ww-team-img" />
+            {TEAM.map(({ img, name, role, eyebrow, bio }) => (
+              <div className="ww-team-card" key={name}>
+                <div
+                  className="ww-team-portrait"
+                  tabIndex={bio ? 0 : undefined}
+                  role={bio ? 'button' : undefined}
+                  aria-label={bio ? `Read bio for ${name}` : undefined}
+                >
+                  {img ? (
+                    <img src={img} alt={name} className="ww-team-img" />
+                  ) : (
+                    <div className="ww-team-placeholder"><span>+</span></div>
+                  )}
+
+                  {/* Default name bar — always visible */}
+                  <div className="ww-team-default-bar">
+                    <p className="ww-team-default-name">{name}</p>
+                    <p className="ww-team-default-role">{role}</p>
+                  </div>
+
+                  {/* Bio overlay — slides up on hover */}
+                  {bio && (
+                    <div className="ww-team-bio-overlay">
+                      <p className="ww-bio-eyebrow">{eyebrow}</p>
+                      <p className="ww-bio-name">{name}</p>
+                      <p className="ww-bio-role">{role}</p>
+                      <div className="ww-bio-divider" />
+                      <p className="ww-bio-text">{bio}</p>
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="ww-team-info">
-                <p className="ww-team-name">Selestin Anthony</p>
-                <p className="ww-team-role">Founder & Creative Director</p>
-              </div>
-            </div>
-            <div className="ww-team-card">
-              <div className="ww-team-img-wrap ww-team-img--placeholder">
-                <span>+</span>
-              </div>
-              <div className="ww-team-info">
-                <p className="ww-team-name">Coming Soon</p>
-                <p className="ww-team-role">Technology Lead</p>
-              </div>
-            </div>
-            <div className="ww-team-card">
-              <div className="ww-team-img-wrap ww-team-img--placeholder">
-                <span>+</span>
-              </div>
-              <div className="ww-team-info">
-                <p className="ww-team-name">Coming Soon</p>
-                <p className="ww-team-role">Strategy & Growth</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -211,12 +183,8 @@ export default function About() {
             </div>
             <div className="ww-about-content-col">
               <h2 className="ww-about-culture-heading">Built for Creative Thinkers & Problem Solvers.</h2>
-              <p className="ww-about-body">
-                We foster a culture of curiosity, innovation, experimentation, and collaboration.
-              </p>
-              <p className="ww-about-body">
-                Our approach combines creative exploration with strategic execution to deliver meaningful digital experiences.
-              </p>
+              <p className="ww-about-body">We foster a culture of curiosity, innovation, experimentation, and collaboration.</p>
+              <p className="ww-about-body">Our approach combines creative exploration with strategic execution to deliver meaningful digital experiences.</p>
             </div>
           </div>
         </div>
