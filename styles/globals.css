@@ -2200,8 +2200,7 @@ html, body {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #6AAAC7;
-  margin: 0;
-  line-height: normal;
+  margin: 0 0 1.1rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.19s, transform 0.4s ease 0.19s;
