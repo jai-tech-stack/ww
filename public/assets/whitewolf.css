@@ -4084,7 +4084,7 @@ a {
   }
 
   .work-card-heading {
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 156px;
@@ -4116,7 +4116,7 @@ a {
 
 @media screen and (min-width: 1440px) {
   body {
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 180px;
@@ -4156,7 +4156,7 @@ a {
   }
 
   .work-card-heading {
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 180px;
@@ -4188,7 +4188,7 @@ a {
 
 @media screen and (min-width: 1920px) {
   body {
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 204px;
@@ -4242,7 +4242,7 @@ a {
   }
 
   .work-card-heading {
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 204px;
@@ -4277,7 +4277,7 @@ a {
     --_spacing---container-padding--default: 15px;
     --_spacing---section-padding--large: 80px;
     --_spacing---section-padding--small: 40px;
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 100px;
@@ -4606,7 +4606,7 @@ a {
     --_spacing---container-padding--default: 15px;
     --_spacing---section-padding--large: 60px;
     --_spacing---section-padding--small: 30px;
-    --_typography---font-size--p2: 16px;
+    --_typography---font-size--p2: 17px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 78px;
@@ -4940,7 +4940,7 @@ a {
     --_spacing---container-padding--default: 15px;
     --_spacing---section-padding--large: 40px;
     --_spacing---section-padding--small: 20px;
-    --_typography---font-size--p2: 15px;
+    --_typography---font-size--p2: 16px;
     --_typography---line-height--m: 120%;
     --_typography---font-weight--regular: 400;
     --_typography---heading-size--h1: 43px;
