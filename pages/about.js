@@ -77,11 +77,11 @@ export default function About() {
           <h1 className="ww-page-title">Driven by Experience.<br />Built for Innovation.</h1>
           <p className="ww-page-subtitle">
             White Wolf was founded to bridge strategy, creativity, technology, and AI innovation into one powerful digital transformation partner.
+</p>
+  <p className="ww-page-subtitle">With leadership experience spanning more than two decades, we help businesses build future-ready brands, digital products, and intelligent experiences for global markets.</p>
 
-With leadership experience spanning more than two decades, we help businesses build future-ready brands, digital products, and intelligent experiences for global markets.
-
-As a proud venture of TechSigma Global , White Wolf combines creative excellence with technological expertise to empower organizations in building scalable, innovative, and future-ready solutions that drive lasting business impact.
-          </p>
+  <p className="ww-page-subtitle">As a venture of TechSigma Global, White Wolf combines creativity, technology, and AI to build scalable, future-ready solutions that drive business growth.</p>
+          
         </div>
       </section>
 
