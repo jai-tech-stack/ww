@@ -144,9 +144,19 @@ html, body {
 }
 
 .navbar-content-flex {
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
+}
+
+/* Push the menu group to the right so the logo stays left,
+   keeping the menu links and Contact button close together */
+.navbar-content-flex > .w-nav-menu {
+  margin-left: auto;
+  float: none;
+}
+.navbar-button-humber-wrapper {
+  margin-left: 28px;
 }
 
 .nav-menu-link {
@@ -397,9 +407,9 @@ html, body {
 .button-wrap.nav-tablet { display: none; }
 
 .nav-menu-flex-down {
-  grid-column-gap: 100px;
-  grid-row-gap: 100px;
-  justify-content: space-between;
+  grid-column-gap: 8px !important;
+  grid-row-gap: 8px !important;
+  justify-content: flex-end;
   align-items: center;
   display: flex;
 }
