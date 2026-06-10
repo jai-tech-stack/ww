@@ -1299,6 +1299,154 @@ html, body {
 .ww-service-card-list li::before { content:"—"; position:absolute; left:0; color:#6AAAC7; opacity:0.5; }
 .ww-service-card-arrow { font-family:'Karla',sans-serif; font-size:0.82rem; color:#6AAAC7; margin-top:0.5rem; }
 
+/* ── Services page — editorial service blocks ───────────────── */
+.ww-svc-block--alt { background-color: rgba(106,170,199,0.03); }
+
+.ww-svc-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left — number + label */
+.ww-svc-head {
+  position: sticky;
+  top: 120px;
+}
+.ww-svc-num {
+  display: block;
+  font-family: 'LucidaBright', Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 400;
+  color: #BF6EB6;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+.ww-svc-label {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+/* Right — content */
+.ww-svc-headline {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.4rem;
+  max-width: 18ch;
+}
+.ww-svc-intro {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin: 0 0 3rem;
+  max-width: 60ch;
+}
+
+.ww-svc-included-label {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6AAAC7;
+  margin: 0 0 1.3rem;
+}
+
+.ww-svc-included {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.1rem 2.5rem;
+  margin-bottom: 3rem;
+}
+.ww-svc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.ww-svc-item-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #BF6EB6;
+  flex-shrink: 0;
+}
+.ww-svc-item-name {
+  font-family: 'Karla', sans-serif !important;
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  color: rgba(255,255,255,0.82);
+  letter-spacing: 0.01em;
+}
+
+/* Technologies row (Development) */
+.ww-svc-tech-wrap { margin-bottom: 3rem; }
+.ww-svc-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.ww-svc-tech-chip {
+  font-family: 'Karla', sans-serif !important;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(106,170,199,0.35);
+  border-radius: 100px;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.ww-svc-tech-chip:hover {
+  background: rgba(106,170,199,0.12);
+  border-color: #6AAAC7;
+  color: #fff;
+}
+
+/* Value proposition block */
+.ww-svc-value {
+  position: relative;
+  padding: 0 0 0 2.2rem;
+  border-left: 2px solid #BF6EB6;
+  max-width: 62ch;
+}
+.ww-svc-value-mark {
+  position: absolute;
+  left: 1.5rem;
+  top: -0.6rem;
+  font-family: 'LucidaBright', Georgia, serif;
+  font-size: 3rem;
+  color: rgba(191,110,182,0.35);
+  line-height: 1;
+  pointer-events: none;
+}
+.ww-svc-value-text {
+  font-family: 'LucidaBright', Georgia, serif !important;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .ww-svc-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ww-svc-head { position: static; display: flex; align-items: baseline; gap: 1.2rem; }
+  .ww-svc-num { margin-bottom: 0; }
+}
+@media (max-width: 600px) {
+  .ww-svc-included { grid-template-columns: 1fr; }
+}
+
 /* ── Process page rows ───────────────────────────────────────── */
 .ww-process-row {
   display: flex;
