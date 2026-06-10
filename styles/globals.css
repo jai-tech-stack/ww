@@ -2899,6 +2899,107 @@ html, body {
 }
 .ww-chat-footer-note a:hover { color: #BF6EB6; }
 
+/* ── Share actions (WhatsApp / Email) ─────────────────── */
+.ww-chat-actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #0d0d0d;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.ww-chat-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+.ww-chat-action:hover { transform: translateY(-1px); }
+.ww-chat-action--wa {
+  background: rgba(37,211,102,0.12);
+  border-color: rgba(37,211,102,0.4);
+  color: #25D366;
+}
+.ww-chat-action--wa:hover { background: rgba(37,211,102,0.2); }
+.ww-chat-action--mail {
+  background: rgba(106,170,199,0.1);
+  border-color: rgba(106,170,199,0.35);
+  color: #6AAAC7;
+}
+.ww-chat-action--mail:hover { background: rgba(106,170,199,0.18); }
+
+/* ── Inline lead-capture form ─────────────────────────── */
+.ww-chat-lead {
+  margin: 6px 0 2px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(106,170,199,0.07);
+  border: 1px solid rgba(106,170,199,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ww-chat-lead-title {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2px;
+}
+.ww-chat-lead-input {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.85rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 9px 11px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ww-chat-lead-input::placeholder { color: rgba(255,255,255,0.35); }
+.ww-chat-lead-input:focus { border-color: #6AAAC7; }
+.ww-chat-lead-btn {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  background: #6AAAC7;
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ww-chat-lead-btn:hover:not(:disabled) { background: #7fb8d2; }
+.ww-chat-lead-btn:disabled { opacity: 0.5; cursor: default; }
+.ww-chat-lead-done {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.88rem;
+  color: #6AAAC7;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  padding: 6px 0;
+}
+.ww-chat-lead-err {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.78rem;
+  color: #ff8a8a;
+  margin: 0;
+}
+
 /* Mobile chat widget */
 @media (max-width: 480px) {
   .ww-chat-window {

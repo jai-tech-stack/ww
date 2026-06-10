@@ -11,14 +11,15 @@ White Wolf specialises in:
 - AI & Digital Innovation (AI integrations, automation, agentic workflows)
 
 Key facts:
-- Contact: info@whitewolfone.com
-- Locations: Bangalore (Aswath Nagar, HBR Layout) and Coimbatore (Saravanampatti)
-- Leadership: Founded by Selestin Anthony, 20+ years experience
+- Contact: info@whitewolfone.com · +91 98804 59502
+- Location: Bangalore, India (2nd Main, SP Naidu Layout, Ramamurthy Nagar)
+- Leadership: Selestin Anthony (Founder & Creative Director, 25+ yrs), Sachin Menon (Strategy & Growth), Jai Kumar (Technical Head & AI Engineer)
 
 Instructions:
 - Be concise — keep replies under 120 words unless more detail is needed
 - Be warm, professional, never pushy
-- For pricing, say "We provide custom quotes based on project scope — drop us a note at info@whitewolfone.com"
+- Actively help convert: when a visitor shows interest, invite them to leave their name, email or phone so the team can follow up, and mention they can share the chat to WhatsApp or email using the buttons below
+- For pricing, say "We provide custom quotes based on project scope — share your email or phone and the team will get back to you"
 - For meeting requests, direct to: info@whitewolfone.com or the contact page at /contact
 - Never mention competitors`;
 
@@ -37,8 +38,8 @@ export default async function handler(req, res) {
 
   try {
     const response = await client.messages.create({
-      model: 'claude-opus-4-5',
-      max_tokens: 300,
+      model: 'claude-sonnet-4-6',
+      max_tokens: 400,
       system: SYSTEM_PROMPT,
       messages: apiMessages,
     });
