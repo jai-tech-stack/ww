@@ -32,6 +32,39 @@ export default function ChatWidget() {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const autoSharedRef = useRef(false);
+  const messagesRef = useRef(messages);
+  const leadRef = useRef(lead);
+
+  // Keep refs current for the unload handler
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
+  useEffect(() => { leadRef.current = lead; }, [lead]);
+
+  // Reliable capture: flush the transcript when the tab is hidden/closed
+  useEffect(() => {
+    const flush = () => {
+      if (autoSharedRef.current) return;
+      const msgs = messagesRef.current;
+      const realUser = msgs.filter((m) => m.role === 'user').length;
+      const ld = leadRef.current;
+      const hasContact = Boolean(ld.email || ld.phone);
+      if (realUser < 3 && !hasContact) return; // only genuine conversations
+      autoSharedRef.current = true;
+      try {
+        const blob = new Blob(
+          [JSON.stringify({ messages: msgs, contact: ld, source: 'AI Chat Widget (auto)' })],
+          { type: 'application/json' }
+        );
+        navigator.sendBeacon('/api/chat-share', blob);
+      } catch {}
+    };
+    const onVis = () => { if (document.visibilityState === 'hidden') flush(); };
+    document.addEventListener('visibilitychange', onVis);
+    window.addEventListener('pagehide', flush);
+    return () => {
+      document.removeEventListener('visibilitychange', onVis);
+      window.removeEventListener('pagehide', flush);
+    };
+  }, []);
 
   // Restore conversation from this browser session
   useEffect(() => {
@@ -91,9 +124,11 @@ export default function ChatWidget() {
     [messages]
   );
 
-  // Auto-email the conversation to the team when the widget is closed
+  // Auto-email the conversation to the team when the widget is closed —
+  // only for genuine conversations (3+ visitor messages or contact shared)
   const closeChat = useCallback(() => {
-    if (!autoSharedRef.current && userMsgCount >= 1) {
+    const hasContact = Boolean(lead.email || lead.phone);
+    if (!autoSharedRef.current && (userMsgCount >= 3 || hasContact)) {
       autoSharedRef.current = true;
       shareTranscript(lead, true);
     }
@@ -133,10 +168,12 @@ export default function ChatWidget() {
     }
   };
 
-  // Open WhatsApp with the full conversation pre-filled to the team
+  // Open WhatsApp with the conversation pre-filled (capped to stay within URL limits)
   const shareToWhatsApp = () => {
     const intro = 'Hi White Wolf, here is my chat from your website:\n\n';
-    const body = encodeURIComponent(intro + buildTranscript(messages));
+    let transcript = buildTranscript(messages);
+    if (transcript.length > 1400) transcript = transcript.slice(-1400) + '\n…(earlier messages trimmed)';
+    const body = encodeURIComponent(intro + transcript);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${body}`, '_blank', 'noopener');
     if (!autoSharedRef.current && userMsgCount >= 1) {
       autoSharedRef.current = true;

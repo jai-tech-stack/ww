@@ -1,19 +1,33 @@
 import nodemailer from "nodemailer";
+import { rateLimit, clientIp } from "../../lib/rate-limit";
 
 const LEADS_EMAIL = process.env.LEADS_EMAIL || "info@whitewolfone.com";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ message: "Method not allowed" });
 
+  // Abuse protection: cap transcript emails per IP
+  const ip = clientIp(req);
+  const limited = rateLimit({ key: `share:${ip}`, limit: 6, windowMs: 600_000 }); // 6 / 10 min
+  if (!limited.ok) {
+    res.setHeader("Retry-After", String(limited.retryAfter));
+    return res.status(429).json({ message: "Too many requests — please try again shortly." });
+  }
+
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    return res.status(503).json({ message: "Email is not configured yet." });
+  }
+
   const { messages, contact = {}, source = "AI Chat Widget" } = req.body || {};
-  if (!Array.isArray(messages) || messages.length === 0) {
+  if (!Array.isArray(messages) || messages.length === 0 || messages.length > 100) {
     return res.status(400).json({ message: "No conversation to share." });
   }
 
-  // Only send if there's at least one real visitor message
-  const userMsgs = messages.filter((m) => m.role === "user");
-  if (userMsgs.length === 0) {
-    return res.status(200).json({ message: "Nothing to share." });
+  // Require a genuine conversation: at least 2 visitor messages, OR contact details
+  const userMsgs = messages.filter((m) => m.role === "user" && typeof m.content === "string");
+  const hasContact = Boolean(contact.email || contact.phone);
+  if (userMsgs.length < 2 && !hasContact) {
+    return res.status(200).json({ message: "Not enough to share." });
   }
 
   const rows = messages
