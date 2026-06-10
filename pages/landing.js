@@ -92,6 +92,22 @@ export default function Landing({ midHtml, endHtml, inlineStyles }) {
 
       {/* ── 1. Banner: left text · right form ─────────────────── */}
       <section className="lp-hero">
+        {/* Background video (free Pexels stock) with image poster fallback */}
+        <video
+          className="lp-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/assets/banner-slide.png"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/8733062/8733062-hd_1920_1080_30fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+
         <div className="lp-hero-grid">
           {/* Left — pitch */}
           <div className="lp-hero-left">

@@ -3006,7 +3006,7 @@ html, body {
   isolation: isolate;
 }
 
-/* Banner image background + dark overlay (keeps text/form readable) */
+/* Banner image background — shows while the video loads / as fallback */
 .lp-hero::before {
   content: "";
   position: absolute;
@@ -3018,6 +3018,18 @@ html, body {
   opacity: 0.5;
   transform: scale(1.05);
   animation: lpHeroZoom 18s ease-in-out infinite alternate;
+}
+
+/* Background video layer (sits above the poster image, below the overlay) */
+.lp-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.55;
+  pointer-events: none;
 }
 .lp-hero::after {
   content: "";
