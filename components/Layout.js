@@ -61,7 +61,7 @@ export default function Layout({ children, title, description }) {
                 <a href="mailto:info@whitewolfone.com" className="ww-footer-link">info@whitewolfone.com</a>
                 <a href="tel:+919538399100" className="ww-footer-link">+91 95383 99100</a>
                  <a href="tel:+919880459502" className="ww-footer-link">+91 98804 59502</a>
-                <span className="ww-footer-link" style={{ cursor: "default" }}>Bangalore, India</span>
+                <span className="ww-footer-link" style={{ cursor: "default" }}>2nd Main SP Naidu Layout, Ramamurthy Nagar, Bengaluru, Karnataka 560016</span>
               </div>
             </div>
 
