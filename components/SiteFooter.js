@@ -41,7 +41,6 @@ export default function SiteFooter() {
                   <a href="/about" className="ww-footer-nav-link">About</a>
                   <a href="/services" className="ww-footer-nav-link">Services</a>
                   <a href="/case-studies" className="ww-footer-nav-link">Projects</a>
-                  <a href="/process" className="ww-footer-nav-link">Process</a>
                   <a href="/contact" className="ww-footer-nav-link">Contact</a>
                 </nav>
               </div>

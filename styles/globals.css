@@ -1000,11 +1000,13 @@ html, body {
 
 .ww-contact-link {
   font-family: 'Karla', sans-serif;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.2s;
   display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
 }
 
 .ww-contact-link:hover {
@@ -2194,8 +2196,8 @@ html, body {
 /* ── LEFT — Locations ──────────────────────────────────── */
 .ww-footer-find-label {
   font-family: 'Karla', sans-serif;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.45);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0 0 2.5rem;
@@ -2207,17 +2209,17 @@ html, body {
 
 .ww-footer-city {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   font-weight: 400;
   color: #ffffff;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.7rem;
 }
 
 .ww-footer-addr {
   font-family: 'Karla', sans-serif;
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.75;
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
   margin: 0 0 1rem;
 }
 
@@ -2250,24 +2252,24 @@ html, body {
 
 .ww-footer-nav-label {
   font-family: 'Karla', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   margin: 0 0 1.8rem;
 }
 
 .ww-footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1.1rem;
 }
 
 .ww-footer-nav-link {
   font-family: 'Karla', sans-serif;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.6);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -2284,10 +2286,10 @@ html, body {
 
 .ww-footer-follow-label {
   font-family: 'Karla', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   margin: 0 0 1rem;
 }
 
@@ -2366,7 +2368,7 @@ html, body {
 
 .ww-footer-card-label {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ffffff;
   line-height: 1.4;
 }
@@ -2399,8 +2401,8 @@ html, body {
 
 .ww-footer-copy {
   font-family: 'Karla', sans-serif;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.4);
 }
 
 .ww-footer-bottom-links {
@@ -2409,8 +2411,8 @@ html, body {
 }
 .ww-footer-bottom-links a {
   font-family: 'Karla', sans-serif;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.3);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.4);
   text-decoration: none;
   transition: color 0.2s;
 }
