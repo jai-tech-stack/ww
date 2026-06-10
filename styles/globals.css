@@ -835,7 +835,7 @@ html, body {
 
 .ww-why-number {
   font-family: 'LucidaBright', Georgia, serif;
-  font-size: 0.7rem;
+  font-size: 1.0rem;
   color: #6AAAC7;
   letter-spacing: 0.15em;
   font-weight: 600;
@@ -2415,10 +2415,9 @@ html, body {
 .ww-footer-nav-label {
   font-family: 'Karla', sans-serif;
   font-size: 0.92rem;
-  font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: #7fb8d2;
   margin: 0 0 1.8rem;
 }
 
@@ -2451,7 +2450,7 @@ html, body {
   font-size: 0.92rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: #7fb8d2;
   margin: 0 0 1rem;
 }
 
