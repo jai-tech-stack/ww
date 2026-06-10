@@ -50,7 +50,7 @@ export default function SiteFooter() {
 
                 {/* Social icons */}
                 <div className="ww-footer-social-row">
-                  <p className="ww-footer-follow-label">Follow Us On:</p>
+                  <p className="ww-footer-follow-label">Follow:</p>
                   <div className="ww-footer-social-icons">
                     <a href="https://www.linkedin.com/company/whitewolfone" target="_blank" rel="noopener noreferrer" className="ww-footer-social-icon" aria-label="LinkedIn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

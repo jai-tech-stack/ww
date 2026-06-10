@@ -1196,7 +1196,7 @@ html, body {
 /* Marquee strip */
 .footer-bottom-marquee {
   gap: 34px;
-  background-color: #BF6EB6 !important;
+  background-color: #ffffff !important;
   justify-content: center;
   align-items: center;
   display: flex;
