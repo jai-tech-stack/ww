@@ -140,7 +140,7 @@ html, body {
 
 .brand-logo {
   width: 100%;
-  max-width: 160px;
+  max-width: 200px;
 }
 
 .navbar-content-flex {
@@ -2971,7 +2971,7 @@ html, body {
 /* ── Label — small uppercase, blue accent ───────────── */
 .ww-stat-label {
   font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
