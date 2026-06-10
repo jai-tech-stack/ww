@@ -2515,6 +2515,110 @@ html, body {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   HIGHLIGHT STATS
+   ══════════════════════════════════════════════════════════= */
+
+.highlight-stats-wrapper {
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-top: 2.5rem;
+}
+
+.ww-stats-eyebrow {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(106,170,201,0.85);
+  margin: 0 0 2.2rem;
+}
+
+.ww-stats-grid {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.ww-stat-item {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0 2rem 0 0;
+}
+.ww-stat-item:last-child {
+  padding-right: 0;
+}
+
+/* Vertical divider between stat items */
+.ww-stat-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.08);
+  align-self: stretch;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* The big number */
+.ww-stat-value {
+  font-family: 'LucidaBright', Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* The "+" suffix — slightly smaller, purple accent */
+.ww-stat-plus {
+  font-size: 0.6em;
+  color: #BF6EB6;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* Text-only values like "AI", "S→E" */
+.ww-stat-value--text {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  letter-spacing: 0.01em;
+  color: #BF6EB6;
+}
+
+/* The small label */
+.ww-stat-label {
+  font-family: 'Karla', sans-serif;
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+  max-width: 160px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ww-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1rem;
+  }
+  .ww-stat-divider { display: none; }
+  .ww-stat-item { padding: 0; flex: unset; }
+}
+
+@media (max-width: 480px) {
+  .ww-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 0.5rem;
+  }
+  .ww-stat-value {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+}
+
 /* ── Selection color ────────────────────────────────────────── */
 ::selection {
   background-color: rgba(106,170,199,0.35);
