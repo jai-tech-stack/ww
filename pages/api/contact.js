@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: `"White Wolf Website" <${process.env.SMTP_USER}>`,
-      to: "selestin.s@gmail.com",
+      to: "info@whitewolfone.com",
       replyTo: email,
       subject: `New Enquiry — ${projectType || "General"} | ${name}`,
       html: `
