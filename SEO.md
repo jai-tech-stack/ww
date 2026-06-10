@@ -34,7 +34,7 @@ This document covers the **on-page / technical SEO** implemented in the codebase
 ### Still recommended (quick wins)
 - **Real OG image (1200×630).** Currently using `/assets/banner-slide.png`. Design a branded
   share card per key page and pass `ogImage` from that page's `getStaticProps`.
-- **Image `alt` text** — audit Webflow homepage images; ensure every `<img>` has descriptive alt.
+- **Image `alt` text** — audit homepage images; ensure every `<img>` has descriptive alt.
 - **Image format/size** — serve WebP/AVIF and compress hero images for Core Web Vitals (LCP).
 - **Local Business schema** — once you have a Google Business Profile, add `LocalBusiness` JSON-LD
   with exact NAP (Name, Address, Phone) and geo coordinates.

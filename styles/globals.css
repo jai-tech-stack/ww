@@ -12,7 +12,7 @@
   font-display: swap;
 }
 
-/* Override Webflow font variables */
+/* Override base font variables */
 :root,
 body {
   --_font-family---body-font:      'LucidaBright', 'Lucida Bright', Georgia, serif;
@@ -72,7 +72,7 @@ input, textarea, button,
   box-sizing: border-box;
 }
 
-/* Override Webflow CSS custom properties with White Wolf brand */
+/* Override base CSS custom properties with White Wolf brand */
 :root,
 body {
   --dark-shade--black:         #0d0d0d;
@@ -107,7 +107,7 @@ html, body {
   inset: 0% 0% auto;
 }
 
-/* Force all navbar elements visible — Webflow scripts set opacity:0 as initial state */
+/* Force all navbar elements visible — base scripts set opacity:0 as initial state */
 .navbar,
 .navbar *,
 .nav-menu-link,
@@ -439,7 +439,7 @@ html, body {
   padding-top: 120px !important;
 }
 
-/* About layout — matches original Webflow structure */
+/* About layout — matches original structure */
 .about-wrapper {
   display: flex !important;
   justify-content: space-between !important;
@@ -2987,6 +2987,9 @@ html, body {
 @media (max-width: 420px) {
   .ww-stat-value { font-size: clamp(1.7rem, 8vw, 2.2rem); }
 }
+
+/* Hide the "Made in Webflow" attribution badge if ever injected */
+.w-webflow-badge { display: none !important; }
 
 /* ── Selection color ────────────────────────────────────────── */
 ::selection {
