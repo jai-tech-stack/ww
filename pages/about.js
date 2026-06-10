@@ -17,7 +17,7 @@ const TEAM = [
   },
   {
     img: null,
-    name: 'Coming Soon',
+    name: 'Sachin Menon',
     role: 'Strategy & Growth',
     eyebrow: null,
     bio: null,
@@ -27,35 +27,45 @@ const TEAM = [
 export default function About() {
 
   useEffect(() => {
-    let attempts = 0;
-    const run = () => {
-      const g = window.gsap;
-      const ST = window.ScrollTrigger;
-      if (!g || !ST) {
-        if (++attempts < 40) setTimeout(run, 150);
-        return;
-      }
-      g.registerPlugin(ST);
+    // Deterministic scroll-reveal (IntersectionObserver) — same fade-up feel
+    // as the homepage, without depending on GSAP/Lenis load timing.
+    const reveals = [];
+    const add = (el, delay = 0) => { if (el) reveals.push({ el, delay }); };
 
-      document.querySelectorAll('.ww-about-story-grid').forEach(grid => {
-        const label   = grid.querySelector('.ww-about-label-col');
-        const content = grid.querySelector('.ww-about-content-col');
-        if (label) g.fromTo(label,   { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: label,   start: 'top 88%', once: true } });
-        if (content) g.fromTo(content, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.9, delay: 0.16, ease: 'power3.out', scrollTrigger: { trigger: content, start: 'top 88%', once: true } });
+    document.querySelectorAll('.ww-about-story-grid').forEach(grid => {
+      add(grid.querySelector('.ww-about-label-col'), 0);
+      add(grid.querySelector('.ww-about-content-col'), 130);
+    });
+    document.querySelectorAll('.ww-mvv-card').forEach((el, i) => add(el, i * 110));
+    document.querySelectorAll('.ww-team-card').forEach((el, i) => add(el, i * 110));
+    add(document.querySelector('.ww-about-culture-heading'), 0);
+    add(document.querySelector('.ww-about-cta-heading'), 0);
+    add(document.querySelector('.ww-about-cta-btn'), 130);
+
+    // Set initial hidden state
+    reveals.forEach(({ el }) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(32px)';
+      el.style.transition =
+        'opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1)';
+      el.style.willChange = 'opacity, transform';
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const r = reveals.find((x) => x.el === entry.target);
+        const delay = r ? r.delay : 0;
+        window.setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, delay);
+        obs.unobserve(entry.target);
       });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
-      const cards = document.querySelectorAll('.ww-mvv-card');
-      if (cards.length) g.fromTo(cards, { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.12, scrollTrigger: { trigger: cards[0], start: 'top 88%', once: true } });
-
-      const team = document.querySelectorAll('.ww-team-card');
-      if (team.length) g.fromTo(team, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out', stagger: 0.12, scrollTrigger: { trigger: team[0], start: 'top 88%', once: true } });
-
-      const ctaH = document.querySelector('.ww-about-cta-heading');
-      const ctaB = document.querySelector('.ww-about-cta-btn');
-      if (ctaH) g.fromTo(ctaH, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: ctaH, start: 'top 88%', once: true } });
-      if (ctaB) g.fromTo(ctaB, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, delay: 0.14, ease: 'power3.out', scrollTrigger: { trigger: ctaB, start: 'top 92%', once: true } });
-    };
-    run();
+    reveals.forEach(({ el }) => obs.observe(el));
+    return () => obs.disconnect();
   }, []);
 
   return (
