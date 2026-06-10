@@ -1155,6 +1155,11 @@ html, body {
 .ww-main { flex: 1; }
 
 /* ── Footer — exact original CSS ────────────────────────────── */
+/* Clear separation so footer never visually merges with the CTA section above */
+.section.cta {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 .footer-section {
   display: flex;
   overflow: clip;
@@ -1176,10 +1181,10 @@ html, body {
   bottom: 0;
 }
 
-/* Marquee strip — blue background */
+/* Marquee strip */
 .footer-bottom-marquee {
   gap: 34px;
-  background-color: #BF6EB6;
+  background-color: #000000 !important;
   justify-content: center;
   align-items: center;
   display: flex;
