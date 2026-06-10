@@ -1929,7 +1929,7 @@ html, body {
 /* Portrait container — clips the hover overlay */
 .ww-team-portrait {
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 5/7;
   overflow: hidden;
   border-radius: 4px;
   background: #141414;
@@ -1996,11 +1996,11 @@ html, body {
   position: absolute;
   inset: 0;
   z-index: 2;
-  padding: 1.6rem 1.5rem 1.4rem;
+  padding: 2.2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background: rgba(6, 6, 6, 0.95);
+  justify-content: flex-start;
+  background: rgba(9, 9, 11, 0.985);
   transform: translateY(100%);
   transition: transform 0.58s cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -2014,41 +2014,43 @@ html, body {
 /* Bio content items — each stagger in after the overlay slides up */
 .ww-bio-eyebrow {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
   font-style: italic;
   color: #BF6EB6;
-  line-height: 1.35;
-  margin: 0 0 0.9rem;
+  line-height: 1.4;
+  margin: 0 0 1.1rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.08s, transform 0.4s ease 0.08s;
 }
 .ww-bio-name {
   font-family: 'LucidaBright', Georgia, serif !important;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   font-weight: 600;
   color: #ffffff;
-  margin: 0 0 0.2rem;
+  line-height: 1.15;
+  margin: 0 0 0.35rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.14s, transform 0.4s ease 0.14s;
 }
 .ww-bio-role {
   font-family: 'Karla', sans-serif !important;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  margin: 0 0 1rem;
+  color: #6AAAC7;
+  margin: 0 0 1.1rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.19s, transform 0.4s ease 0.19s;
 }
 .ww-bio-divider {
-  width: 28px;
-  height: 1px;
-  background: rgba(191,110,182,0.55);
-  margin-bottom: 0.9rem;
+  width: 36px;
+  height: 2px;
+  background: rgba(191,110,182,0.7);
+  margin-bottom: 1.1rem;
+  flex-shrink: 0;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left center;
@@ -2056,22 +2058,24 @@ html, body {
 }
 .ww-bio-text {
   font-family: 'Karla', sans-serif !important;
-  font-size: clamp(0.75rem, 0.95vw, 0.84rem);
-  color: rgba(255,255,255,0.6);
-  line-height: 1.65;
+  font-size: clamp(0.9rem, 1.15vw, 1rem);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.72;
   margin: 0;
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  max-height: 42%;
+  padding-right: 6px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.27s, transform 0.4s ease 0.27s;
   /* subtle scrollbar */
   scrollbar-width: thin;
-  scrollbar-color: rgba(191,110,182,0.35) transparent;
+  scrollbar-color: rgba(191,110,182,0.45) transparent;
 }
-.ww-bio-text::-webkit-scrollbar { width: 3px; }
+.ww-bio-text::-webkit-scrollbar { width: 4px; }
 .ww-bio-text::-webkit-scrollbar-track { background: transparent; }
-.ww-bio-text::-webkit-scrollbar-thumb { background: rgba(191,110,182,0.35); border-radius: 2px; }
+.ww-bio-text::-webkit-scrollbar-thumb { background: rgba(191,110,182,0.45); border-radius: 2px; }
 
 /* Trigger child reveals when overlay is hovered */
 .ww-team-card:hover .ww-bio-eyebrow,
