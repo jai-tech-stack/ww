@@ -1,94 +1,111 @@
 export default function SiteFooter() {
-  const footerHtml = `<div class="footer-section">
-    <section class="section footer">
-      <div class="footer-top-content">
-        <div class="w-layout-blockcontainer container w-container">
-          <div class="footer-main-wrapper">
-            <div class="overflow-hidden">
-              <div class="footer-menu-block">
-                <a href="https://www.facebook.com/" target="_blank" class="footer-menu-link w-inline-block">
-                  <h6 class="footer-menu-iteam">Facebook</h6>
-                  <div class="footer-hover-icon-block">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _1" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _2" style="transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+  return (
+    <div className="footer-section">
+      <section className="section footer">
+        <div className="ww-footer-new">
+          <div className="ww-container">
+            <div className="ww-footer-new-grid">
+
+              {/* LEFT — Locations */}
+              <div className="ww-footer-locations">
+                <p className="ww-footer-find-label">Find Us At</p>
+
+                <div className="ww-footer-location-item">
+                  <h4 className="ww-footer-city">Bangalore</h4>
+                  <p className="ww-footer-addr">Aswath Nagar, HBR Layout 5th Block,<br />Bangalore, India</p>
+                  <a
+                    href="https://maps.google.com/?q=Aswath+Nagar+HBR+Layout+5th+Block+Bangalore+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ww-footer-directions"
+                  >Get Directions</a>
+                </div>
+
+                <div className="ww-footer-location-item">
+                  <h4 className="ww-footer-city">Coimbatore</h4>
+                  <p className="ww-footer-addr">1st Floor, Sathuriyan Complex,<br />Keeranatham Rd, Saravanampatti,<br />Coimbatore, India</p>
+                  <a
+                    href="https://maps.google.com/?q=Sathuriyan+Complex+Keeranatham+Rd+Saravanampatti+Coimbatore+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ww-footer-directions"
+                  >Get Directions</a>
+                </div>
+              </div>
+
+              {/* RIGHT — Social + Chat/Speak */}
+              <div className="ww-footer-right">
+
+                {/* Social icons */}
+                <div className="ww-footer-social-row">
+                  <p className="ww-footer-follow-label">Follow Us On:</p>
+                  <div className="ww-footer-social-icons">
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="ww-footer-social-icon" aria-label="LinkedIn">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" className="ww-footer-social-icon" aria-label="Dribbble">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="ww-footer-social-icon" aria-label="Instagram">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="ww-footer-social-icon" aria-label="Facebook">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
                   </div>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" class="footer-menu-link w-inline-block">
-                  <h6 class="footer-menu-iteam">Instagram</h6>
-                  <div class="footer-hover-icon-block">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _1" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _2" style="transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  </div>
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank" class="footer-menu-link w-inline-block">
-                  <h6 class="footer-menu-iteam">LinkedIn</h6>
-                  <div class="footer-hover-icon-block">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _1" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _2" style="transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  </div>
-                </a>
-                <a href="https://x.com/" target="_blank" class="footer-menu-link w-inline-block">
-                  <h6 class="footer-menu-iteam">Twitter</h6>
-                  <div class="footer-hover-icon-block">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _1" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <img src="/assets/692a945c9fb2219774557743_Frame (37).svg" loading="lazy" alt="" class="footer-menu-arrow _2" style="transform: translate3d(-100%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                  </div>
-                </a>
+                </div>
+
+                {/* Chat / Speak cards */}
+                <div className="ww-footer-contact-cards">
+                  <a href="https://wa.me/919880459502" target="_blank" rel="noopener noreferrer" className="ww-footer-contact-card">
+                    <div className="ww-footer-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div className="ww-footer-card-label">Chat to<br />Us Now</div>
+                    <div className="ww-footer-card-arrow">→</div>
+                  </a>
+                  <a href="tel:+919880459502" className="ww-footer-contact-card">
+                    <div className="ww-footer-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div className="ww-footer-card-label">Speak to<br />Us Now</div>
+                    <div className="ww-footer-card-arrow">→</div>
+                  </a>
+                </div>
+
+                <p className="ww-footer-sales-note"><em>For sales purpose only *</em></p>
+              </div>
+
+            </div>
+
+            {/* Bottom bar */}
+            <div className="ww-footer-bottom-bar">
+              <span className="ww-footer-copy">© 2025 White Wolf. All rights reserved.</span>
+              <div className="ww-footer-bottom-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+                <a href="/case-studies">Projects</a>
               </div>
             </div>
-            <div class="overflow-hidden">
-              <div class="footer-menu-block">
-                <a href="/" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Home</h6></a>
-                <a href="/about" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">About</h6></a>
-                <a href="/services" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Service</h6></a>
-                <a href="/case-studies" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Project</h6></a>
-              </div>
-            </div>
-            <div class="overflow-hidden _3">
-              <div class="footer-menu-block">
-                <a href="/services/branding" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Branding</h6></a>
-                <a href="/services/ui-ux-design" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">UI/UX Design</h6></a>
-                <a href="/services/development" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">Development</h6></a>
-                <a href="/services/ai-integrated-services" class="footer-section-id-link w-inline-block"><h6 class="footer-menu-iteam hover">AI Services</h6></a>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom-wrap">
-            <div class="overflow-hidden">
-              <div class="footer-info-left-wrap">
-                <div class="footer-info-text"><span class="span-text-pimary-color">©</span> 2025 White Wolf.</div>
-              </div>
-            </div>
-             
           </div>
         </div>
-      </div>
-    </section>
-    <div class="footer-bottom-marquee-wrapper">
-      <div class="footer-bottom-marquee section" style="overflow:hidden;">
-        <div class="footer-marquee-track" style="display:flex;width:max-content;">
-          <div class="footer-bottom-text-wrapper">
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-          </div>
-          <div class="footer-bottom-text-wrapper" aria-hidden="true">
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
-            <div class="bottom-big-text"><h1 class="footer-bottom-text">White Wolf</h1><h1 class="footer-bottom-text">-</h1></div>
+      </section>
+
+      {/* Marquee */}
+      <div className="footer-bottom-marquee-wrapper">
+        <div className="footer-bottom-marquee section" style={{overflow:"hidden"}}>
+          <div className="footer-marquee-track" style={{display:"flex",width:"max-content"}}>
+            {[...Array(2)].map((_, i) => (
+              <div className="footer-bottom-text-wrapper" key={i} aria-hidden={i > 0 ? "true" : undefined}>
+                {["White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–"].map((t,j) => (
+                  <div className="bottom-big-text" key={j}><h1 className="footer-bottom-text">{t}</h1></div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-  </div>`;
-
-  return (
-    <div dangerouslySetInnerHTML={{ __html: footerHtml }} />
   );
 }

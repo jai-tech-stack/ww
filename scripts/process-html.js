@@ -121,8 +121,8 @@ raw = replaceDivContent(raw, 'medium-content-text',
 );
 
 // Services
-raw = raw.replace(/aria-label="We create powerful brands[^"]*"/, 'aria-label="We deliver end-to-end digital transformation — from strategy and brand to product and AI."');
-raw = replaceDivContent(raw, 'service-tag-description', '<p style="font-size:clamp(1.1rem,1.8vw,1.5rem);line-height:1.65;color:rgba(255,255,255,0.85);">We deliver end-to-end digital transformation — from strategy and brand to product and AI.</p>');
+raw = raw.replace(/aria-label="We create powerful brands[^"]*"/, 'aria-label="We deliver end-to-end digital transformation — from strategy and brand to product and AIFrom vision to execution, we deliver end-to-end digital solutions across strategy, brand experience, product engineering, and artificial intelligence — creating measurable impact at every stage."');
+raw = replaceDivContent(raw, 'service-tag-description', '<p style="font-size:clamp(1.1rem,1.8vw,1.5rem);line-height:1.65;color:rgba(255,255,255,0.85);">From vision to execution, we deliver end-to-end digital solutions across strategy, brand experience, product engineering, and artificial intelligence — creating measurable impact at every stage.</p>');
 raw = raw.replace(/(<div[^>]*class="content-title"[^>]*>)Brand Identity(<\/div>)/g, '$1Branding$2');
 raw = raw.replace('Our Brand Identity service helps you build a distinctive, memorable, and cohesive presence that resonates with your target audience.', 'We create memorable brands with strategic positioning, visual identity systems, and storytelling that connects globally.');
 raw = raw.replace(/(<div[^>]*class="content-title"[^>]*>)ui\/ux design(<\/div>)/g, '$1UI/UX Design$2');
