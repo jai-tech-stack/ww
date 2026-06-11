@@ -106,6 +106,16 @@ async function runTool(name, input, messages) {
 }
 
 export default async function handler(req, res) {
+  // Health check: open /api/chat in a browser to verify server config
+  if (req.method === 'GET') {
+    return res.json({
+      status: 'ok',
+      hasApiKey: Boolean(process.env.ANTHROPIC_API_KEY),
+      apiKeyPrefix: process.env.ANTHROPIC_API_KEY ? process.env.ANTHROPIC_API_KEY.slice(0, 7) : null,
+      model: 'claude-sonnet-4-6',
+      smtpConfigured: mailerConfigured(),
+    });
+  }
   if (req.method !== 'POST') return res.status(405).end();
 
   const ip = clientIp(req);

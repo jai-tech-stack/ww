@@ -1,5 +1,10 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "functions": {
+    "pages/api/chat.js": { "maxDuration": 30 },
+    "pages/api/chat-share.js": { "maxDuration": 20 },
+    "pages/api/contact.js": { "maxDuration": 20 }
+  }
 }
