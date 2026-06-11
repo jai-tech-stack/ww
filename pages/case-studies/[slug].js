@@ -32,6 +32,21 @@ export default function ProjectPage({ project }) {
             </div>
             <h1 className="ww-proj-title">{project.title}</h1>
             <p className="ww-proj-tagline">{project.tagline}</p>
+            {project.behanceUrl && (
+              <a
+                href={project.behanceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ww-proj-behance"
+                style={{ borderColor: `${project.color}66`, color: project.color }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8.2 6.3c.9 0 1.6.1 2.3.3.6.2 1.2.4 1.6.8.4.3.8.8 1 1.3.2.5.3 1.2.3 1.9 0 .8-.2 1.5-.6 2-.4.5-.9 1-1.6 1.3.9.3 1.6.8 2.1 1.4.5.7.7 1.5.7 2.4 0 .8-.2 1.5-.5 2-.3.6-.7 1-1.3 1.4-.5.3-1.1.6-1.8.7-.7.2-1.4.2-2.1.2H1V6.3h7.2zM7.8 11c.6 0 1-.1 1.4-.4.4-.3.5-.7.5-1.3 0-.3 0-.6-.2-.8-.1-.2-.3-.4-.5-.5-.2-.1-.4-.2-.7-.2-.3 0-.6-.1-.9-.1H4.3V11h3.5zm.2 4.9c.3 0 .6 0 .9-.1.3 0 .5-.1.7-.3.2-.1.4-.3.5-.5.1-.2.2-.5.2-.9 0-.7-.2-1.2-.6-1.5-.4-.3-.9-.4-1.6-.4H4.3v3.7H8zm10.3-9.1c.6 0 1.2.1 1.7.3.5.2 1 .5 1.3.9.4.4.7.9.9 1.4.2.6.3 1.2.3 1.9v.6h-6.1c0 .7.3 1.2.7 1.6.4.4 1 .5 1.7.5.5 0 1-.1 1.3-.4.4-.2.6-.5.7-.8h2.4c-.4 1.2-1 2-1.8 2.5-.8.5-1.7.8-2.9.8-.8 0-1.5-.1-2.1-.4-.6-.3-1.2-.6-1.6-1.1-.4-.5-.8-1-1-1.7-.2-.6-.3-1.4-.3-2.1 0-.8.1-1.5.4-2.1.2-.7.6-1.2 1-1.7.5-.5 1-.8 1.6-1.1.6-.2 1.3-.3 2.1-.3zm-.1 1.9c-.6 0-1 .2-1.4.5-.3.3-.5.8-.6 1.4h3.9c-.1-.6-.3-1-.6-1.4-.3-.3-.8-.5-1.3-.5zM15.5 5.5h4.9V7h-4.9V5.5z"/>
+                </svg>
+                View Full Project on Behance
+                <span aria-hidden="true">↗</span>
+              </a>
+            )}
           </div>
 
           {/* Metadata bar */}
@@ -127,6 +142,30 @@ export default function ProjectPage({ project }) {
         </section>
       ))}
 
+      {/* ── Gallery (horizontal swipe strip) ──────────────────── */}
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="ww-proj-gallery-sec">
+          <div className="ww-container">
+            <div className="ww-proj-gallery-head">
+              <p className="ww-page-tag">Gallery</p>
+              {project.behanceUrl && (
+                <a href={project.behanceUrl} target="_blank" rel="noopener noreferrer" className="ww-proj-gallery-link">
+                  See all shots on Behance ↗
+                </a>
+              )}
+            </div>
+          </div>
+          <div className="ww-proj-gallery" role="list">
+            {project.gallery.map((img, i) => (
+              <div className="ww-proj-gallery-item" role="listitem" key={i}>
+                <img src={img} alt={`${project.title} — image ${i + 1}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
+          <p className="ww-proj-gallery-hint">Swipe / scroll →</p>
+        </section>
+      )}
+
       {/* ── Results ───────────────────────────────────────────── */}
       {project.results && project.results.length > 0 && (
         <section className="ww-proj-results" style={{ "--proj-color": project.color }}>
@@ -154,9 +193,16 @@ export default function ProjectPage({ project }) {
                 Ready to build something like this?
               </h3>
             </div>
-            <Link href="/contact" className="ww-nav-cta" style={{ fontSize: "1rem", padding: "12px 32px" }}>
-              Let&apos;s Talk
-            </Link>
+            <div className="ww-proj-cta-actions">
+              {project.behanceUrl && (
+                <a href={project.behanceUrl} target="_blank" rel="noopener noreferrer" className="ww-proj-cta-behance">
+                  View on Behance ↗
+                </a>
+              )}
+              <Link href="/contact" className="ww-nav-cta" style={{ fontSize: "1rem", padding: "12px 32px" }}>
+                Let&apos;s Talk
+              </Link>
+            </div>
           </div>
         </div>
       </section>
