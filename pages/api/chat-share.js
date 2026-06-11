@@ -3,6 +3,8 @@ import { rateLimit, clientIp } from "../../lib/rate-limit";
 
 const LEADS_EMAIL = process.env.LEADS_EMAIL || "info@whitewolfone.com";
 
+export const config = { maxDuration: 20 };
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ message: "Method not allowed" });
 

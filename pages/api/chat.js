@@ -4,6 +4,10 @@ import { sendTeamEmail, mailerConfigured } from '../../lib/mailer';
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
+// Allow the agent loop (multiple sequential model calls) enough time on Vercel.
+// Default serverless timeout is 10s, which a tool-using loop can exceed.
+export const config = { maxDuration: 30 };
+
 const MAX_MSG_LEN = 1000;   // per-message character cap
 const MAX_HISTORY = 24;     // only send the last N messages to the model
 const MAX_TOOL_STEPS = 4;   // safety cap on the agent loop
@@ -167,9 +171,14 @@ export default async function handler(req, res) {
     if (!finalText) finalText = 'Thanks! Is there anything else I can help you with?';
     return res.json({ content: finalText, toolsUsed });
   } catch (err) {
-    console.error('Chat API error:', err);
+    const status = err?.status || err?.statusCode || null;
+    console.error('Chat API error:', status, err?.name, err?.message);
     return res.status(500).json({
       content: "I'm having trouble connecting right now. Please reach out to us at info@whitewolfone.com and we'll get back to you promptly.",
+      // Safe diagnostics (no secrets) so the cause is visible in the Network tab
+      reason: err?.name || 'Error',
+      detail: err?.message || 'unknown',
+      upstreamStatus: status,
     });
   }
 }
