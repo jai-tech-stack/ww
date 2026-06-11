@@ -2631,35 +2631,120 @@ html, body {
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 20px 0 16px;
-  height: 48px;
+  gap: 11px;
+  padding: 0 22px 0 9px;
+  height: 60px;
   border-radius: 100px;
-  background: #BF6EB6;
   color: #ffffff;
   border: none;
   cursor: pointer;
   font-family: 'Karla', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 20px rgba(191,110,182,0.45);
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  /* Animated AI gradient */
+  background: linear-gradient(125deg, #BF6EB6 0%, #8E6BD6 45%, #6AAAC7 100%);
+  background-size: 220% 220%;
+  box-shadow: 0 10px 34px rgba(191,110,182,0.45), 0 2px 8px rgba(0,0,0,0.35);
+  animation: wwFabGradient 7s ease infinite, wwFabBreathe 4.5s ease-in-out infinite;
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s;
 }
 .ww-chat-fab:hover {
-  background: #a85ea0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(191,110,182,0.55);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 44px rgba(142,107,214,0.55), 0 3px 10px rgba(0,0,0,0.4);
 }
+
+@keyframes wwFabGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes wwFabBreathe {
+  0%, 100% { box-shadow: 0 10px 34px rgba(191,110,182,0.40), 0 2px 8px rgba(0,0,0,0.35); }
+  50% { box-shadow: 0 12px 42px rgba(106,170,199,0.55), 0 2px 8px rgba(0,0,0,0.35); }
+}
+
+/* Orb holding the sparkle */
+.ww-chat-fab-orb {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ww-chat-fab-spark {
+  color: #fff;
+  animation: wwSparkFloat 3.2s ease-in-out infinite;
+}
+@keyframes wwSparkFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-1.5px) rotate(10deg) scale(1.08); }
+}
+
+/* Expanding ring */
+.ww-chat-fab-ping {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.55);
+  animation: wwPing 2.4s cubic-bezier(0,0,0.2,1) infinite;
+}
+@keyframes wwPing {
+  0% { transform: scale(0.85); opacity: 0.8; }
+  80%, 100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Two-line label */
+.ww-chat-fab-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.18;
+}
+.ww-chat-fab-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.ww-chat-fab-sub {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ww-chat-fab-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #36e27a;
+  animation: wwDotPulse 1.8s ease-out infinite;
+}
+@keyframes wwDotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(54,226,122,0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(54,226,122,0); }
+  100% { box-shadow: 0 0 0 0 rgba(54,226,122,0); }
+}
+
+/* Open (close) state — compact circle */
 .ww-chat-fab--open {
   padding: 0;
-  width: 48px;
+  width: 52px;
+  height: 52px;
+  gap: 0;
   justify-content: center;
+  animation: wwFabGradient 7s ease infinite;
 }
-.ww-chat-fab--open .ww-chat-fab-label { display: none; }
 
-.ww-chat-fab-label {
-  white-space: nowrap;
+@media (prefers-reduced-motion: reduce) {
+  .ww-chat-fab,
+  .ww-chat-fab--open,
+  .ww-chat-fab-spark,
+  .ww-chat-fab-ping,
+  .ww-chat-fab-dot { animation: none; }
 }
 
 /* Chat window */
