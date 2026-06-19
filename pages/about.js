@@ -18,9 +18,9 @@ const TEAM = [
   {
     img: '/assets/team2.jpg',
     name: 'Jai Kumar',
-    role: 'Technical Head & AI Engineer',
-    eyebrow: 'Engineering Scalable Solutions. Powering Intelligent Innovation.',
-    bio: 'With over 12+ years of experience in web technologies, cloud infrastructure, e-commerce, and AI-driven solutions, Jai Kumar leads the technical vision at White Wolf. He has successfully delivered and managed digital platforms for organizations across India, the UAE, and Qatar, spanning healthcare, real estate, nonprofit, and consumer sectors. His expertise covers the entire digital lifecycle — from strategy and architecture to development, cloud deployment, performance optimization, and AI integration. As the creator of Mintbrand, a SaaS-based branding workflow platform, Jai brings a unique blend of technical excellence, product thinking, and business insight. Passionate about innovation, he helps organizations build secure, scalable, and intelligent digital ecosystems that drive measurable growth and long-term value.',
+    role: 'Senior Web Developer',
+    eyebrow: '12+ Years of Web Development & Digital Delivery Excellence.',
+    bio: 'With over 12 years of experience, Jai Kumar is a senior web developer specialising in WordPress, WooCommerce, and Shopify. He has delivered 50+ websites and actively manages 20+ live properties for clients across healthcare, real estate, nonprofit, and consumer brands in India, the UAE, and Qatar. He brings genuine agency delivery discipline — owning every project from the first brief through launch, with deep expertise in SEO, Core Web Vitals, and analytics. He is also the creator of Mintbrand, a SaaS branding-workflow platform, blending technical craft with real product thinking.',
   },
 ];
 
