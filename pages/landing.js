@@ -18,9 +18,9 @@ const TEAM = [
   {
     img: "/assets/team2.jpg",
     name: "Jai Kumar",
-    role: "Senior Web Developer",
-    eyebrow: "12+ Years of Web Development & Digital Delivery Excellence.",
-    bio: "With over 12 years of experience, Jai Kumar is a senior web developer specialising in WordPress, WooCommerce, and Shopify. He has delivered 50+ websites and actively manages 20+ live properties for clients across healthcare, real estate, nonprofit, and consumer brands in India, the UAE, and Qatar. He brings genuine agency delivery discipline — owning every project from the first brief through launch, with deep expertise in SEO, Core Web Vitals, and analytics. He is also the creator of Mintbrand, a SaaS branding-workflow platform, blending technical craft with real product thinking.",
+    role: "Senior Full-Stack Developer",
+    eyebrow: "Full-Stack Development, Cloud Deployment & Custom AI Integrations.",
+    bio: "Jai Kumar is a senior full-stack developer with 12+ years of experience building fast, modern web experiences. He works across the stack — HTML5, CSS3, JavaScript, jQuery, React, and WordPress on the front end, with server-side development, hosting, deployment, and AWS cloud infrastructure behind it. He has also built numerous custom AI chat integrations, bringing intelligent, conversational experiences into client products. As the creator of Mintbrand, a SaaS branding-workflow platform, Jai pairs hands-on engineering with genuine agency delivery discipline — owning every project from the first brief through launch, including SEO, performance, and ongoing support.",
   },
 ];
 
