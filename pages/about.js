@@ -20,7 +20,7 @@ const TEAM = [
     name: 'Jai Kumar',
     role: 'Senior Full-Stack Developer',
     eyebrow: 'Full-Stack Development, Cloud Deployment & Custom AI Integrations.',
-    bio: 'Jai Kumar is a senior full-stack developer with 12+ years of experience building fast, modern web experiences. He works across the stack — HTML5, CSS3, JavaScript, jQuery, React, and WordPress on the front end, with server-side development, hosting, deployment, and AWS cloud infrastructure behind it. He has also built numerous custom AI chat integrations, bringing intelligent, conversational experiences into client products. Jai pairs hands-on engineering with genuine agency delivery discipline — owning every project from the first brief through launch, including SEO, performance, and ongoing support.',
+    bio: 'Jai Kumar is a senior full-stack developer with 12+ years of experience building fast, modern web experiences. He works across the stack — HTML5, CSS3, JavaScript, jQuery, React, and WordPress on the front end, with Node.js, server-side development, databases, hosting, deployment, and AWS cloud infrastructure behind it. He has also built numerous custom AI chat integrations, bringing intelligent, conversational experiences into client products. Jai pairs hands-on engineering with genuine agency delivery discipline — owning every project from the first brief through launch, including SEO, performance, and ongoing support.',
   },
 ];
 
