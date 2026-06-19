@@ -109,6 +109,12 @@ export default function SiteFooter() {
             {/* Bottom bar */}
             <div className="ww-footer-bottom-bar">
               <span className="ww-footer-copy">© 2026 White Wolf. All rights reserved.</span>
+              <span className="ww-footer-venture">
+                A venture of{" "}
+                <a href="https://www.techsigmaglobal.com/" target="_blank" rel="noopener noreferrer">
+                  TechSigma Global
+                </a>
+              </span>
             </div>
           </div>
         </div>
