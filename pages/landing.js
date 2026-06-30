@@ -6,14 +6,14 @@ const TEAM = [
     name: "Selestin Anthony",
     role: "Founder & Creative Director",
     eyebrow: "25+ Years of Creative Leadership. Building Brands That Endure.",
-    bio: "Selestin helps businesses build brands people remember and trust. With 25+ years across advertising, branding, digital design, and product innovation, he turns ideas into brand experiences that stand out — and stand the test of time. His award-winning work spans brand identity, packaging, marketing, websites, and digital products, including recognition for national Girl Child Safety awareness campaigns and multiple Best Design and UI/UX awards. For every client, Selestin brings strategic thinking, bold creativity, and a sharp sense of what moves audiences — so your brand does not just look great, it drives real growth.",
+    bio: "With over 25 years of experience spanning advertising, branding, digital design, and product innovation, Selestin Anthony has built a distinguished career transforming ideas into impactful brand experiences. Beginning as a visualizer, he evolved into a multidisciplinary creative leader, delivering award-winning work across brand identity, packaging, marketing communications, websites, and digital products. His work has been recognized through multiple industry accolades, including awards for national Girl Child Safety and protection awareness campaigns, Best Design and UI/UX awards, and large-scale brand initiatives. Driven by a passion for design beyond boundaries, Selestin combines strategic thinking, creativity, and emerging technologies to help organizations build meaningful brands, exceptional user experiences, and future-ready digital solutions.",
   },
   {
     img: "/assets/sachin.png",
     name: "Sachin Menon",
     role: "Strategy & Growth",
-    eyebrow: "Connecting Business Goals With Brands That Grow.",
-    bio: "Sachin helps businesses grow by connecting sharp strategy with brands and products people love. With over a decade founding and scaling ventures across software, marketing, and consumer products, he sees the whole picture — from your business goals to the customer experience that delivers them. For clients, that means brands and digital experiences built not just to look good, but to drive engagement, conversion, and long-term loyalty.",
+    eyebrow: "A Decade of Building Brands, Products & Growth-Focused Businesses.",
+    bio: "Sachin Menon is a technology leader and brand strategist, with over a decade of experience building digital products, brands, and growth-focused businesses. Having founded and scaled multiple ventures across software, marketing, and consumer products, he brings a unique perspective that connects business goals with exceptional user experiences. At our studio, Sachin leads the vision for creating brands and digital experiences that are not only visually compelling but also strategically designed to drive growth, engagement, and long-term customer loyalty.",
   },
   {
     img: "/assets/team2.jpg",
