@@ -339,6 +339,15 @@ html, body {
   height: 100%;
 }
 
+/* Keep the wolf in frame when the landscape hero is cropped on
+   narrower screens (the wolf sits on the right of the image). */
+@media (max-width: 1024px) {
+  .slider-image-wrap { object-position: 70% center !important; }
+}
+@media (max-width: 767px) {
+  .slider-image-wrap { object-position: 74% 42% !important; }
+}
+
 .slider-v2-wrapper {
   width: 100%;
   height: 146px;
