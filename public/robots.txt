@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /landing
 
-Sitemap: https://www.whitewolfone.com/sitemap.xml
+Sitemap: https://whitewolfone.in/sitemap.xml

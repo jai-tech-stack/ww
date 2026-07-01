@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import {
   SITE_URL,
   SITE_NAME,
+  SITE_TAGLINE,
   DEFAULT_TITLE,
   DEFAULT_DESCRIPTION,
   DEFAULT_OG_IMAGE,
@@ -63,8 +64,9 @@ export default function Header({
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:width" content="1920" />
+      <meta property="og:image:height" content="1080" />
+      <meta property="og:image:alt" content={`${SITE_NAME} — ${SITE_TAGLINE}`} />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
