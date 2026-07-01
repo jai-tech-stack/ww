@@ -159,6 +159,11 @@ html, body {
   margin-left: 28px;
 }
 
+/* On mobile the menu links are hidden, so push the hamburger to the far right */
+@media (max-width: 991px) {
+  .navbar-button-humber-wrapper { margin-left: auto; }
+}
+
 .nav-menu-link {
   gap: 12px;
   background-color: transparent;
