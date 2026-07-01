@@ -346,6 +346,25 @@ html, body {
 }
 @media (max-width: 767px) {
   .slider-image-wrap { object-position: 74% 42% !important; }
+
+  /* Dark scrim behind hero text so it stays readable over the wolf */
+  .banner-info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+      rgba(0,0,0,0.9) 0%,
+      rgba(0,0,0,0.7) 30%,
+      rgba(0,0,0,0.35) 55%,
+      rgba(0,0,0,0) 80%);
+  }
+  .hero-content-wrapper { z-index: 1; }
+  .hero-left-text .hero-text,
+  .hero-right-text .hero-text {
+    text-shadow: 0 2px 14px rgba(0,0,0,0.75);
+  }
 }
 
 .slider-v2-wrapper {
