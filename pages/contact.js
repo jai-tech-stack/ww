@@ -87,8 +87,8 @@ export default function Contact() {
 export async function getStaticProps() {
   return {
     props: {
-      title: "Contact",
-      description: "Get in touch with White Wolf to start your digital transformation project.",
+      title: "Contact White Wolf | Start Your Digital Project",
+      description: "Contact White Wolf in Bengaluru to discuss branding, UI/UX design, web development or AI integration. Tell us your goals and receive a response within 24 hours.",
     },
   };
 }

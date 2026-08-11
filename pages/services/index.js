@@ -226,9 +226,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: "Services — Branding, UI/UX, Development & AI",
+      title: "Branding, UI/UX, Web & AI Services | White Wolf",
       description:
-        "Branding, UI/UX Design, Development, and AI Integrated Services — end-to-end digital transformation from White Wolf. Strategy, design, engineering and AI under one roof.",
+        "Explore White Wolf's branding, UI/UX design, web development and AI integration services—an end-to-end team for strategy, design, engineering and growth.",
       jsonLd: serviceList,
     },
   };

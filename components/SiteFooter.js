@@ -86,7 +86,7 @@ export default function SiteFooter() {
                   </button>
 
                   <a
-                    href="tel:+9195383 99100"
+                    href="tel:+919538399100"
                     className="ww-footer-contact-card"
                     aria-label="Speak to us now"
                   >
@@ -127,7 +127,7 @@ export default function SiteFooter() {
             {[...Array(2)].map((_, i) => (
               <div className="footer-bottom-text-wrapper" key={i} aria-hidden={i > 0 ? "true" : undefined}>
                 {["White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–","White Wolf","–"].map((t,j) => (
-                  <div className="bottom-big-text" key={j}><h1 className="footer-bottom-text">{t}</h1></div>
+                  <div className="bottom-big-text" key={j}><span className="footer-bottom-text">{t}</span></div>
                 ))}
               </div>
             ))}

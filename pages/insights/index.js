@@ -22,8 +22,8 @@ export default function Insights() {
 export async function getStaticProps() {
   return {
     props: {
-      title: "Insights",
-      description: "Perspectives on branding, design, development, and AI from the White Wolf team.",
+      title: "Branding, Design & AI Insights | White Wolf",
+      description: "Explore practical perspectives from White Wolf on brand strategy, UI/UX design, web development, digital products and applied AI for modern businesses.",
     },
   };
 }

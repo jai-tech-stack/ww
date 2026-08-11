@@ -2,6 +2,7 @@ export default function Home({ bodyHtml, inlineStyles }) {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: inlineStyles }} />
+      <h1 className="ww-visually-hidden">Digital Transformation Agency for Branding, UI/UX, Development and AI</h1>
       <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: bodyHtml }} />
     </>
   );
@@ -14,8 +15,8 @@ export async function getStaticProps() {
       bodyHtml,
       inlineStyles,
       isHomepage: true,
-      title: "White Wolf — Digital Transformation Agency",
-      description: "Branding, UI/UX Design, Web Development, AI Solutions",
+      title: "White Wolf | Digital Transformation Agency in Bangalore",
+      description: "White Wolf is a Bangalore digital transformation agency delivering brand strategy, UI/UX design, web development and practical AI solutions for businesses.",
     },
   };
 }

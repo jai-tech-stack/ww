@@ -61,8 +61,8 @@ export default function CaseStudies() {
 export async function getStaticProps() {
   return {
     props: {
-      title: "Case Studies",
-      description: "White Wolf portfolio — branding, UI/UX, development and AI projects.",
+      title: "Digital Transformation Case Studies | White Wolf",
+      description: "Explore White Wolf case studies across branding, UI/UX, web development and AI integration, including the strategy, creative work and outcomes behind each project.",
     },
   };
 }

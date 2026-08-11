@@ -32,6 +32,7 @@ export default function Header({
     : DEFAULT_TITLE;
   const desc = description || DEFAULT_DESCRIPTION;
   const image = abs(ogImage || DEFAULT_OG_IMAGE);
+  const isJpeg = /\.jpe?g(?:$|\?)/i.test(image);
 
   // Site-wide structured data + any per-page schema
   const schemas = [organizationSchema(), websiteSchema()];
@@ -64,8 +65,10 @@ export default function Header({
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1920" />
-      <meta property="og:image:height" content="1080" />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:type" content={isJpeg ? "image/jpeg" : "image/png"} />
+      <meta property="og:image:width" content={isJpeg ? "1440" : "1923"} />
+      <meta property="og:image:height" content={isJpeg ? "780" : "1081"} />
       <meta property="og:image:alt" content={`${SITE_NAME} — ${SITE_TAGLINE}`} />
       <meta property="og:locale" content="en_US" />
 
@@ -75,6 +78,7 @@ export default function Header({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={`${SITE_NAME} — ${SITE_TAGLINE}`} />
 
       {/* Icons */}
       <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />

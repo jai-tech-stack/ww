@@ -217,8 +217,8 @@ export default function About() {
 export async function getStaticProps() {
   return {
     props: {
-      title: "About — White Wolf",
-      description: "Driven by Experience. Built for Innovation. White Wolf bridges strategy, creativity, technology, and AI innovation.",
+      title: "About White Wolf | Digital Transformation Agency",
+      description: "Meet the White Wolf team combining brand strategy, product design, engineering and AI to build future-ready digital experiences for ambitious businesses.",
     },
   };
 }
