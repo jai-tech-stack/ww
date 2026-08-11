@@ -261,7 +261,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       project,
-      title: `${project.title} — ${project.category} Case Study`,
+      title: `${project.title} Case Study | White Wolf`,
       description: project.overview
         ? project.overview.slice(0, 155)
         : project.tagline,
