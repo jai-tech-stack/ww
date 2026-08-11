@@ -94,6 +94,9 @@ export default function App({ Component, pageProps }) {
           description={description}
           noindex={pageProps.noindex === true}
           ogImage={pageProps.ogImage}
+          ogImageAlt={pageProps.ogImageAlt}
+          ogImageWidth={pageProps.ogImageWidth}
+          ogImageHeight={pageProps.ogImageHeight}
           ogType={pageProps.ogType}
           jsonLd={pageProps.jsonLd}
         />

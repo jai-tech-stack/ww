@@ -1,7 +1,7 @@
 import { rateLimit, clientIp } from '../../lib/rate-limit';
 import { sendTeamEmail, mailerConfigured } from '../../lib/mailer';
 
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 // Allow the agent loop (multiple sequential model calls) enough time on Vercel.

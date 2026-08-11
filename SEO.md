@@ -20,7 +20,7 @@ This document covers the **on-page / technical SEO** implemented in the codebase
 | Meta description per page | same | ✅ |
 | Canonical URL (auto from route) | `components/Header.js` | ✅ |
 | Robots meta (`index/follow`, large image preview) | `components/Header.js` | ✅ |
-| `noindex` on `/landing` (duplicate of homepage sections) | `pages/landing.js` | ✅ |
+| Indexable `/landing` consultation page with dedicated Service schema | `pages/landing.js` | ✅ |
 | Open Graph tags (title, desc, url, image, type) | `components/Header.js` | ✅ |
 | Twitter summary_large_image card | `components/Header.js` | ✅ |
 | Organization + WebSite JSON-LD (site-wide) | `lib/seo.js` → `Header.js` | ✅ |

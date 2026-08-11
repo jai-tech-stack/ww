@@ -9,6 +9,7 @@ const STATIC_ROUTES = [
   { path: "/case-studies", priority: "0.8", changefreq: "weekly" },
   { path: "/insights", priority: "0.6", changefreq: "weekly" },
   { path: "/contact", priority: "0.7", changefreq: "yearly" },
+  { path: "/landing", priority: "0.8", changefreq: "monthly" },
 ];
 
 function buildSitemap(urls) {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SITE_URL } from "../lib/seo";
 
 const TEAM = [
   {
@@ -251,15 +252,38 @@ export async function getStaticProps() {
   const midHtml = bodyHtml.substring(aboutStart, whyStart); // about · process · service · project
   const endHtml = bodyHtml.substring(whyStart);             // why · contact · cta
 
+  const landingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Digital Growth Consultation",
+    description:
+      "A free consultation covering brand strategy, UI/UX design, web and app development, and practical AI integration.",
+    url: `${SITE_URL}/landing`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: ["IN", "Worldwide"],
+    serviceType: "Digital transformation consultation",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/landing`,
+    },
+  };
+
   return {
     props: {
       midHtml,
       endHtml,
       inlineStyles,
       isLanding: true,
-      noindex: true, // campaign page reuses homepage sections — keep out of the index
-      title: "Grow With White Wolf — Free Consultation",
-      description: "Branding, UI/UX, Development & AI under one roof. Book a free consultation and grow your business.",
+      title: "Free Digital Growth Consultation | White Wolf",
+      description: "Book a free digital growth consultation with White Wolf in Bengaluru. Get practical direction on branding, UI/UX, web development and AI for your business.",
+      ogImage: "/assets/banner-slide3.jpg",
+      ogImageAlt: "White Wolf digital growth consultation for branding, web development and AI",
+      ogImageWidth: "3840",
+      ogImageHeight: "2148",
+      jsonLd: landingSchema,
     },
   };
 }
