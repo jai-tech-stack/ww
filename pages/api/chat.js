@@ -1,8 +1,8 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { rateLimit, clientIp } from '../../lib/rate-limit';
 import { sendTeamEmail, mailerConfigured } from '../../lib/mailer';
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 // Allow the agent loop (multiple sequential model calls) enough time on Vercel.
 // Default serverless timeout is 10s, which a tool-using loop can exceed.
@@ -79,6 +79,43 @@ const TOOLS = [
   },
 ];
 
+const GEMINI_TOOLS = [{
+  functionDeclarations: TOOLS.map(({ name, description, input_schema }) => ({
+    name,
+    description,
+    parameters: input_schema,
+  })),
+}];
+
+async function generateGemini(contents) {
+  const response = await fetch(
+    `${GEMINI_API_URL}/${encodeURIComponent(GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(process.env.GEMINI_API_KEY)}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents,
+        tools: GEMINI_TOOLS,
+        generationConfig: { maxOutputTokens: 600, temperature: 0.6 },
+      }),
+    }
+  );
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(data?.error?.message || `Gemini request failed (${response.status})`);
+    error.status = response.status;
+    throw error;
+  }
+
+  const candidate = data?.candidates?.[0];
+  if (!candidate?.content?.parts) {
+    throw new Error(candidate?.finishReason || 'Gemini returned no response');
+  }
+  return candidate.content;
+}
+
 async function runTool(name, input, messages) {
   const contact = { name: input.name, email: input.email, phone: input.phone };
   try {
@@ -118,9 +155,9 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     return res.json({
       status: 'ok',
-      hasApiKey: Boolean(process.env.ANTHROPIC_API_KEY),
-      apiKeyPrefix: process.env.ANTHROPIC_API_KEY ? process.env.ANTHROPIC_API_KEY.slice(0, 7) : null,
-      model: 'claude-sonnet-4-6',
+      provider: 'google-gemini',
+      hasApiKey: Boolean(process.env.GEMINI_API_KEY),
+      model: GEMINI_MODEL,
       smtpConfigured: mailerConfigured(),
     });
   }
@@ -134,7 +171,7 @@ export default async function handler(req, res) {
     return res.status(429).json({ content: "You're sending messages a little fast — please wait a moment and try again." });
   }
 
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.GEMINI_API_KEY) {
     return res.status(503).json({ content: 'Our assistant is offline right now. Please email info@whitewolfone.com.' });
   }
 
@@ -148,7 +185,10 @@ export default async function handler(req, res) {
     .filter((m, i) => !(i === 0 && m.role === 'assistant'))
     .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
     .slice(-MAX_HISTORY)
-    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_MSG_LEN) }));
+    .map((m) => ({
+      role: m.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: m.content.slice(0, MAX_MSG_LEN) }],
+    }));
 
   if (apiMessages.length === 0) return res.status(400).json({ error: 'No valid messages' });
 
@@ -158,27 +198,22 @@ export default async function handler(req, res) {
     let finalText = '';
 
     for (let step = 0; step < MAX_TOOL_STEPS; step++) {
-      const response = await client.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 600,
-        system: SYSTEM_PROMPT,
-        tools: TOOLS,
-        messages: convo,
-      });
+      const responseContent = await generateGemini(convo);
+      const text = responseContent.parts.map((part) => part.text || '').join('').trim();
+      const toolUses = responseContent.parts.filter((part) => part.functionCall);
 
-      const text = response.content.filter((c) => c.type === 'text').map((c) => c.text).join('').trim();
-
-      if (response.stop_reason === 'tool_use') {
-        const toolUses = response.content.filter((c) => c.type === 'tool_use');
-        convo.push({ role: 'assistant', content: response.content });
+      if (toolUses.length > 0) {
+        convo.push({ role: 'model', parts: responseContent.parts });
 
         const results = [];
-        for (const tu of toolUses) {
-          const out = await runTool(tu.name, tu.input, messages);
-          toolsUsed.push({ name: tu.name, input: tu.input });
-          results.push({ type: 'tool_result', tool_use_id: tu.id, content: out });
+        for (const part of toolUses) {
+          const call = part.functionCall;
+          const input = call.args || {};
+          const out = await runTool(call.name, input, messages);
+          toolsUsed.push({ name: call.name, input });
+          results.push({ functionResponse: { name: call.name, response: { result: out } } });
         }
-        convo.push({ role: 'user', content: results });
+        convo.push({ role: 'user', parts: results });
         continue; // let the model respond to the tool results
       }
 
